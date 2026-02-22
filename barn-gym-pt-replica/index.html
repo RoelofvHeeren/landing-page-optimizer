@@ -49,7 +49,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       }; if (!f._fbq) f._fbq = n;
       n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
       t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
@@ -88,12 +88,13 @@
                 Your First 1-on-1 Session Is 100% Free. Stop guessing and get the expert guidance you need to succeed.
               </p>
 
-              <div class="hero-trust-elements animate-fade-up" style="animation-delay: 0.2s;">
+              <div id="heroSocialProof" class="hero-trust-elements animate-fade-up" style="animation-delay: 0.2s;">
                 <div class="rating-box">
                   <div class="stars">★★★★★</div>
                   <p class="micro-copy-premium">East Sussex's Premier Personal Training</p>
                 </div>
-                <p class="location-copy">Serving Etchingham & Surrounding East Sussex Areas</p>
+                <p class="location-copy">Serving <span id="rotatingTown">Etchingham</span> & Surrounding East Sussex
+                  Areas</p>
               </div>
             </div>
 
@@ -113,8 +114,8 @@
                   <div class="form-group-premium">
                     <input type="tel" name="phone" placeholder="Phone Number" required class="premium-input">
                   </div>
-                  <button type="submit" class="btn btn-premium-submit">Schedule Free PT →</button>
-                  <p class="form-footer-note">⚡️ Limited spots available for this month</p>
+                  <button type="submit" class="btn btn-premium-submit">Book Free PT Session →</button>
+                  <p class="form-footer-note">Limited spots available for this month</p>
                 </form>
               </div>
             </div>
@@ -296,7 +297,7 @@
       <div class="container">
         <div class="text-center" style="margin-bottom: 50px;">
           <p class="section-subtext-small">Memberships</p>
-          <h2 class="section-headline dark-text">Personal Training <span class="green-text">Weekly Packages</span></h2>
+          <h2 class="section-headline dark-text">Personal Training <span class="green-text">Packages</span></h2>
           <p class="section-subheadline" style="max-width: 800px; margin: 0 auto;">Transparent pricing for those ready
             to commit to a serious transformation.</p>
         </div>
@@ -367,22 +368,22 @@
               <div class="carousel-nav next" id="carouselNext">&#10095;</div>
               <div class="carousel-track" id="carouselTrack">
                 <div class="carousel-slide">
-                  <video src="/testimonial1.mp4" controls playsinline></video>
+                  <video src="/testimonial1.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial2.mp4" controls playsinline></video>
+                  <video src="/testimonial2.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial3.mp4" controls playsinline></video>
+                  <video src="/testimonial3.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial4.mp4" controls playsinline></video>
+                  <video src="/testimonial4.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial5.mp4" controls playsinline></video>
+                  <video src="/testimonial5.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial6.mp4" controls playsinline></video>
+                  <video src="/testimonial6.mp4" muted loop playsinline autoplay></video>
                 </div>
               </div>
               <div class="carousel-dots" id="carouselDots">
@@ -553,10 +554,14 @@
         behavior: 'smooth'
       });
 
-      // Pause all videos
+      // Manage video playback: play visible, pause others
       const allVideos = track.querySelectorAll('video');
-      allVideos.forEach(v => {
-        v.pause();
+      allVideos.forEach((v, i) => {
+        if (i === currentIndex) {
+          v.play().catch(() => { });
+        } else {
+          v.pause();
+        }
       });
     }
 
@@ -609,6 +614,22 @@
       const walk = (x - startX) * 2; // scroll-fast
       track.scrollLeft = scrollLeft - walk;
     });
+
+    // Rotating Towns Logic
+    const towns = ["Etchingham", "Robertsbridge", "Burwash", "Hurst Green", "Ticehurst", "Heathfield", "Battle"];
+    let townIndex = 0;
+    const townEl = document.getElementById('rotatingTown');
+
+    if (townEl) {
+      setInterval(() => {
+        townEl.style.opacity = '0';
+        setTimeout(() => {
+          townIndex = (townIndex + 1) % towns.length;
+          townEl.textContent = towns[townIndex];
+          townEl.style.opacity = '1';
+        }, 500);
+      }, 3000);
+    }
 
     // ─── Analytics & Lead Capture ───────────────────────────────────────────
 
