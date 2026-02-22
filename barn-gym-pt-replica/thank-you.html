@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Barn Gym Personal Training</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/posthog-js@1.110.1/dist/posthog.min.js"></script>
+    <script>
+        posthog.init('POSTHOG_KEY_PLACEHOLDER', { api_host: 'https://app.posthog.com' });
+        window.PAGE_SOURCE_PREFIX = 'pt-thank-you';
+    </script>
+    <script>
+        window.GADS_ID = '';
+        window.META_PIXEL_ID = '935413671754852';
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-PLACEHOLDER"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        if (window.GADS_ID) gtag('config', window.GADS_ID);
+    </script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        if (window.META_PIXEL_ID) {
+            fbq('init', window.META_PIXEL_ID);
+            fbq('track', 'PageView');
+        }
+    </script>
+    <style>
+        :root {
+            --primary: #007559;
+            --text: #131415;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/images/IMG_9676.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 70px 50px;
+            border-radius: 24px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+            max-width: 650px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 52px;
+            margin-bottom: 25px;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--text);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 15px;
+            font-family: var(--font-serif);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Application Received</h1>
+        <p>Thank you for your application for Personal Training at Barn Gym. We've received your information and will be
+            in touch shortly.</p>
+        <div style="margin-top: 40px;">
+            <a href="https://barn-gym.com" class="btn">Go To Our Website</a>
+        </div>
+    </div>
+    <script>
+        posthog.capture('thank_you_view', { page: window.PAGE_SOURCE_PREFIX });
+    </script>
+</body>
+
+</html>

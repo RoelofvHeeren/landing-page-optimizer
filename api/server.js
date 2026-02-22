@@ -85,6 +85,7 @@ app.get(['/dashboard', '/dashboard/'], (req, res) => {
 app.get('/pt-style.css', (req, res) => res.sendFile(path.join(ptDir, 'style.css')));
 const ptRouter = express.Router();
 ptRouter.get('/', (req, res) => res.sendFile(path.join(ptDir, 'index.html')));
+ptRouter.get('/thank-you', (req, res) => res.sendFile(path.join(ptDir, 'thank-you.html')));
 app.use('/pt', ptRouter);
 
 // ─── Shared static assets (images, logos, videos) ────────────────────────────
@@ -95,7 +96,10 @@ app.use(express.static(path.join(sixWeekDir, 'public')));
 app.use(express.static(sixWeekDir)); // /style.css
 
 // ─── 6-week landing page at /6week ───────────────────────────────────────────
-app.get(['/6week', '/6week/'], (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
+const sixWeekRouter = express.Router();
+sixWeekRouter.get('/', (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
+sixWeekRouter.get('/thank-you', (req, res) => res.sendFile(path.join(sixWeekDir, 'thank-you.html')));
+app.use('/6week', sixWeekRouter);
 
 // ─── Root redirect to /6week ─────────────────────────────────────────────────
 app.get('/', (req, res) => res.redirect(301, '/6week'));

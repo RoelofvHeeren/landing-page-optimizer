@@ -270,8 +270,10 @@ h4,
 #rotatingTown {
   display: inline-block;
   transition: opacity 0.4s, transform 0.4s;
-  color: var(--primary-color);
+  color: #fff !important;
   font-weight: bold;
+  font-family: var(--font-heading);
+  white-space: nowrap;
 }
 
 #rotatingTown.fade-out {
@@ -798,7 +800,7 @@ h4,
   height: 100%;
   width: 100%;
   overflow: hidden;
-  scroll-snap-type: x mandatory;
+  /* Disable swipe/drag scroll */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }

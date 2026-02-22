@@ -89,19 +89,18 @@
               </p>
 
               <div id="heroSocialProof" class="hero-trust-elements animate-fade-up" style="animation-delay: 0.2s;">
+                <p class="location-copy">Personal Training Serving: <span id="rotatingTown">Etchingham</span></p>
                 <div class="rating-box">
                   <div class="stars">★★★★★</div>
                   <p class="micro-copy-premium">East Sussex's Premier Personal Training</p>
                 </div>
-                <p class="location-copy">Premium Personal Training Serving: <span id="rotatingTown">Etchingham</span>
-                </p>
               </div>
             </div>
 
             <!-- Right Column: Form -->
             <div class="hero-form-container animate-fade-up" style="animation-delay: 0.3s;">
               <div class="glass-form-card">
-                <h3 class="form-title">Start Your Transformation</h3>
+                <h3 class="form-title">First Session For Free</h3>
                 <p class="form-subtitle">Talk to a trainer & get your custom plan.</p>
 
                 <form id="heroLeadForm" class="premium-form">
@@ -279,7 +278,7 @@
             </div>
             <div class="step-details">
               <span class="step-number" id="step-num">01</span>
-              <h3 class="step-title font-playfair" id="step-head">The Tactical Consultation</h3>
+              <h3 class="step-title font-playfair" id="step-head">Fitness and Movement Analysis</h3>
               <p class="step-text" id="step-desc">Beyond a chat—we map your starting line and identify precisely what's
                 held you back from achieving your absolute best.</p>
             </div>
@@ -491,7 +490,7 @@
     const stepsData = {
       1: {
         num: '01',
-        head: 'The Tactical Consultation',
+        head: 'Fitness and Movement Analysis',
         desc: "Beyond a chat—we map your starting line and identify precisely what's held you back from achieving your absolute best.",
         img: '/images/IMG_1212.jpg'
       },
@@ -743,7 +742,11 @@
         if (!json.success) throw new Error(json.error);
         posthog.identify(email, { name, email, phone });
         trackEvent('lead_captured', { source, method: 'modal' });
-        goToStep(3);
+
+        // Wait briefly for tracking events to fire before redirect
+        setTimeout(() => {
+          window.location.href = '/pt/thank-you';
+        }, 800);
       } catch (err) {
         console.error('Lead submit error:', err);
         submitBtn.innerText = 'Try Again';
@@ -780,9 +783,12 @@
           if (!json.success) throw new Error(json.error);
           posthog.identify(email, { name, email, phone });
           trackEvent('lead_captured', { source, method: 'hero-form' });
-          submitBtn.innerText = 'Check Your Email! ✅';
+          submitBtn.innerText = 'Check Your Email!';
           heroLeadForm.reset();
-          setTimeout(() => { submitBtn.innerText = originalText; submitBtn.disabled = false; }, 4000);
+
+          setTimeout(() => {
+            window.location.href = '/pt/thank-you';
+          }, 800);
         } catch (err) {
           console.error('Hero form error:', err);
           submitBtn.innerText = 'Try Again';
