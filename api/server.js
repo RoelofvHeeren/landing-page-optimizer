@@ -94,12 +94,12 @@ app.get('/dashboard', (req, res) => {
 // 6-Week: https://join.barn-gym.com/6week
 const sixWeekDir = path.join(__dirname, '..', 'barn-gym-6-week-replica');
 app.use('/6week', express.static(path.join(sixWeekDir, 'public')));
-app.get('/6week', (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
+app.get(['/6week', '/6week/'], (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
 
 // PT: https://join.barn-gym.com/pt
 const ptDir = path.join(__dirname, '..', 'barn-gym-pt-replica');
 app.use('/pt', express.static(path.join(ptDir, 'public')));
-app.get('/pt', (req, res) => res.sendFile(path.join(ptDir, 'index.html')));
+app.get(['/pt', '/pt/'], (req, res) => res.sendFile(path.join(ptDir, 'index.html')));
 
 // ─── Health check ────────────────────────────────────────────────────────────
 app.get('/health', (req, res) => res.json({ ok: true, ts: new Date().toISOString() }));
