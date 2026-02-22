@@ -94,9 +94,11 @@ app.use(express.static(path.join(ptDir, 'public')));
 app.use(express.static(path.join(sixWeekDir, 'public')));
 app.use(express.static(sixWeekDir)); // /style.css
 
-// ─── 6-week landing page at root / ───────────────────────────────────────────
-app.get(['/6week', '/6week/'], (req, res) => res.redirect(301, '/'));
-app.get(['/'], (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
+// ─── 6-week landing page at /6week ───────────────────────────────────────────
+app.get(['/6week', '/6week/'], (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
+
+// ─── Root redirect to /6week ─────────────────────────────────────────────────
+app.get('/', (req, res) => res.redirect(301, '/6week'));
 
 app.listen(PORT, () => {
     console.log(`🚀 Barn Gym API  → http://localhost:${PORT}`);
