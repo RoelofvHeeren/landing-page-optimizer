@@ -110,6 +110,7 @@ h4,
   border: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: var(--font-heading);
 }
 
 .btn:hover {
@@ -323,6 +324,7 @@ h4,
   font-weight: bold;
   box-shadow: 0 4px 15px rgba(0, 117, 89, 0.4);
   transition: all 0.3s ease;
+  font-family: var(--font-heading);
 }
 
 .btn-premium-submit:hover {
