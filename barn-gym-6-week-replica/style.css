@@ -108,6 +108,7 @@ h4,
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   border: none;
+  font-family: var(--font-heading);
 }
 
 .btn:hover {
@@ -185,18 +186,27 @@ h4,
 }
 
 .hero-headline {
-  font-size: 64px;
+  font-size: 48px;
   line-height: 1.1;
   margin-bottom: 24px;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   color: #ffffff;
+  font-weight: 400;
+}
+
+.hero-headline em {
+  font-size: 72px;
+  font-style: italic;
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
 }
 
 .hero-subheadline {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 40px;
-  opacity: 1;
-  max-width: 600px;
+  opacity: 0.9;
+  max-width: 550px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   color: #ffffff;
 }
@@ -265,18 +275,38 @@ h4,
   background: var(--primary-color);
   color: #fff;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   box-shadow: 0 4px 15px rgba(0, 117, 89, 0.4);
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
+  font-family: var(--font-heading);
 }
 
 .btn-premium-submit:hover {
   background: #008a6a;
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
+}
+
+#heroSocialProof {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-stars {
+  color: #FACC15;
+  font-size: 18px;
+}
+
+.micro-copy {
+  color: #ffffff;
+  opacity: 1;
+  margin: 0;
+  font-weight: 500;
 }
 
 .form-footer-note {
@@ -1244,12 +1274,52 @@ h4,
 }
 
 @media (max-width: 768px) {
+  .hero-headline {
+    font-size: 32px !important;
+  }
+
+  .hero-headline em {
+    font-size: 48px !important;
+  }
+
+  .hero-subheadline {
+    font-size: 16px !important;
+    margin: 0 auto 30px !important;
+    padding: 0 15px;
+    max-width: 100% !important;
+  }
+
+  #heroSocialProof {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .avatars-section p.section-subheadline {
+    padding: 0 20px;
+  }
+
   .info-modal-content {
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-modal-image img {
+    max-height: 250px !important;
   }
 
   .info-close {
     top: 10px;
     right: 10px;
   }
+}
+
+.info-modal-image img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
 }

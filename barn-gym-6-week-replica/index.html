@@ -28,6 +28,40 @@
     window.PAGE_SOURCE_PREFIX = '6-week';
   </script>
 
+  <!-- Tracking Configuration -->
+  <script>
+    // FILL THESE IN:
+    window.GADS_ID = ''; // e.g. 'AW-123456789'
+    window.GADS_LABEL = ''; // e.g. 'abcDeFGhiJKLmnOpqRS'
+    window.META_PIXEL_ID = ''; // e.g. '123456789012345'
+  </script>
+
+  <!-- Google Ads (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-PLACEHOLDER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    if (window.GADS_ID) gtag('config', window.GADS_ID);
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      }; if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    if (window.META_PIXEL_ID) {
+      fbq('init', window.META_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+  </script>
+
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
@@ -53,10 +87,9 @@
               <p class="hero-subheadline">A proven 6-week roadmap to build strength, lose fat, and reclaim your energy.
                 Designed for locals in the Etchingham area who are ready to finally see results.</p>
 
-              <div style="margin-top: 30px; display: flex; align-items: center; gap: 10px;">
-                <div style="color: #FACC15; font-size: 18px;">★★★★★</div>
-                <p class="micro-copy" style="color: #ffffff; opacity: 1; margin: 0; font-weight: 500;">Join 160+ locals
-                  from <span id="rotatingTown"
+              <div id="heroSocialProof">
+                <div class="hero-stars">★★★★★</div>
+                <p class="micro-copy">Join 100+ transformations from <span id="rotatingTown"
                     style="font-weight: 700; transition: opacity 0.5s ease;">Etchingham</span></p>
               </div>
             </div>
@@ -137,15 +170,15 @@
         <div class="card"
           style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid #eee;">
           <div class="card-image-wrapper">
-            <img src="/images/community.png" alt="The Community Seeker"
+            <img src="/images/IMG_9261.jpg" alt="Everyday Members"
               style="width: 100%; height: 260px; object-fit: cover; display: block;" />
           </div>
           <div class="card-content" style="padding: 30px 25px; text-align: center; background: #fff;">
-            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 12px;">The
-              Community Seeker</h3>
-            <p class="card-text" style="color: #555; font-size: 15px; line-height: 1.6;">You want more than just access
-              to treadmills. You want a private strength coaching facility with a tribe of like-minded locals to hold
-              you accountable.</p>
+            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 12px;">Everyday
+              Members</h3>
+            <p class="card-text" style="color: #555; font-size: 15px; line-height: 1.6;">You don't need to be an athlete
+              to start. Our foundation is built on locals just looking to feel better and stay active in a supportive
+              environment.</p>
           </div>
         </div>
 
@@ -229,14 +262,16 @@
         <div class="text-center" style="margin-bottom: 50px;">
           <h2 class="section-headline dark-text"
             style="font-family: var(--font-heading); font-size: 50px; margin-bottom: 20px;">What Is <span
-              class="green-text">Included</span> in our <span class="green-text">Welcome Offer</span>?</h2>
+              class="green-text">Included</span> in our <span class="green-text">6 Week Transformation</span>?</h2>
           <p class="section-subheadline dark-text">Everything you need to guarantee results, built into one seamless
             local experience.</p>
         </div>
 
         <div class="included-grid">
           <!-- Card 1 -->
-          <div class="included-card" style="background-image: url('/images/IMG_9247.jpg');" data-modal="modal-training">
+          <div class="included-card"
+            style="background-image: url('/images/IMG_9255.jpg'); background-position: top center;"
+            data-modal="modal-training">
             <div class="included-content">
               <h3 class="included-title">Training Plan</h3>
               <div class="included-btn">+</div>
@@ -251,7 +286,7 @@
             </div>
           </div>
           <!-- Card 3 -->
-          <div class="included-card" style="background-image: url('/images/IMG_9255.jpg');" data-modal="modal-coaches">
+          <div class="included-card" style="background-image: url('/images/IMG_9247.jpg');" data-modal="modal-coaches">
             <div class="included-content">
               <h3 class="included-title">Coaches</h3>
               <div class="included-btn">+</div>
@@ -358,22 +393,22 @@
               <div class="carousel-nav next" id="carouselNext">&#10095;</div>
               <div class="carousel-track" id="carouselTrack">
                 <div class="carousel-slide">
-                  <video src="/testimonial1.mp4" controls playsinline></video>
+                  <video src="/testimonial1.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial2.mp4" controls playsinline></video>
+                  <video src="/testimonial2.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial3.mp4" controls playsinline></video>
+                  <video src="/testimonial3.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial4.mp4" controls playsinline></video>
+                  <video src="/testimonial4.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial5.mp4" controls playsinline></video>
+                  <video src="/testimonial5.mp4" muted loop playsinline autoplay></video>
                 </div>
                 <div class="carousel-slide">
-                  <video src="/testimonial6.mp4" controls playsinline></video>
+                  <video src="/testimonial6.mp4" muted loop playsinline autoplay></video>
                 </div>
               </div>
               <div class="carousel-dots" id="carouselDots">
@@ -407,6 +442,10 @@
           <a href="#">Privacy Policy</a>
           <a href="#">Contact Us</a>
           <a href="#">Terms & Conditions</a>
+        </div>
+
+        <div style="margin-top: 20px; font-weight: 500;">
+          <a href="tel:07XXX XXXXXX" style="color: inherit; text-decoration: none;">📞 07XXX XXXXXX (Call or Text)</a>
         </div>
 
         <p class="legal-text">
@@ -611,6 +650,15 @@
 
     async function trackEvent(event_type, event_data = {}) {
       posthog.capture(event_type, { ...event_data, page: window.PAGE_SOURCE_PREFIX });
+
+      // Signal Meta Pixel & Google Ads on conversion
+      if (event_type === 'lead_captured') {
+        if (window.fbq && window.META_PIXEL_ID) fbq('track', 'Lead');
+        if (window.gtag && window.GADS_ID && window.GADS_LABEL) {
+          gtag('event', 'conversion', { 'send_to': `${window.GADS_ID}/${window.GADS_LABEL}` });
+        }
+      }
+
       fetch(window.API_BASE + '/api/events', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -781,7 +829,7 @@
           </ul>
         </div>
         <div class="info-modal-image">
-          <img src="/images/IMG_9247.jpg" alt="Training Plan" />
+          <img src="/images/IMG_9255.jpg" alt="Training Plan" style="object-position: top center;" />
         </div>
       </div>
     </div>
@@ -826,7 +874,7 @@
           </ul>
         </div>
         <div class="info-modal-image">
-          <img src="/images/IMG_9255.jpg" alt="Coaches" />
+          <img src="/images/IMG_9247.jpg" alt="Coaches" />
         </div>
       </div>
     </div>

@@ -510,10 +510,14 @@
             const totalSubmits = Object.values(data.formConversions || {}).reduce((a, v) => a + (v.submits || 0), 0);
             const convRate = totalStarts ? ((totalSubmits / totalStarts) * 100).toFixed(1) + '%' : '–';
 
+            const ghlSuccess = (data.recentLeads || []).filter(l => l.ghl_status === 'success').length;
+            const ghlFailed = (data.recentLeads || []).filter(l => l.ghl_status === 'failed').length;
+            const ghlPending = (data.recentLeads || []).filter(l => l.ghl_status === 'pending').length;
+
             const kpis = [
                 { label: 'Total Leads', value: data.totalLeads || 0, sub: 'All time', accent: '#4ade80' },
                 { label: 'Page Views', value: totalPageViews, sub: 'Tracked sessions', accent: '#60a5fa' },
-                { label: 'Form Starts', value: totalStarts, sub: 'Users opened form', accent: '#facc15' },
+                { label: 'GHL Sync', value: ghlSuccess, sub: `${ghlFailed} failed / ${ghlPending} pending`, accent: ghlFailed > 0 ? '#facc15' : '#4ade80' },
                 { label: 'Conversion Rate', value: convRate, sub: 'Form starts → submits', accent: '#f472b6' }
             ];
 
