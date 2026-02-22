@@ -24,7 +24,7 @@
   <!-- API config -->
   <script>
     // Set to your Railway URL when deployed, e.g. https://barn-gym-api.railway.app
-    window.API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3000' : '';
+    window.API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://join.barn-gym.com';
     window.PAGE_SOURCE_PREFIX = '6-week';
   </script>
 </head>
@@ -40,15 +40,15 @@
           <div class="hero-grid">
             <!-- Left Column: Content -->
             <div class="hero-content">
-              <h1 class="hero-headline">The Etchingham Area's Premier Gym:<br>Start With Our <span
-                  class="underline-highlight">Welcome Offer</span></h1>
+              <h1 class="hero-headline">The Barn Gym Welcome Offer:<br><em>6 Week Transformation</em></h1>
               <p class="hero-subheadline">A proven 6-week roadmap to build strength, lose fat, and reclaim your energy.
-                Join a community of locals who actually get results.</p>
+                Designed for locals in the Etchingham area who are ready to finally see results.</p>
 
               <div style="margin-top: 30px; display: flex; align-items: center; gap: 10px;">
                 <div style="color: #FACC15; font-size: 18px;">★★★★★</div>
-                <p class="micro-copy" style="color: #ffffff; opacity: 1; margin: 0; font-weight: 500;">Join 160+ Locals
-                  Around The Etchingham Area</p>
+                <p class="micro-copy" style="color: #ffffff; opacity: 1; margin: 0; font-weight: 500;">Join 160+ locals
+                  from <span id="rotatingTown"
+                    style="font-weight: 700; transition: opacity 0.5s ease;">Etchingham</span></p>
               </div>
             </div>
 
@@ -66,7 +66,7 @@
                     <input type="email" name="email" placeholder="Email Address" required class="premium-input">
                   </div>
                   <div class="form-group-premium">
-                    <input type="tel" name="phone" placeholder="Phone Number" required class="premium-input">
+                    <input type="tel" name="phone" placeholder="Mobile Number" required class="premium-input">
                   </div>
                   <button type="submit" class="btn-premium-submit">Secure My Spot →</button>
                   <p class="form-footer-note">⚡️ Limited spots available for this month</p>
@@ -78,7 +78,7 @@
       </div>
     </section>
 
-    <section class="avatars-section" style="padding: 80px 0; background-color: #ffffff;">
+    <section class="avatars-section" style="padding: 80px 0 40px; background-color: #ffffff;">
       <h2 class="section-headline text-center">Who Is Our <span class="green-text">Welcome Offer</span> For?</h2>
       <p class="section-subheadline text-center" style="max-width: 800px; margin: 0 auto 50px;">
         This is specifically for locals near Etchingham, Robertsbridge, and Heathfield who are looking for a "gym near
@@ -248,8 +248,7 @@
             </div>
           </div>
           <!-- Card 4 -->
-          <div class="included-card" style="background-image: url('/images/IMG_0885.jpg');"
-            data-modal="modal-nutrition">
+          <div class="included-card" style="background-image: url('/images/food.jpeg');" data-modal="modal-nutrition">
             <div class="included-content">
               <h3 class="included-title">Nutrition</h3>
               <div class="included-btn">+</div>
@@ -273,12 +272,12 @@
 
     <!-- Pricing / Welcome Offer Section -->
     <section class="pricing-section" id="pricing" style="padding: 80px 0; background-color: #ffffff;">
-      <div class="container" style="max-width: 1100px;">
+      <div class="container" style="max-width: 95vw; padding: 0;">
         <div class="pricing-card"
           style="display: flex; border: 4px solid var(--primary-color); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);">
           <!-- Left: Image (Mirroring the user's reference) -->
           <div class="pricing-image"
-            style="flex: 1; min-height: 500px; background-image: url('/images/IMG_9247.jpg'); background-size: cover; background-position: center;">
+            style="flex: 1; min-height: 500px; background-image: url('/images/IMG_9676.jpg'); background-size: cover; background-position: center;">
           </div>
 
           <!-- Right: Content -->
@@ -428,7 +427,7 @@
 
           <!-- Step 3 (Lead Capture) -->
           <div class="survey-step" id="step3">
-            <h3 class="survey-title">Where should we send your local action plan?</h3>
+            <h3 class="survey-title">You're One Step Away — Lock In Your Spot Now</h3>
             <div id="exitBadgePlaceholder"></div> <!-- Injected during exit intent -->
             <form id="leadForm">
               <div class="form-group">
@@ -440,8 +439,8 @@
                 <input class="form-input" type="email" name="email" placeholder="john@example.com" required />
               </div>
               <div class="form-group">
-                <label class="form-label">Phone Number (Optional)</label>
-                <input class="form-input" type="tel" name="phone" placeholder="+44 7700 900077" />
+                <label class="form-label">Mobile Number</label>
+                <input class="form-input" type="tel" name="phone" placeholder="Your mobile number" />
               </div>
               <button type="submit" class="submit-btn" id="surveySubmitBtn">Secure My Spot</button>
             </form>
@@ -705,26 +704,6 @@
       }
     });
 
-    // What's Included Modals Logic
-    const includedCards = document.querySelectorAll('.included-card');
-    const infoCloseBtns = document.querySelectorAll('.info-close');
-    includedCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const infoModal = document.getElementById(card.getAttribute('data-modal'));
-        if (infoModal) { infoModal.classList.add('active'); document.body.style.overflow = 'hidden'; }
-      });
-    });
-    infoCloseBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const overlay = btn.closest('.info-modal-overlay');
-        if (overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
-      });
-    });
-    document.querySelectorAll('.info-modal-overlay').forEach(overlay => {
-      overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
-      });
-    });
 
     // ─── Hero lead form submit ──────────────────────────────────────────────
     const heroLeadForm = document.getElementById('heroLeadForm');
@@ -860,7 +839,7 @@
           </ul>
         </div>
         <div class="info-modal-image">
-          <img src="/images/IMG_0885.jpg" alt="Nutrition" />
+          <img src="/images/food.jpeg" alt="Nutrition" />
         </div>
       </div>
     </div>
@@ -888,5 +867,46 @@
     </div>
   </div>
 </body>
+
+<script>
+  // Info modals — this script runs AFTER all modal HTML is in the DOM
+  document.querySelectorAll('.included-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const infoModal = document.getElementById(card.getAttribute('data-modal'));
+      if (infoModal) { infoModal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    });
+  });
+
+  document.querySelectorAll('.info-modal-overlay').forEach(overlay => {
+    const closeBtn = overlay.querySelector('.info-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+    });
+  });
+</script>
+
+<script>
+  // Rotating town names — fade in/out every 3s
+  const towns = ['Etchingham', 'Robertsbridge', 'Heathfield', 'Battle', 'Burwash', 'Hurst Green', 'Wadhurst'];
+  let townIndex = 0;
+  const townEl = document.getElementById('rotatingTown');
+  if (townEl) {
+    setInterval(() => {
+      townEl.style.opacity = '0';
+      setTimeout(() => {
+        townIndex = (townIndex + 1) % towns.length;
+        townEl.textContent = towns[townIndex];
+        townEl.style.opacity = '1';
+      }, 500);
+    }, 3000);
+  }
+</script>
 
 </html>
