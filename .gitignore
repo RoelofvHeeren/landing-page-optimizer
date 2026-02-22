@@ -1,0 +1,31 @@
+# Node dependencies
+node_modules/
+
+# Environment variables (never commit real secrets)
+.env
+.env.local
+.env.production
+
+# Large binary assets – store via Git LFS or leave out of the repo
+*.png
+*.jpg
+*.jpeg
+*.avif
+*.mp4
+*.webp
+*.gif
+
+# Mac OS
+.DS_Store
+**/.DS_Store
+
+# Vite build output
+dist/
+
+# Playwright screenshots / test output
+test-results/
+playwright-report/
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Retreats - Barn Gym</title>
+    <link rel="stylesheet" href="/global.css">
+
+    <script type="module" src="/js/components.js" defer></script>
+
+    <style>
+        .hero-retreats {
+            position: relative;
+            background-image: url('/images/retreats/osPVKLUGSUoJ5pSXyTuaMJCaEc.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .hero-retreats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+            border-radius: 20px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            margin-left: 5%;
+        }
+
+        .hero-content h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            color: #eee;
+        }
+
+        /* Philosophy Section */
+        .philosophy-section {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .philosophy-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
+
+        .philosophy-section p {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .philosophy-section img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .author-text {
+            display: inline-block;
+            font-size: 14px;
+            color: #666;
+            vertical-align: middle;
+        }
+
+        /* Locations Section */
+        .locations-wrapper {
+            background-image: url('/images/retreats/RphVOHZvK9v3PrzRLDhE0h2hvM.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            border-radius: 20px;
+            margin: 0 20px;
+        }
+
+        .locations-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(45, 55, 65, 0.85);
+            border-radius: 20px;
+        }
+
+        .locations-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .locations-content h2 {
+            font-size: 50px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 60px;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .location-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+        }
+
+        .location-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .location-card-body {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: -20px 10px 10px 10px;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .location-card-body h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 80px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaeaea;
+        }
+
+        .pricing-content {
+            flex: 1;
+            padding: 80px 60px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .pricing-content h2 {
+            font-size: 40px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 25px;
+            color: #3b5f41;
+        }
+
+        .pricing-content p.desc {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .pricing-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        .pricing-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            color: #444;
+            font-size: 16px;
+        }
+
+        .pricing-list li::before {
+            content: '•';
+            color: #999;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .pricing-content h3 {
+            font-size: 24px;
+            color: #3b5f41;
+            font-weight: 500;
+        }
+
+        .pricing-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .pricing-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .pricing-image .btn-black-overlay {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .pricing-image .btn-black-overlay:hover {
+            background: black;
+            border-color: white;
+        }
+
+        /* FAQ and Map Area */
+        .faq-map-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-image: url('/images/retreats/V8KEbgWX8X7q8Am3EwRlAlHncLU.png');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .faq-section {
+            flex: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 45px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 50px;
+        }
+
+        .faq-item {
+            background: #f4f4f4;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 400;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .faq-question i::after {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-section {
+                flex-direction: column;
+            }
+
+            .pricing-image {
+                min-height: 400px;
+            }
+
+            .faq-map-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #fcfcfc;">
+
+    <!-- Top Navigation Overlay (Mocked) -->
+    <div
+        style="position: absolute; top: 40px; left: 60px; right: 60px; z-index: 100; display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" class="brand-logo">
+            <img src="/logos/white.png" alt="Barn Gym" style="height: 60px;">
+        </a>
+        <div
+            style="width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.5); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; cursor: pointer;">
+            <span style="width: 20px; height: 1px; background: white;"></span>
+            <span style="width: 20px; height: 1px; background: white;"></span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-retreats">
+        <div class="hero-content">
+            <h1>Retreats</h1>
+            <p>Fully customised, high-performance wellbeing in a premium countryside setting.</p>
+            <a href="#build" class="btn"
+                style="background: transparent; color: white; border: 1px solid white; padding: 12px 30px; border-radius: 30px;">Design
+                Your Retreat</a>
+        </div>
+    </header>
+
+    <!-- Philosophy -->
+    <section class="philosophy-section">
+        <h2>The <span class="text-green" style="font-style: italic;">Philosophy</span></h2>
+        <p>
+            <span class="text-green" style="font-style: italic; font-weight: 600;">Leadership</span> teams need space to
+            think clearly, align, and reset. Our<br>
+            Executive Wellness Retreats are bespoke <span class="text-green"
+                style="font-style: italic; font-weight: 600;">experiences</span> tailored to your<br>
+            goals and challenges.
+        </p>
+        <div>
+            <img src="/images/retreats/EbvAh0MM6UKpZRbq3KLcc89lcKg.png" alt="Guy Kennedy">
+            <span class="author-text">Guy Kennedy - Founder & Head coach @ Barn Gym</span>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations-wrapper">
+        <div class="locations-content">
+            <h2>Locations</h2>
+            <div class="locations-grid">
+                <!-- Location 1 -->
+                <div class="location-card">
+                    <img src="/images/retreats/LubHpvn0EpeMoCi1EXZgKy4ZpA.jpg" alt="Eastwood Observatory">
+                    <div class="location-card-body">
+                        <h3>Eastwood Observatory</h3>
+                        <a href="#learn" class="btn btn-dark"
+                            style="width: 100%; border-radius: 20px; padding: 8px; font-size: 14px;">Learn More</a>
+                    </div>
+                </div>
+                <!-- Location 2 -->
+                <div class="location-card">
+                    <img src="/images/retreats/1GN7Si87yKAOzNe3TUhUXEbbOY.webp" alt="The Bell">
+                    <div class="location-card-body">
+                        <h3>The Bell</h3>
+                        <a href="#learn" class="btn btn-dark"
+                            style="width: 100%; border-radius: 20px; padding: 8px; font-size: 14px;">Learn More</a>
+                    </div>
+                </div>
+                <!-- Location 3 -->
+                <div class="location-card">
+                    <img src="/images/retreats/n3msvO8V5yfjPnSqKfEvLRAA.jpeg" alt="Oastbrook Vineyards">
+                    <div class="location-card-body">
+                        <h3>Oastbrook Vineyards</h3>
+                        <a href="#learn" class="btn btn-dark"
+                            style="width: 100%; border-radius: 20px; padding: 8px; font-size: 14px;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#build" class="btn"
+                style="background: transparent; color: white; border: 1px solid white; padding: 12px 30px; border-radius: 30px;">Build
+                Your Retreat</a>
+        </div>
+    </section>
+
+    <!-- Pricing & Investment -->
+    <section class="pricing-section">
+        <div class="pricing-content">
+            <h2>Pricing <span style="font-style: normal; color: #3b5f41;">&</span> Investment</h2>
+            <p class="desc">
+                A fully bespoke 2–3 day leadership retreat designed around your team's objectives. Every element is
+                customised, from strategic facilitation to wellness experiences and venue selection.
+            </p>
+            <ul class="pricing-list">
+                <li>Bespoke programme design</li>
+                <li>All activities, materials, and equipment</li>
+                <li>Venue hire at our private estate</li>
+                <li>All meals and refreshments</li>
+            </ul>
+            <h3>Starting from £999 per retreat</h3>
+        </div>
+        <div class="pricing-image">
+            <img src="/images/retreats/y4Xa9IV1YAAqCqRIGbufNCCoWvg.png" alt="Retreat Experience">
+            <a href="#design" class="btn-black-overlay">Design Now</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div>
+        <h2
+            style="text-align: center; font-size: 45px; font-family: 'Playfair Display', serif; margin-top: 80px; margin-bottom: 40px;">
+            Your Questions, <span class="text-green" style="font-style: italic;">Answered</span></h2>
+    </div>
+
+    <section class="faq-map-container">
+        <!-- FAQ left side -->
+        <div class="faq-section" style="margin: 0; padding-right: 40px;">
+            <div class="faq-item">
+                <div class="faq-question">What does a corporate retreat include? <i></i></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you host retreats at your venue? <i></i></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What's the investment? <i></i></div>
+            </div>
+
+        </div>
+
+        <!-- FAQ right side (in original it's two cols of FAQ) -->
+        <div class="faq-section" style="margin: 0;">
+            <div class="faq-item">
+                <div class="faq-question">How long are the retreats? <i></i></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What types of teams benefit most? <i></i></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do we plan a retreat? <i></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map representation underneath FAQs to match the screenshot -->
+    <div
+        style="max-width: 1400px; margin: 40px auto 80px; text-align: center; border-radius: 20px; overflow: hidden; border: 1px solid #ddd;">
+        <img src="/images/corporate-personal-training/l4dFjQh9c43t1L0h0r2a51A0.png" alt="Map"
+            style="width: 100%; display: block; object-fit: cover;">
+        <!-- Wait the baseline uses an actual map embed, I'll use the image from corporate PT as a mock -->
+    </div>
+
+    <!-- Footer injected by JS -->
+
+</body>
+
+</html>

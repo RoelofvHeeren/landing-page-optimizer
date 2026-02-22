@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Barn Gym</title>
+    <link rel="stylesheet" href="/global.css">
+
+    <script type="module" src="/js/components.js" defer></script>
+
+    <style>
+        .hero-about {
+            position: relative;
+            background-image: url('/images/about/plBZtQwlPXyrABG0Y6SCNrt78vo.png');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 20px;
+        }
+
+        .hero-about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 80px;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+        }
+
+        .values-section {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .values-section p {
+            font-size: 24px;
+            line-height: 1.4;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .author-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .author-badge img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        .author-badge span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Our Story */
+        .story-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 60px auto;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+        }
+
+        .story-image {
+            flex: 1.2;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-content {
+            flex: 1;
+            padding: 80px 60px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .story-content h2 {
+            font-size: 45px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+        }
+
+        .story-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 50px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .team-section p.subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            color: white;
+        }
+
+        .team-info h3 {
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 5px;
+        }
+
+        .team-info p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 900px) {
+            .story-section {
+                flex-direction: column;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #fcfcfc;">
+
+    <div
+        style="position: absolute; top: 40px; left: 60px; right: 60px; z-index: 100; display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" class="brand-logo">
+            <img src="/logos/white.png" alt="Barn Gym" style="height: 60px;">
+        </a>
+        <div
+            style="width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.5); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; cursor: pointer;">
+            <span style="width: 20px; height: 1px; background: white;"></span>
+            <span style="width: 20px; height: 1px; background: white;"></span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero-about">
+        <div class="hero-content">
+            <h1>About</h1>
+        </div>
+    </header>
+
+    <!-- Values -->
+    <section class="values-section">
+        <p>Our core values are community and continuous improvement. We grow together, support each other, and stay
+            committed to becoming better every single week.</p>
+        <div class="author-badge">
+            <img src="/images/about/EbvAh0MM6UKpZRbq3KLcc89lcKg.png" alt="Guy Kennedy">
+            <span>Guy Kennedy - Founder & Head coach @ Barn Gym</span>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story-section">
+        <div class="story-image">
+            <img src="/images/about/f6m1TTouhOmF3KUKH2Yle31V3xg.png" alt="Barn Gym Original Building">
+        </div>
+        <div class="story-content">
+            <h2>Our <span class="text-green" style="font-style: italic;">Story</span></h2>
+            <p>Barn Gym started in 2020, when the world shut down and people had nowhere to train.</p>
+            <p>What began as a simple idea, offering personal training sessions inside a converted barn during lockdown,
+                quickly became something bigger. The quiet countryside, the open space, and the need for real human
+                connection brought people together in a way no commercial gym could.</p>
+            <p>Session by session, a small group formed. Then it grew. And today, Barn Gym is a thriving community of
+                like-minded people who meet in the hills, train with purpose, support each other, and push to get a
+                little better every day. It's no longer just a place to work out, it's a place to belong.</p>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+        <h2>The <span class="text-green" style="font-style: italic;">Faces</span> of Our Company</h2>
+        <p class="subtitle">Get to know the people who make our work meaningful, and who are ready to help you write
+            your own success story.</p>
+
+        <div class="team-grid">
+            <!-- Guy -->
+            <div class="team-card">
+                <img src="/images/about/EbvAh0MM6UKpZRbq3KLcc89lcKg.png" alt="Guy Kennedy">
+                <div class="team-info">
+                    <h3>Guy Kennedy</h3>
+                    <p>Head Coach & Founder</p>
+                </div>
+            </div>
+            <!-- Charlie -->
+            <div class="team-card">
+                <img src="/images/about/urcRQgQNunUzRQlqyClwshw7gA0.png" alt="Charlie Crick">
+                <div class="team-info">
+                    <h3>Charlie Crick</h3>
+                    <p>Personal Trainer</p>
+                </div>
+            </div>
+            <!-- Charlotte -->
+            <div class="team-card">
+                <img src="/images/about/421CpuVF5yyGpXYyy2Ii1qakgA.png" alt="Charlotte Knudson">
+                <div class="team-info">
+                    <h3>Charlotte Knudson</h3>
+                    <p>Personal Trainer</p>
+                </div>
+            </div>
+            <!-- Sophie -->
+            <div class="team-card">
+                <img src="/images/about/8zFiceJ4SieCKm6AVvIsHzFsXZw.png" alt="Sophie">
+                <div class="team-info">
+                    <h3>Sophie</h3>
+                    <p>Yoga Teacher</p>
+                </div>
+            </div>
+            <!-- Caroline -->
+            <div class="team-card">
+                <img src="/images/about/JBHHbdvTM5AUa6nNy6BcTHN8Ngo.png" alt="Caroline Kennedy">
+                <div class="team-info">
+                    <h3>Caroline Kennedy</h3>
+                    <p>Personal Trainer</p>
+                </div>
+            </div>
+            <!-- Kasper -->
+            <div class="team-card">
+                <img src="/images/about/tQJxi7pM4w4NIt6nQikc5kXWlI.png" alt="Kasper Maximov">
+                <div class="team-info">
+                    <h3>Kasper Maximov</h3>
+                    <p>Personal Trainer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer injected by JS -->
+
+</body>
+
+</html>

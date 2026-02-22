@@ -1,0 +1,16 @@
+{
+    "name": "barn-gym-api",
+    "version": "1.0.0",
+    "description": "API server for Barn Gym landing pages – lead capture, GHL integration, and analytics",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.18.3",
+        "pg": "^8.11.5"
+    }
+}

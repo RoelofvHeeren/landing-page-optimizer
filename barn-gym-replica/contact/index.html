@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Barn Gym</title>
+    <link rel="stylesheet" href="/global.css">
+
+    <script type="module" src="/js/components.js" defer></script>
+
+    <style>
+        .hero-contact {
+            position: relative;
+            background-image: url('/images/about/plBZtQwlPXyrABG0Y6SCNrt78vo.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 20px;
+        }
+
+        .hero-contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 80px;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+        }
+
+        /* Connect Card */
+        .connect-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 60px auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+        }
+
+        .connect-image {
+            flex: 1.2;
+        }
+
+        .connect-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .connect-content {
+            flex: 1;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .connect-content h2 {
+            font-size: 40px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+        }
+
+        .connect-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-whatsapp {
+            background: #252525;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background: black;
+        }
+
+        .btn-call {
+            background: #252525;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .btn-call:hover {
+            background: black;
+        }
+
+        /* Map and Info Row (inherited from landing structure) */
+        .info-map-row {
+            display: flex;
+            max-width: 1400px;
+            margin: 40px auto;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .info-box {
+            flex: 0.8;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 24px;
+            padding: 40px;
+        }
+
+        .map-box {
+            flex: 2;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .map-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .connect-section {
+                flex-direction: column;
+            }
+
+            .info-map-row {
+                flex-direction: column;
+            }
+
+            .btn-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #fcfcfc;">
+
+    <div
+        style="position: absolute; top: 40px; left: 60px; right: 60px; z-index: 100; display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" class="brand-logo">
+            <img src="/logos/white.png" alt="Barn Gym" style="height: 60px;">
+        </a>
+        <div
+            style="width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.5); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; cursor: pointer;">
+            <span style="width: 20px; height: 1px; background: white;"></span>
+            <span style="width: 20px; height: 1px; background: white;"></span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero-contact">
+        <div class="hero-content">
+            <h1>Contact</h1>
+        </div>
+    </header>
+
+    <!-- Connect -->
+    <section class="connect-section">
+        <div class="connect-image">
+            <img src="/images/contact/8DFgRGS3nKrOKiEuKpu3AoLIF0.png" alt="Team Work">
+        </div>
+        <div class="connect-content">
+            <h2>Connect <span class="text-green" style="font-style: italic;">With Us</span></h2>
+            <p>We're happy to hear how we can help you on your fitness journey!</p>
+            <div class="btn-row">
+                <a href="#" class="btn-whatsapp">Chat Via Whatsapp</a>
+                <a href="#" class="btn-call">Call Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info & Map -->
+    <div class="info-map-row">
+        <div class="info-box">
+            <div style="margin-bottom: 30px;">
+                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Location</p>
+                <p style="font-size: 16px; color: #333;">Burwash, TN19 7DE, United Kingdom</p>
+            </div>
+            <div>
+                <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Opening Hours</p>
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #333;">
+                    <tr>
+                        <td style="padding: 4px 0;">Monday:</td>
+                        <td style="text-align: right;">6:00 AM - 9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 0;">Tuesday:</td>
+                        <td style="text-align: right;">6:00 AM - 9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 0;">Wednesday:</td>
+                        <td style="text-align: right;">6:00 AM - 9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 0;">Thursday:</td>
+                        <td style="text-align: right;">6:00 AM - 9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 0;">Friday:</td>
+                        <td style="text-align: right;">6:00 AM - 9:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 0;">Saturday:</td>
+                        <td style="text-align: right;">7:00 AM - 2:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 0;">Sunday:</td>
+                        <td style="text-align: right;">8:00 AM - 12:00 PM</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="map-box">
+            <img src="/images/corporate-personal-training/l4dFjQh9c43t1L0h0r2a51A0.png" alt="Map Location">
+        </div>
+    </div>
+
+    <!-- Footer injected by JS -->
+
+</body>
+
+</html>

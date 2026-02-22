@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Week Transformation - Barn Gym</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/js/components.js" defer></script>
+    <style>
+        .transformation-hero {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+            overflow: hidden;
+            margin: 20px;
+            border-radius: 40px;
+        }
+
+        .transformation-hero video.bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .transformation-hero .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: white;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            max-width: 400px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-video-box {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .video-card {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .welcome-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .welcome-section h2 {
+            font-size: 52px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .welcome-section p {
+            font-size: 20px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 0 20px;
+            max-width: 1400px;
+            margin: 0 auto 100px auto;
+        }
+
+        .pillar-card {
+            position: relative;
+            height: 500px;
+            border-radius: 24px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .pillar-card:hover {
+            flex: 1.5;
+        }
+
+        /* Simplified flex-like grow effect if used in flexbox, but grid is safer */
+        .pillar-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: opacity 0.3s;
+        }
+
+        .pillar-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .plus-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .testimonials-section {
+            padding: 100px 20px;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 60px auto;
+        }
+
+        .test-video {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #222;
+            aspect-ratio: 1/1;
+        }
+
+        .offer-box {
+            max-width: 1100px;
+            margin: -100px auto 100px auto;
+            background: white;
+            border: 1px solid #17482d;
+            border-radius: 30px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+        }
+
+        .offer-img {
+            flex: 1;
+            background-image: url('/images/transformation/MT1DYfiDm5axfyRRNalMaqXOQJs.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .offer-details {
+            flex: 1;
+            padding: 60px;
+            text-align: left;
+        }
+
+        .offer-details h3 {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .offer-price {
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            color: #17482d;
+            margin-bottom: 30px;
+        }
+
+        .offer-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        .offer-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .offer-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #17482d;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .pillars-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px auto;
+            }
+
+            .hero-video-box {
+                justify-content: center;
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .offer-box {
+                flex-direction: column;
+                margin-top: 50px;
+            }
+
+            .offer-img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="transformation-hero">
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="/testimonial.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transform Your<br>Body In 6 Weeks</h1>
+                <p>Transform your fitness in six weeks with personalised coaching and energising workouts in the East
+                    Sussex hills.</p>
+                <a href="#" class="btn btn-outline-white" style="border-radius: 4px; padding: 12px 30px;">Join Now</a>
+            </div>
+            <div class="hero-video-box">
+                <div class="video-card">
+                    <video src="/testimonial.mp4" style="width:100%; height:100%; object-fit: cover;" controls></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="welcome-section">
+        <div class="container">
+            <h2>Welcome To Barn Gym's <span class="text-green" style="color: #1c7c54;">6 Week Transformation</span></h2>
+            <p>Fitness isn't just about looking good. It's about creating a <span
+                    style="font-weight: bold;">lifestyle</span> that keeps you <span
+                    style="font-weight: bold; color: #1c7c54;">strong, energized,</span> and thriving, no matter how
+                busy life gets.</p>
+            <a href="#" class="btn btn-dark" style="padding: 15px 50px;">Join Now</a>
+        </div>
+    </section>
+
+    <div class="pillars-grid">
+        <div class="pillar-card"
+            style="background-image: url('/images/transformation/2m2l4scK2uEUSqxu1YENctiSVU.png');">
+            <div class="pillar-overlay">
+                <h3>Training Plan</h3>
+                <div class="plus-btn">+</div>
+            </div>
+        </div>
+        <div class="pillar-card" style="background-image: url('/images/transformation/3kbyj1SN0wU8nOsudmvr8L7KY.png');">
+            <div class="pillar-overlay">
+                <h3>Accountability</h3>
+                <div class="plus-btn">+</div>
+            </div>
+        </div>
+        <div class="pillar-card"
+            style="background-image: url('/images/transformation/9J5iAVZ8VVUTgQVe9UrWcDnFyA.png');">
+            <div class="pillar-overlay">
+                <h3>Coaches</h3>
+                <div class="plus-btn">+</div>
+            </div>
+        </div>
+        <div class="pillar-card"
+            style="background-image: url('/images/transformation/CgljCoIH3Vv4AsCuVfh4uOHnIk.png');">
+            <div class="pillar-overlay">
+                <h3>Nutrition</h3>
+                <div class="plus-btn">+</div>
+            </div>
+        </div>
+        <div class="pillar-card"
+            style="background-image: url('/images/transformation/EbvAh0MM6UKpZRbq3KLcc89lcKg.png');">
+            <div class="pillar-overlay">
+                <h3>Community</h3>
+                <div class="plus-btn">+</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-grid">
+                <div class="test-video">
+                    <video src="/testimonial2.mp4" style="width:100%; height:100%; object-fit: cover;" controls></video>
+                </div>
+                <div class="test-video">
+                    <video src="/testimonial3.mp4" style="width:100%; height:100%; object-fit: cover;" controls></video>
+                </div>
+                <div class="test-video">
+                    <video src="/testimonial4.mp4" style="width:100%; height:100%; object-fit: cover;" controls></video>
+                </div>
+                <div class="test-video">
+                    <video src="/testimonial5.mp4" style="width:100%; height:100%; object-fit: cover;" controls></video>
+                </div>
+            </div>
+            <a href="#" class="btn btn-outline-white"
+                style="border-radius: 4px; padding: 12px 30px; margin-bottom: 60px;">Join Now</a>
+        </div>
+    </section>
+
+    <div class="offer-box">
+        <div class="offer-img"></div>
+        <div class="offer-details">
+            <h3>Today Just:</h3>
+            <p class="offer-price">£299</p>
+            <ul class="offer-list">
+                <li><span style="font-weight: 600; color: #17482d;">Personalized Training Plan</span> - Crafted just for
+                    you, every step of the way.</li>
+                <li><span style="font-weight: 600; color: #17482d;">One-on-One Coaching</span> - Professional guidance
+                    to ensure you succeed.</li>
+                <li><span style="font-weight: 600; color: #17482d;">Nutritional Support</span> - Tailored advice to fuel
+                    your fitness journey.</li>
+                <li><span style="font-weight: 600; color: #17482d;">Access to a Private Community</span> - Join a tribe
+                    that motivates and supports.</li>
+                <li><span style="font-weight: 600; color: #17482d;">Serene Workouts in Nature</span> - Train in an
+                    environment designed to inspire.</li>
+            </ul>
+            <a href="#" class="btn btn-dark" style="width: 100%;">Claim Your Spot</a>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Site Workshops - Barn Gym</title>
+    <link rel="stylesheet" href="/global.css">
+
+    <script type="module" src="/js/components.js" defer></script>
+
+    <style>
+        .hero-workshops {
+            position: relative;
+            background-image: url('/images/workshops/sRARSMqcPOsLctHEegVCl9oGn14.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-workshops::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .section-text-center {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-text-center h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .section-text-center p {
+            font-size: 18px;
+            color: #444;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .author-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .author-badge img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* --- Dark section with horizontal scrollers --- */
+        .scroller-section-wrapper {
+            background-image: url('/images/workshops/RphVOHZvK9v3PrzRLDhE0h2hvM.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .scroller-section-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 30, 30, 0.85);
+        }
+
+        .scroller-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .scroller-header {
+            margin-bottom: 40px;
+        }
+
+        .scroller-header h2 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .scroller-header p {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* The horizontal scroll container */
+        .cards-scroller {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 40px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .cards-scroller::-webkit-scrollbar {
+            display: none;
+            /* Safari and Chrome */
+        }
+
+        .scroller-card {
+            flex: 0 0 350px;
+            scroll-snap-align: center;
+            background: white;
+            color: black;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .scroller-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .scroller-card-body {
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .scroller-card-body h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            height: 40px;
+            /* fixed height to align menus */
+        }
+
+        .scroller-card-body p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Detail Cards ( alternating image/text ) */
+        .detail-row {
+            display: flex;
+            background: white;
+            margin: 40px auto;
+            max-width: 1200px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            min-height: 450px;
+        }
+
+        .detail-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .detail-content {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .detail-content h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .detail-content p.description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .detail-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .detail-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: #444;
+            font-size: 15px;
+        }
+
+        .detail-list li::before {
+            content: '•';
+            color: #ccc;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .detail-price {
+            font-size: 18px;
+            color: #3b5f41;
+            /* The green text color */
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .detail-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .btn-booking {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            align-self: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .btn-booking.absolute {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid white;
+        }
+
+        .btn-booking:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            background: #f7f7f7;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .faq-question i::after {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+
+            .detail-row,
+            .detail-row.reverse {
+                flex-direction: column;
+            }
+
+            .detail-image {
+                min-height: 300px;
+            }
+
+            .detail-content {
+                padding: 40px 20px;
+            }
+
+            .btn-booking.absolute {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #fcfcfc;">
+
+    <div
+        style="position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" class="brand-logo">
+            <img src="/logos/white.png" alt="Barn Gym" style="height: 60px;">
+        </a>
+        <div style="display: flex; gap: 20px;">
+            <!-- Inject by script -->
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero-workshops">
+        <div class="hero-content">
+            <h1 class="font-playfair">On-Site Workshops</h1>
+            <p>Stronger culture is built when people disconnect from the office, come together, and focus on what truly
+                drives performance.</p>
+            <a href="#workshops" class="btn btn-white">View Offerings</a>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="section-text-center">
+        <h2 class="font-playfair">A Complete Workshop Experience for <span class="text-green"
+                style="font-style: italic;">High-Performing</span> Teams</h2>
+        <p>We help teams <span class="text-green" style="font-style: italic;">connect</span> better, think clearer, and
+            work smarter through powerful on-site workshops designed to boost productivity, reduce stress, and
+            strengthen team <span class="text-green" style="font-style: italic;">cohesion</span>.</p>
+
+        <div class="author-badge">
+            <img src="/images/workshops/EbvAh0MM6UKpZRbq3KLcc89lcKg.png" alt="Guy Kennedy">
+            <span style="font-size: 14px;">Guy Kennedy - Founder & Head coach @ Barn Gym</span>
+        </div>
+        <a href="#join" class="btn btn-dark" style="padding: 15px 40px;">Join Now</a>
+    </section>
+
+    <!-- Essential & Premium Overview Scrollers -->
+    <section class="scroller-section-wrapper" id="workshops">
+        <div class="scroller-content">
+            <div style="margin-bottom: 60px;">
+                <img src="/logos/white.png" alt="Barn Gym Logo"
+                    style="height: 60px; margin-bottom: 20px;">
+                <div class="scroller-header">
+                    <h2 class="font-playfair">Our Essential Workshops</h2>
+                    <p>£350-650 Per Activity Session</p>
+                </div>
+
+                <div class="cards-scroller" style="padding-bottom: 20px;">
+                    <!-- Yoga -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/6a4CyymymlsDHjDn6QDMSRZiSg.jpeg" alt="Yoga">
+                        <div class="scroller-card-body">
+                            <h3>Yoga Sessions</h3>
+                            <a href="#yoga" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Pilates -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/V1WpSofqUFmI85Q2SYvvWEgPEa8.jpeg" alt="Pilates">
+                        <div class="scroller-card-body">
+                            <h3>Pilates Classes</h3>
+                            <a href="#pilates" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Circuit -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/paSjo7nYwBlOPvhjGYkuAuW8tY.jpeg" alt="Circuit Training">
+                        <div class="scroller-card-body">
+                            <h3>Circuit Training & Bootcamp</h3>
+                            <a href="#circuit" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Cross Country -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/hMRalDqRG3TsPeHwKH5oCTECZ74.jpeg" alt="Cross Country">
+                        <div class="scroller-card-body">
+                            <h3>Cross Country Running</h3>
+                            <a href="#running" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 80px;">
+                <div class="scroller-header">
+                    <h2 class="font-playfair">Our Premium Adventure Experiences</h2>
+                    <p>£600-1,200 Per Experience Package</p>
+                </div>
+
+                <div class="cards-scroller">
+                    <!-- Sheep -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/IxiRwu0i8BeA6SIHrSpSwg74.png" alt="Sheep Herding">
+                        <div class="scroller-card-body">
+                            <h3>Sheep Herding</h3>
+                            <a href="#sheep" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Orienteering -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/YnMYanT9tf7umko3AUZpf8hOxg.jpeg" alt="Orienteering">
+                        <div class="scroller-card-body">
+                            <h3>Orienteering Challenges</h3>
+                            <a href="#orienteering" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn
+                                More</a>
+                        </div>
+                    </div>
+                    <!-- Hay Bale -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/5KqDjCe5ufEkSOgL5K4fWycoIE.webp" alt="Hay Bale Racing">
+                        <div class="scroller-card-body">
+                            <h3>Hay Bale Racing</h3>
+                            <a href="#hay" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Foraging -->
+                    <div class="scroller-card">
+                        <img src="/images/workshops/xegnnfzktHr1aB1v5IOTUSC3rQ.webp" alt="Mushroom Foraging">
+                        <div class="scroller-card-body">
+                            <h3>Mushroom Foraging & Nature Connection</h3>
+                            <a href="#foraging" class="btn btn-dark" style="width: 100%; border-radius: 8px;">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Sections -->
+    <div style="text-align: center; padding: 60px 20px 20px;">
+        <h2 class="font-playfair" style="font-size: 45px;">Our <span class="text-green"
+                style="font-style: italic;">Essential</span> Workshops</h2>
+    </div>
+
+    <!-- Yoga -->
+    <div class="detail-row" id="yoga">
+        <div class="detail-content">
+            <h3>Professional Yoga Sessions</h3>
+            <p class="description">Expert-led yoga classes designed specifically for corporate teams.<br><br>Our
+                certified yoga instructors create accessible sessions that accommodate all fitness levels, focusing on
+                stress relief, flexibility, and mindfulness in our serene countryside setting.</p>
+            <ul class="detail-list">
+                <li>60-90 minute guided yoga sessions</li>
+                <li>All yoga equipment provided</li>
+                <li>Suitable for all abilities</li>
+                <li>Indoor/outdoor options available</li>
+            </ul>
+            <p class="detail-price">£350-450 per session (up to 15 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/6a4CyymymlsDHjDn6QDMSRZiSg.jpeg" alt="Yoga">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Circuit -->
+    <div class="detail-row reverse" id="circuit">
+        <div class="detail-content">
+            <h3>Circuit Training & Bootcamp</h3>
+            <p class="description">High-energy group fitness sessions that build teamwork through shared physical
+                challenges.<br><br>Our circuits combine strength, cardio, and functional movements in fun, competitive
+                formats that encourage collaboration and mutual support.</p>
+            <ul class="detail-list">
+                <li>Team-based exercise stations</li>
+                <li>Competitive group challenges</li>
+                <li>Scalable intensity levels</li>
+                <li>Leadership development opportunities</li>
+            </ul>
+            <p class="detail-price">£400-550 per session (up to 20 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/paSjo7nYwBlOPvhjGYkuAuW8tY.jpeg" alt="Circuit">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Running -->
+    <div class="detail-row" id="running">
+        <div class="detail-content">
+            <h3>Cross Country Running</h3>
+            <p class="description">Expert-led run clubs designed specifically for corporate teams.<br><br>Guided running
+                experiences through our beautiful countryside setting. Our qualified running coaches lead teams through
+                scenic routes, teaching proper technique while building camaraderie through shared physical achievement
+                and natural beauty.</p>
+            <ul class="detail-list">
+                <li>Professional running coach instruction</li>
+                <li>Scenic countryside routes</li>
+                <li>All fitness levels accommodated</li>
+                <li>Technique improvement focus</li>
+            </ul>
+            <p class="detail-price">£350-450 per session (up to 25 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/hMRalDqRG3TsPeHwKH5oCTECZ74.jpeg" alt="Running">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Breathwork -->
+    <div class="detail-row reverse" id="breathwork">
+        <div class="detail-content">
+            <h3>Breathwork Sessions</h3>
+            <p class="description">Expert-led breathwork groups designed specifically for corporate
+                teams.<br><br>Specialised breathwork sessions led by our expert practitioners. Learn powerful breathing
+                techniques including Wim Hof methods that reduce stress, increase energy levels, and improve mental
+                clarity for enhanced workplace performance.</p>
+            <ul class="detail-list">
+                <li>Wim Hof breathing techniques</li>
+                <li>Stress reduction methods</li>
+                <li>Energy enhancement practices</li>
+                <li>Indoor/outdoor options available</li>
+            </ul>
+            <p class="detail-price">£350-500 per session (up to 20 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/26jL4zFKc61aU6nJjruYqwVldg.jpeg" alt="Breathwork">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Ice Bath -->
+    <div class="detail-row" id="icebath">
+        <div class="detail-content">
+            <h3>Ice Bath Therapy</h3>
+            <p class="description">Expert-led ice bath therapy sessions designed specifically for corporate
+                teams.<br><br>Experience the transformative power of cold therapy with professional guidance. This
+                unique wellness experience builds mental resilience, reduces stress, and creates powerful team bonding
+                through shared challenge and overcome adversity together.</p>
+            <ul class="detail-list">
+                <li>Professional cold therapy guidance</li>
+                <li>Safety protocols & supervision</li>
+                <li>Mental resilience building</li>
+                <li>Team bonding through shared challenge</li>
+            </ul>
+            <p class="detail-price">£450-650 per session (up to 12 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/zmBNe6qHAe67EQCeDE4hLI5H1U.jpeg" alt="Ice Bath">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Meditation -->
+    <div class="detail-row reverse" id="meditation">
+        <div class="detail-content">
+            <h3>Meditation & Mindfulness</h3>
+            <p class="description">Expert-led mindfulness classes designed specifically for corporate
+                teams.<br><br>Guided mindfulness sessions that teach practical stress management techniques. Our
+                experienced practitioners lead teams through breathing exercises, meditation practices, and mindfulness
+                techniques that can be applied in the workplace for improved focus and wellbeing.</p>
+            <ul class="detail-list">
+                <li>Workplace stress reduction techniques</li>
+                <li>Guided breathing exercises</li>
+                <li>Mindful communication practices</li>
+                <li>Take-home wellbeing resources</li>
+            </ul>
+            <p class="detail-price">£350-500 per session (up to 25 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/EJP8b8PPfSYM7ICj62QO8gjnY.jpeg" alt="Meditation">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Pilates -->
+    <div class="detail-row" id="pilates">
+        <div class="detail-content">
+            <h3>Pilates Classes</h3>
+            <p class="description">Professional pilates instruction focusing on core strength, posture improvement, and
+                body alignment.<br><br>Our qualified pilates instructors deliver sessions that enhance physical
+                wellbeing while promoting mental focus and team cooperation.</p>
+            <ul class="detail-list">
+                <li>Core strength and stability focus</li>
+                <li>Posture improvement techniques</li>
+                <li>All pilates equipment provided</li>
+                <li>Beginner to advanced modifications</li>
+            </ul>
+            <p class="detail-price">£350-450 per session (up to 15 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/V1WpSofqUFmI85Q2SYvvWEgPEa8.jpeg" alt="Pilates">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Spacer -->
+    <div style="text-align: center; padding: 60px 20px 20px;">
+        <h2 class="font-playfair" style="font-size: 45px;">Our Premium Adventure Experiences</h2>
+    </div>
+
+    <!-- Sheep -->
+    <div class="detail-row reverse" id="sheep">
+        <div class="detail-content">
+            <h3>Sheep Herding Adventures</h3>
+            <p class="description">Our signature team building experience! Work alongside professional shepherds and
+                their dogs to move sheep through the countryside.<br><br>This unique activity develops leadership,
+                communication, and strategic thinking while creating unforgettable memories.</p>
+            <ul class="detail-list">
+                <li>Professional shepherd instruction</li>
+                <li>Working with trained sheepdogs</li>
+                <li>Strategy and teamwork challenges</li>
+                <li>Champagne celebration included</li>
+            </ul>
+            <p class="detail-price">£800-1,000 per session (up to 15 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/IxiRwu0i8BeA6SIHrSpSwg74.png" alt="Sheep">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Orienteering -->
+    <div class="detail-row" id="orienteering">
+        <div class="detail-content">
+            <h3>Orienteering Challenges</h3>
+            <p class="description">Navigate our countryside using maps and teamwork skills.<br><br>Groups are given
+                coordinates and challenges to complete while finding their way to the final celebration point. Builds
+                problem-solving, leadership, and communication skills.</p>
+            <ul class="detail-list">
+                <li>Professional printed maps provided</li>
+                <li>Strategic checkpoint challenges</li>
+                <li>Team communication exercises</li>
+                <li>Celebration drinks at finish point</li>
+            </ul>
+            <p class="detail-price">£500-900 per session (up to 25 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/YnMYanT9tf7umko3AUZpf8hOxg.jpeg" alt="Orienteering">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Hay Bale -->
+    <div class="detail-row reverse" id="hay">
+        <div class="detail-content">
+            <h3>Hay Bale Racing (Seasonal)</h3>
+            <p class="description">A uniquely fun countryside experience where teams compete in hay bale pushing races
+                and challenges.<br><br>This seasonal activity (spring/summer) combines physical exercise with laughter,
+                creating memorable team bonding moments in our authentic farm setting.</p>
+            <ul class="detail-list">
+                <li>Seasonal availability (spring/summer)</li>
+                <li>Team racing competitions</li>
+                <li>Farm-authentic experience</li>
+                <li>Prize ceremonies and celebrations</li>
+            </ul>
+            <p class="detail-price">£500-700 per session (up to 25 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/5KqDjCe5ufEkSOgL5K4fWycoIE.webp" alt="Hay Bale">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Archery -->
+    <div class="detail-row" id="archery">
+        <div class="detail-content">
+            <h3>Archery & Axe Throwing</h3>
+            <p class="description">Experience the thrill of traditional target sports with professional instruction in
+                archery and axe throwing.<br><br>These skill-based activities promote focus, patience, and friendly
+                competition while providing unique team bonding experiences. 18+ adults only for axe throwing.</p>
+            <ul class="detail-list">
+                <li>Professional safety instruction</li>
+                <li>All equipment and targets provided</li>
+                <li>Individual and team competitions</li>
+                <li>Axe throwing: 18+ adults only</li>
+            </ul>
+            <p class="detail-price">£600-800 per session (up to 16 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/BBg1U9Xs1uaZwmMeXTlB5EO1M0.webp" alt="Archery">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Frisbee Golf -->
+    <div class="detail-row reverse" id="frisbee">
+        <div class="detail-content">
+            <h3>Frisbee Golf & Traditional Rounders</h3>
+            <p class="description">Combine classic British sport with modern team activities.<br><br>Our frisbee golf
+                course uses the natural terrain, while rounders tournaments create friendly competition. Both activities
+                are designed to break down hierarchies and encourage playful interaction.</p>
+            <ul class="detail-list">
+                <li>Multi-terrain frisbee golf course</li>
+                <li>Traditional rounders tournaments</li>
+                <li>All equipment provided</li>
+                <li>Prize ceremonies and celebrations</li>
+            </ul>
+            <p class="detail-price">£500-700 per combined session (up to 30 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/IVc0yQ4ggouQpMz0JH0cE8jFFI.jpeg" alt="Frisbee Golf">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Cocktails -->
+    <div class="detail-row" id="cocktails">
+        <div class="detail-content">
+            <h3>Cocktails & Mocktails Experience</h3>
+            <p class="description">Learn the art of creating delicious cocktails and health-conscious
+                mocktails.<br><br>Our mixology experts teach teams to craft beautiful drinks using fresh ingredients,
+                herbs, and superfoods - perfect for evening entertainment with options for both alcoholic and
+                non-alcoholic preferences.</p>
+            <ul class="detail-list">
+                <li>Professional mixology instruction</li>
+                <li>Superfood and herb ingredients</li>
+                <li>Recipe cards to take home</li>
+                <li>Team cocktail competitions</li>
+            </ul>
+            <p class="detail-price">£700-1,000 per experience (up to 20 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/SUUNl1bFM8J9AkjnSAuRNYXDM.webp" alt="Cocktails">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Foraging -->
+    <div class="detail-row reverse" id="foraging">
+        <div class="detail-content">
+            <h3>Mushroom Foraging & Nature Connection</h3>
+            <p class="description">Explore our 30-acre grounds with expert foragers who teach teams to identify edible
+                mushrooms, berries, and nuts.<br><br>This educational adventure combines learning with team bonding
+                while connecting corporate groups with the natural world. Seasonal availability: Late September through
+                early November.</p>
+            <ul class="detail-list">
+                <li>Expert forager guidance</li>
+                <li>Seasonal produce identification (Sept-Nov)</li>
+                <li>Sustainable harvesting practices</li>
+                <li>Recipe cards and preparation tips</li>
+            </ul>
+            <p class="detail-price">£600-800 per session (up to 20 participants)</p>
+        </div>
+        <div class="detail-image">
+            <img src="/images/workshops/xegnnfzktHr1aB1v5IOTUSC3rQ.webp" alt="Foraging">
+            <a href="#book" class="btn-booking absolute">Book Now</a>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="font-playfair">Your Questions, <span class="text-green" style="font-style: italic;">Answered</span>
+        </h2>
+
+        <div class="faq-item">
+            <div class="faq-question">What kinds of workshops do you offer? <i></i></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can workshops be held on-site at our office? <i></i></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How long are the workshops? <i></i></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What's the price range? <i></i></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you handle all equipment? <i></i></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do we book? <i></i></div>
+        </div>
+    </section>
+
+    <!-- Talk To Our Team -->
+    <section
+        style="display: flex; gap: 40px; justify-content: center; align-items: center; max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+        <div style="flex: 1; text-align: center;">
+            <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 20px;">Talk To Our <span class="text-green"
+                    style="font-style: italic;">Team</span></h2>
+            <img src="/images/workshops/7wZnlUom2UVa7t0pRCeSpeKhVkw.png" alt="Team"
+                style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        </div>
+        <div style="flex: 1;">
+            <!-- Mock Map Image -->
+            <img src="/images/corporate-personal-training/l4dFjQh9c43t1L0h0r2a51A0.png" alt="Map"
+                style="width: 100%; border-radius: 20px; object-fit: cover;">
+        </div>
+    </section>
+
+    <!-- Footer injected by JS -->
+</body>
+
+</html>

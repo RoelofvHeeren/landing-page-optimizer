@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logos/Barn gym white logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barn Gym - The Training System For Busy People</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- PostHog Analytics -->
+  <script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    const POSTHOG_KEY = window.__ENV_POSTHOG_KEY__ || 'phc_placeholder';
+    posthog.init(POSTHOG_KEY, { api_host: 'https://app.posthog.com', autocapture: false, capture_pageview: false });
+  </script>
+
+  <!-- API config -->
+  <script>
+    window.API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3000' : '';
+    window.PAGE_SOURCE_PREFIX = 'pt';
+  </script>
+</head>
+
+<body>
+  <!-- HEAVY REPLICA STRUCTURE -->
+  <main>
+    <!-- Hero Section Container -->
+    <section class="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+          <div class="hero-grid">
+            <!-- Left Column: Content -->
+            <div class="hero-text-content">
+              <h1 class="hero-headline animate-fade-up">Dedicated Private Coaching for <span
+                  class="underline-highlight">Guaranteed Results</span></h1>
+              <p class="hero-subheadline animate-fade-up" style="animation-delay: 0.1s;"><strong>Special Offer:</strong>
+                Your First 1-on-1 Session Is 100% Free. Stop guessing and get the expert guidance you need to succeed.
+              </p>
+
+              <div class="hero-trust-elements animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="rating-box">
+                  <div class="stars">★★★★★</div>
+                  <p class="micro-copy-premium">East Sussex's Premier Personal Training</p>
+                </div>
+                <p class="location-copy">Serving Etchingham & Surrounding East Sussex Areas</p>
+              </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="hero-form-container animate-fade-up" style="animation-delay: 0.3s;">
+              <div class="glass-form-card">
+                <h3 class="form-title">Start Your Transformation</h3>
+                <p class="form-subtitle">Talk to a trainer & get your custom plan.</p>
+
+                <form id="heroLeadForm" class="premium-form">
+                  <div class="form-group-premium">
+                    <input type="text" name="name" placeholder="Full Name" required class="premium-input">
+                  </div>
+                  <div class="form-group-premium">
+                    <input type="email" name="email" placeholder="Email Address" required class="premium-input">
+                  </div>
+                  <div class="form-group-premium">
+                    <input type="tel" name="phone" placeholder="Phone Number" required class="premium-input">
+                  </div>
+                  <button type="submit" class="btn btn-premium-submit">Request Fitness Consultation →</button>
+                  <p class="form-footer-note">⚡️ Limited spots available for this month</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Is This For Section -->
+    <section class="avatars-section" style="padding: 80px 0; background-color: #ffffff;">
+      <h2 class="section-headline text-center">Who Is <span class="green-text">1-On-1 Personal Training</span> For?</h2>
+      <p class="section-subheadline text-center" style="max-width: 800px; margin: 0 auto 50px;">
+        Designed specifically for East Sussex residents who want a direct, private roadmap to achieving their absolute
+        best.
+      </p>
+
+      <div class="avatar-grid container">
+        <!-- Card 1 -->
+        <div class="card"
+          style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid #eee; background: #fff;">
+          <div class="card-image-wrapper">
+            <img src="/images/IMG_9247.jpg" alt="Specific Goals & Milestones" />
+          </div>
+          <div class="card-content" style="padding: 40px 30px; text-align: center;">
+            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 15px;">Specific
+              Goals & Milestones</h3>
+            <p class="card-text" style="color: #555; font-size: 16px; line-height: 1.6;">You have a clear objective—like
+              building targeted strength or preparing for an event—and you need a fully customized roadmap to get there
+              without wasting any time at all.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card"
+          style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px; border-radius: 12px; overflow: hidden; position: relative; border: 2px solid var(--primary-color); background: #fff;">
+          <div
+            style="position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: #fff; padding: 4px 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; font-size: 12px; font-weight: bold; text-transform: uppercase; z-index: 10;">
+            Most Common
+          </div>
+          <div class="card-image-wrapper">
+            <img src="/images/IMG_9412.jpg" alt="Form Correction & Rehab" />
+          </div>
+          <div class="card-content" style="padding: 40px 30px; text-align: center;">
+            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 15px;">Form
+              Correction & Rehab</h3>
+            <p class="card-text" style="color: #555; font-size: 16px; line-height: 1.6;">You’re dealing with lingering
+              injuries or mobility issues and need an expert coach standing beside you to ensure every training
+              repetition is both safe and 100% effective.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card"
+          style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid #eee; background: #fff;">
+          <div class="card-image-wrapper">
+            <img src="/images/IMG_9411.jpg" alt="Maximum Accountability" />
+          </div>
+          <div class="card-content" style="padding: 40px 30px; text-align: center;">
+            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 15px;">Maximum
+              Accountability</h3>
+            <p class="card-text" style="color: #555; font-size: 16px; line-height: 1.6;">You want the absolute fastest
+              route to building strength and confidence, skipping the crowds around the Etchingham area for premium
+              1-on-1
+              bespoke coaching and attention.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 10px; text-align: center; grid-column: 1 / -1;">
+          <button class="btn btn-dark survey-trigger">Apply For Personal Training</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+      <div class="container text-center">
+        <p class="section-subtext-small">Results</p>
+        <h2 class="section-headline dark-text" style="margin-bottom: 20px;">Real <span class="green-text">People</span>,
+          Real <span class="green-text">Results</span></h2>
+        <p class="section-subheadline" style="color: #666; font-weight: 300;">No influencers. No fake
+          transformations. Just everyday members.</p>
+
+        <div style="margin-bottom: 0;">
+          <button class="btn btn-dark survey-trigger">Apply For Personal Training</button>
+        </div>
+
+        <!-- Marquee Carousels -->
+        <div class="marquee-wrapper">
+          <!-- Row 1 (Left to Right) -->
+          <div class="marquee-row marquee-left-right">
+            <div class="marquee-content">
+              <img src="/transformations/13.avif" alt="Result" />
+              <img src="/transformations/14.avif" alt="Result" />
+              <img src="/transformations/3.avif" alt="Result" />
+              <img src="/transformations/5.avif" alt="Result" />
+              <img src="/transformations/7.avif" alt="Result" />
+              <img src="/transformations/Amy.avif" alt="Result" />
+              <img src="/transformations/Euan.avif" alt="Result" />
+              <img src="/transformations/Ferguson.avif" alt="Result" />
+              <img src="/transformations/Harrison.avif" alt="Result" />
+              <!-- Duplicate for infinite loop -->
+              <img src="/transformations/13.avif" alt="Result" />
+              <img src="/transformations/14.avif" alt="Result" />
+              <img src="/transformations/3.avif" alt="Result" />
+              <img src="/transformations/5.avif" alt="Result" />
+              <img src="/transformations/7.avif" alt="Result" />
+              <img src="/transformations/Amy.avif" alt="Result" />
+              <img src="/transformations/Euan.avif" alt="Result" />
+              <img src="/transformations/Ferguson.avif" alt="Result" />
+              <img src="/transformations/Harrison.avif" alt="Result" />
+            </div>
+          </div>
+
+          <!-- Row 2 (Right to Left) -->
+          <div class="marquee-row marquee-right-left" style="margin-top: 20px;">
+            <div class="marquee-content">
+              <img src="/transformations/James .avif" alt="Result" />
+              <img src="/transformations/James.avif" alt="Result" />
+              <img src="/transformations/Marcus.avif" alt="Result" />
+              <img src="/transformations/Mark.avif" alt="Result" />
+              <img src="/transformations/Morgaine.avif" alt="Result" />
+              <img src="/transformations/Rihana.avif" alt="Result" />
+              <img src="/transformations/Roelof.avif" alt="Result" />
+              <img src="/transformations/Toby.avif" alt="Result" />
+              <img src="/transformations/Tom.avif" alt="Result" />
+              <!-- Duplicate for infinite loop -->
+              <img src="/transformations/James .avif" alt="Result" />
+              <img src="/transformations/James.avif" alt="Result" />
+              <img src="/transformations/Marcus.avif" alt="Result" />
+              <img src="/transformations/Mark.avif" alt="Result" />
+              <img src="/transformations/Morgaine.avif" alt="Result" />
+              <img src="/transformations/Rihana.avif" alt="Result" />
+              <img src="/transformations/Roelof.avif" alt="Result" />
+              <img src="/transformations/Toby.avif" alt="Result" />
+              <img src="/transformations/Tom.avif" alt="Result" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="steps-section">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 50px;">
+          <h2 class="section-headline dark-text">How It <span class="green-text">Works</span></h2>
+          <p class="section-subheadline dark-text">A proven 3-step process to get you from starting line to goal line.
+          </p>
+        </div>
+
+        <div class="step-container">
+          <div class="step-nav">
+            <div class="step-tab active" data-step="1">STEP 1</div>
+            <div class="step-tab" data-step="2">STEP 2</div>
+            <div class="step-tab" data-step="3">STEP 3</div>
+          </div>
+
+          <div class="step-content-row">
+            <div class="step-image">
+              <img id="step-img" src="/images/IMG_1212.jpg" alt="Consultation" />
+            </div>
+            <div class="step-details">
+              <span class="step-number" id="step-num">01</span>
+              <h3 class="step-title font-playfair" id="step-head">The Tactical Consultation</h3>
+              <p class="step-text" id="step-desc">Beyond a chat—we map your starting line and identify precisely what's
+                held you back from achieving your absolute best.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 40px;">
+          <button class="btn btn-dark survey-trigger">Apply For Personal Training</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" style="padding: 80px 0; background-color: #ffffff;">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 50px;">
+          <p class="section-subtext-small">Memberships</p>
+          <h2 class="section-headline dark-text">Personal Training <span class="green-text">Weekly Packages</span></h2>
+          <p class="section-subheadline" style="max-width: 800px; margin: 0 auto;">Transparent pricing for those ready
+            to commit to a serious transformation.</p>
+        </div>
+
+        <div class="avatar-grid">
+          <!-- 4 Sessions -->
+          <div class="card pricing-card">
+            <div class="card-image-wrapper">
+              <img src="/images/IMG_1690.jpg" alt="4 Sessions" />
+            </div>
+            <div class="card-content" style="padding: 40px 30px; text-align: center;">
+              <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 5px;">4
+                Sessions</h3>
+              <p style="color: #666; margin-bottom: 20px;">A Month</p>
+              <div class="price" style="font-size: 48px; color: #111; font-weight: 900; margin-bottom: 20px;">£250</div>
+              <p style="color: #555; margin-bottom: 25px;">Includes Online Coaching</p>
+              <button class="btn btn-dark survey-trigger" style="width: 100%;">Start Today</button>
+            </div>
+          </div>
+
+          <!-- 8 Sessions -->
+          <div class="card pricing-card" style="border: 2px solid var(--primary-color);">
+            <div class="card-image-wrapper">
+              <img src="/images/IMG_2278.jpg" alt="8 Sessions" />
+            </div>
+            <div class="card-content" style="padding: 40px 30px; text-align: center;">
+              <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 5px;">8
+                Sessions</h3>
+              <p style="color: #666; margin-bottom: 20px;">A Month</p>
+              <div class="price" style="font-size: 48px; color: #111; font-weight: 900; margin-bottom: 20px;">£490</div>
+              <p style="color: #555; margin-bottom: 25px;">Includes Online Coaching</p>
+              <button class="btn btn-dark survey-trigger" style="width: 100%;">Start Today</button>
+            </div>
+          </div>
+
+          <!-- 12 Sessions -->
+          <div class="card pricing-card">
+            <div class="card-image-wrapper">
+              <img src="/images/IMG_9586.jpg" alt="12 Sessions" />
+            </div>
+            <div class="card-content" style="padding: 40px 30px; text-align: center;">
+              <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 5px;">12
+                Sessions</h3>
+              <p style="color: #666; margin-bottom: 20px;">A Month</p>
+              <div class="price" style="font-size: 48px; color: #111; font-weight: 900; margin-bottom: 20px;">£650</div>
+              <p style="color: #555; margin-bottom: 25px;">Includes Online Coaching</p>
+              <button class="btn btn-dark survey-trigger" style="width: 100%;">Start Today</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="padding-bottom: 60px;">
+      <div class="testimonial-wrapper">
+        <div class="testimonial-overlay"></div>
+        <div class="testimonial-content">
+          <div class="testimonial-left">
+            <h2 class="section-headline white-text font-playfair">Hear From Our Members</h2>
+            <button class="btn btn-primary survey-trigger" style="margin-top: 20px;">Apply For Personal
+              Training</button>
+          </div>
+          <div class="testimonial-right">
+            <!-- Functional Video Carousel -->
+            <div class="video-carousel-placeholder" id="testimonialSlider">
+              <div class="carousel-nav prev" id="carouselPrev">&#10094;</div>
+              <div class="carousel-nav next" id="carouselNext">&#10095;</div>
+              <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                  <video src="/testimonial1.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial2.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial3.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial4.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial5.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial6.mp4" controls playsinline></video>
+                </div>
+              </div>
+              <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="container text-center">
+        <h2 class="footer-headline">Start Your Personal Training Journey</h2>
+        <p class="footer-subtext">Stop guessing. Work with an expert coach and finally achieve the results you deserve.
+        </p>
+
+        <button class="btn btn-dark survey-trigger" style="margin-bottom: 50px;">Apply For Personal Training</button>
+
+        <div class="footer-logo">
+          <img src="/logos/Barn Gym Logo transparent copy.png" alt="Barn Community"
+            style="max-width: 150px; margin: 0 auto; display: block;" />
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+
+        <p class="legal-text">
+          This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by
+          Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+        </p>
+      </div>
+      <!-- HTML for Survey Modal -->
+      <div class="modal-overlay" id="surveyModal">
+        <div class="survey-card">
+          <button class="modal-close" id="closeSurvey">&times;</button>
+
+          <!-- Step 1 -->
+          <div class="survey-step active" id="step1">
+            <h3 class="survey-title">What are you looking to achieve with 1-on-1 coaching?</h3>
+            <button class="option-btn next-step">Build Muscle & Targeted Strength</button>
+            <button class="option-btn next-step">Form Correction & Injury Rehab</button>
+            <button class="option-btn next-step">Fast-Tracked Weight Loss</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="survey-step" id="step2">
+            <h3 class="survey-title">How many times a week can you realistically train with a coach?</h3>
+            <button class="option-btn next-step">1 Session (Just to keep form in check)</button>
+            <button class="option-btn next-step">2 Sessions (Consistent progress)</button>
+            <button class="option-btn next-step">3 Sessions (Maximum results)</button>
+          </div>
+
+          <!-- Step 3 (Lead Capture) -->
+          <div class="survey-step" id="step3">
+            <h3 class="survey-title">Where should we send your private consultation booking link?</h3>
+            <div id="exitBadgePlaceholder"></div> <!-- Injected during exit intent -->
+            <form id="leadForm">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input class="form-input" type="text" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input class="form-input" type="email" name="email" placeholder="john@example.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input class="form-input" type="tel" name="phone" placeholder="+44 7700 900077" required />
+              </div>
+              <button type="submit" class="submit-btn" id="surveySubmitBtn">Secure My Spot</button>
+            </form>
+          </div>
+
+          <!-- Success State -->
+          <div class="survey-step" id="step4">
+            <div style="font-size: 60px; margin-bottom: 20px;">✅</div>
+            <h3 class="survey-title">You're on the list!</h3>
+            <p style="font-size: 18px; color: #555;">Our head coach will be in touch shortly to finalize your 1-on-1
+              Personal Training introduction and free first session.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </footer>
+  </main>
+
+  <!-- Script for Step Interactivity -->
+  <script>
+    const stepsData = {
+      1: {
+        num: '01',
+        head: 'The Tactical Consultation',
+        desc: "Beyond a chat—we map your starting line and identify precisely what's held you back from achieving your absolute best.",
+        img: '/images/IMG_1212.jpg'
+      },
+      2: {
+        num: '02',
+        head: 'The Benchmark Session',
+        desc: 'Your first training experience where we test movement, establish baselines, and find your rhythm with expert coaching standing beside you.',
+        img: '/images/IMG_2537.jpg'
+      },
+      3: {
+        num: '03',
+        head: 'The Custom Blueprint',
+        desc: 'A 100% bespoke plan designed for your schedule, your body, and your non-negotiable goals. No more guessing, just direct action.',
+        img: '/images/IMG_0885.jpg'
+      }
+    };
+
+    const tabs = document.querySelectorAll('.step-tab');
+    const stepNum = document.getElementById('step-num');
+    const stepHead = document.getElementById('step-head');
+    const stepDesc = document.getElementById('step-desc');
+    const stepImg = document.getElementById('step-img');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all
+        tabs.forEach(t => t.classList.remove('active'));
+        // Add to clicked
+        tab.classList.add('active');
+
+        // Update content
+        const stepId = tab.getAttribute('data-step');
+        const data = stepsData[stepId];
+
+        stepNum.textContent = data.num;
+        stepHead.textContent = data.head;
+        stepDesc.textContent = data.desc;
+        stepImg.src = data.img;
+      });
+    });
+
+    // Testimonial Carousel Logic
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+
+    let currentIndex = 0;
+    const totalSlides = dots.length;
+
+    function updateCarousel(index) {
+      currentIndex = index;
+
+      // Update dots
+      dots.forEach(d => d.classList.remove('active'));
+      dots[currentIndex].classList.add('active');
+
+      // Move track via native scrolling for smooth drag support
+      const slideWidth = track.clientWidth;
+      track.scrollTo({
+        left: slideWidth * currentIndex,
+        behavior: 'smooth'
+      });
+
+      // Pause all videos
+      const allVideos = track.querySelectorAll('video');
+      allVideos.forEach(v => {
+        v.pause();
+      });
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        const index = parseInt(e.target.getAttribute('data-index'));
+        updateCarousel(index);
+      });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = totalSlides - 1;
+      updateCarousel(newIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= totalSlides) newIndex = 0;
+      updateCarousel(newIndex);
+    });
+
+    // Optional: Add drag to scroll support using mouse events
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      track.classList.add('active');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('mouseleave', () => {
+      isDown = false;
+      track.classList.remove('active');
+    });
+    track.addEventListener('mouseup', () => {
+      isDown = false;
+      track.classList.remove('active');
+      // Snap to nearest slide
+      const slideWidth = track.clientWidth;
+      const nearestIndex = Math.round(track.scrollLeft / slideWidth);
+      updateCarousel(nearestIndex);
+    });
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 2; // scroll-fast
+      track.scrollLeft = scrollLeft - walk;
+    });
+
+    // ─── Analytics & Lead Capture ───────────────────────────────────────────
+
+    const SESSION_ID = (() => {
+      let id = sessionStorage.getItem('bg_session');
+      if (!id) { id = crypto.randomUUID(); sessionStorage.setItem('bg_session', id); }
+      return id;
+    })();
+
+    posthog.capture('$pageview', { page: window.PAGE_SOURCE_PREFIX, url: location.href });
+
+    async function trackEvent(event_type, event_data = {}) {
+      posthog.capture(event_type, { ...event_data, page: window.PAGE_SOURCE_PREFIX });
+      fetch(window.API_BASE + '/api/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session_id: SESSION_ID, page: window.PAGE_SOURCE_PREFIX, event_type, event_data })
+      }).catch(() => { });
+    }
+
+    const scrollMilestones = { 25: false, 50: false, 75: false, 100: false };
+    window.addEventListener('scroll', () => {
+      const scrollPct = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
+      [25, 50, 75, 100].forEach(m => {
+        if (!scrollMilestones[m] && scrollPct >= m) {
+          scrollMilestones[m] = true;
+          trackEvent('scroll_' + m, { depth: m });
+        }
+      });
+    });
+
+    // ─── Survey Modal & Exit Intent Logic ───────────────────────────────────
+    const modal = document.getElementById('surveyModal');
+    const triggers = document.querySelectorAll('.survey-trigger');
+    const closeBtn = document.getElementById('closeSurvey');
+    const steps = document.querySelectorAll('.survey-step');
+    const nextBtns = document.querySelectorAll('.next-step');
+    const leadForm = document.getElementById('leadForm');
+    const exitBadgePlaceholder = document.getElementById('exitBadgePlaceholder');
+    let exitIntentFired = false;
+    let currentStep = 0;
+    let surveyAnswers = {};
+
+    function openModal(isExitIntent = false) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      trackEvent('modal_open', { trigger: isExitIntent ? 'exit_intent' : 'button' });
+      if (isExitIntent) {
+        exitBadgePlaceholder.innerHTML = '<div class="exit-badge">Wait! Before You Go...</div>';
+        goToStep(2);
+      } else {
+        exitBadgePlaceholder.innerHTML = '';
+        goToStep(0);
+      }
+    }
+
+    function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; }
+
+    function goToStep(index) {
+      steps.forEach(s => s.classList.remove('active'));
+      steps[index].classList.add('active');
+      currentStep = index;
+      trackEvent('survey_step', { step: index + 1 });
+      if (index === 2) trackEvent('form_start', { source: window.PAGE_SOURCE_PREFIX + '-modal' });
+    }
+
+    triggers.forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); }); });
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+    nextBtns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        surveyAnswers['q' + (currentStep + 1)] = btn.textContent.trim();
+        if (currentStep < steps.length - 1) goToStep(currentStep + 1);
+      });
+    });
+
+    // ─── Modal lead form submit ─────────────────────────────────────────────
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('surveySubmitBtn');
+      submitBtn.innerText = 'Securing...';
+      submitBtn.disabled = true;
+
+      const name = leadForm.querySelector('[name="name"]')?.value.trim();
+      const email = leadForm.querySelector('[name="email"]')?.value.trim();
+      const phone = leadForm.querySelector('[name="phone"]')?.value.trim();
+      const source = window.PAGE_SOURCE_PREFIX + '-modal';
+
+      try {
+        const res = await fetch(window.API_BASE + '/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name, email, phone, source, session_id: SESSION_ID,
+            survey_q1: surveyAnswers.q1, survey_q2: surveyAnswers.q2
+          })
+        });
+        const json = await res.json();
+        if (!json.success) throw new Error(json.error);
+        posthog.identify(email, { name, email, phone });
+        trackEvent('lead_captured', { source, method: 'modal' });
+        goToStep(3);
+      } catch (err) {
+        console.error('Lead submit error:', err);
+        submitBtn.innerText = 'Try Again';
+        submitBtn.disabled = false;
+      }
+    });
+
+    // ─── Hero lead form submit ──────────────────────────────────────────────
+    const heroLeadForm = document.getElementById('heroLeadForm');
+    if (heroLeadForm) {
+      heroLeadForm.querySelector('input')?.addEventListener('focus', () => {
+        trackEvent('form_start', { source: window.PAGE_SOURCE_PREFIX + '-hero' });
+      }, { once: true });
+
+      heroLeadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = heroLeadForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = 'Sending...';
+        submitBtn.disabled = true;
+
+        const name = heroLeadForm.querySelector('[name="name"]').value.trim();
+        const email = heroLeadForm.querySelector('[name="email"]').value.trim();
+        const phone = heroLeadForm.querySelector('[name="phone"]')?.value.trim();
+        const source = window.PAGE_SOURCE_PREFIX + '-hero';
+
+        try {
+          const res = await fetch(window.API_BASE + '/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, phone, source, session_id: SESSION_ID })
+          });
+          const json = await res.json();
+          if (!json.success) throw new Error(json.error);
+          posthog.identify(email, { name, email, phone });
+          trackEvent('lead_captured', { source, method: 'hero-form' });
+          submitBtn.innerText = 'Check Your Email! ✅';
+          heroLeadForm.reset();
+          setTimeout(() => { submitBtn.innerText = originalText; submitBtn.disabled = false; }, 4000);
+        } catch (err) {
+          console.error('Hero form error:', err);
+          submitBtn.innerText = 'Try Again';
+          submitBtn.disabled = false;
+        }
+      });
+    }
+
+    // Exit Intent
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY < 0 && !exitIntentFired && !modal.classList.contains('active')) {
+        exitIntentFired = true;
+        openModal(true);
+      }
+    });
+  </script>
+</body>
+
+</html>

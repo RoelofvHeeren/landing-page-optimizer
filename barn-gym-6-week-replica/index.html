@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logos/Barn gym white logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barn Gym - The Training System For Busy People</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- PostHog Analytics -->
+  <script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    const POSTHOG_KEY = window.__ENV_POSTHOG_KEY__ || 'phc_placeholder';
+    posthog.init(POSTHOG_KEY, { api_host: 'https://app.posthog.com', autocapture: false, capture_pageview: false });
+  </script>
+
+  <!-- API config -->
+  <script>
+    // Set to your Railway URL when deployed, e.g. https://barn-gym-api.railway.app
+    window.API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3000' : '';
+    window.PAGE_SOURCE_PREFIX = '6-week';
+  </script>
+</head>
+
+<body>
+  <!-- HEAVY REPLICA STRUCTURE -->
+  <main>
+    <!-- Hero Section Container -->
+    <section class="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+          <div class="hero-grid">
+            <!-- Left Column: Content -->
+            <div class="hero-content">
+              <h1 class="hero-headline">The Etchingham Area's Premier Gym:<br>Start With Our <span
+                  class="underline-highlight">Welcome Offer</span></h1>
+              <p class="hero-subheadline">A proven 6-week roadmap to build strength, lose fat, and reclaim your energy.
+                Join a community of locals who actually get results.</p>
+
+              <div style="margin-top: 30px; display: flex; align-items: center; gap: 10px;">
+                <div style="color: #FACC15; font-size: 18px;">★★★★★</div>
+                <p class="micro-copy" style="color: #ffffff; opacity: 1; margin: 0; font-weight: 500;">Join 160+ Locals
+                  Around The Etchingham Area</p>
+              </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="hero-form-container">
+              <div class="glass-form-card">
+                <h3 class="form-title">Claim Your Welcome Offer</h3>
+                <p class="form-subtitle">Talk to a coach & get your 6-week custom plan.</p>
+
+                <form id="heroLeadForm" class="premium-form">
+                  <div class="form-group-premium">
+                    <input type="text" name="name" placeholder="Full Name" required class="premium-input">
+                  </div>
+                  <div class="form-group-premium">
+                    <input type="email" name="email" placeholder="Email Address" required class="premium-input">
+                  </div>
+                  <div class="form-group-premium">
+                    <input type="tel" name="phone" placeholder="Phone Number" required class="premium-input">
+                  </div>
+                  <button type="submit" class="btn-premium-submit">Secure My Spot →</button>
+                  <p class="form-footer-note">⚡️ Limited spots available for this month</p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="avatars-section" style="padding: 80px 0; background-color: #ffffff;">
+      <h2 class="section-headline text-center">Who Is Our <span class="green-text">Welcome Offer</span> For?</h2>
+      <p class="section-subheadline text-center" style="max-width: 800px; margin: 0 auto 50px;">
+        This is specifically for locals near Etchingham, Robertsbridge, and Heathfield who are looking for a "gym near
+        me" that actually provides a result-driven community.
+      </p>
+
+      <div class="avatar-grid container">
+        <!-- Card 1 -->
+        <div class="card"
+          style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid #eee;">
+          <div class="card-image-wrapper">
+            <img src="/images/busy.png" alt="The Busy Professional"
+              style="width: 100%; height: 260px; object-fit: cover; display: block;" />
+          </div>
+          <div class="card-content" style="padding: 30px 25px; text-align: center; background: #fff;">
+            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 12px;">The Busy
+              Professional</h3>
+            <p class="card-text" style="color: #555; font-size: 15px; line-height: 1.6;">You work long hours and
+              struggle to find a fitness routine that actually fits your schedule. You need someone to give you clarity
+              and structure.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card"
+          style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px; border-radius: 12px; overflow: hidden; position: relative; border: 2px solid var(--primary-color);">
+          <div
+            style="position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--primary-color); color: #fff; padding: 4px 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; font-size: 12px; font-weight: bold; text-transform: uppercase; z-index: 10;">
+            Most Common
+          </div>
+          <div class="card-image-wrapper">
+            <img src="/images/frustrated.png" alt="The Frustrated Gym-Goer"
+              style="width: 100%; height: 260px; object-fit: cover; display: block;" />
+          </div>
+          <div class="card-content" style="padding: 30px 25px; text-align: center; background: #fff;">
+            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 12px;">The
+              Frustrated Gym-Goer</h3>
+            <p class="card-text" style="color: #555; font-size: 15px; line-height: 1.6;">You've tried the local leisure
+              centres in East Sussex, but you feel lost on the gym floor and aren't seeing the physical changes you want
+              in
+              the mirror.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card"
+          style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid #eee;">
+          <div class="card-image-wrapper">
+            <img src="/images/community.png" alt="The Community Seeker"
+              style="width: 100%; height: 260px; object-fit: cover; display: block;" />
+          </div>
+          <div class="card-content" style="padding: 30px 25px; text-align: center; background: #fff;">
+            <h3 class="card-title font-playfair" style="color: #111; font-weight: bold; margin-bottom: 12px;">The
+              Community Seeker</h3>
+            <p class="card-text" style="color: #555; font-size: 15px; line-height: 1.6;">You want more than just access
+              to treadmills. You want a private strength coaching facility with a tribe of like-minded locals to hold
+              you accountable.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center; grid-column: 1 / -1;">
+          <button class="btn btn-dark survey-trigger">Apply For Our Welcome Offer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+      <div class="container text-center">
+        <p class="section-subtext-small">Results</p>
+        <h2 class="section-headline dark-text" style="margin-bottom: 20px;">Real <span class="green-text">People</span>,
+          Real <span class="green-text">Results</span></h2>
+        <p class="section-subheadline" style="color: #666; font-weight: 300;">No influencers. No fake
+          transformations. Just everyday members.</p>
+
+        <div style="margin-bottom: 40px;">
+          <button class="btn btn-dark survey-trigger">Start Your 6 Week Journey</button>
+        </div>
+
+        <!-- Marquee Carousels -->
+        <div class="marquee-wrapper">
+          <!-- Row 1 (Left to Right) -->
+          <div class="marquee-row marquee-left-right">
+            <div class="marquee-content">
+              <img src="/transformations/13.avif" alt="Result" />
+              <img src="/transformations/14.avif" alt="Result" />
+              <img src="/transformations/3.avif" alt="Result" />
+              <img src="/transformations/5.avif" alt="Result" />
+              <img src="/transformations/7.avif" alt="Result" />
+              <img src="/transformations/Amy.avif" alt="Result" />
+              <img src="/transformations/Euan.avif" alt="Result" />
+              <img src="/transformations/Ferguson.avif" alt="Result" />
+              <img src="/transformations/Harrison.avif" alt="Result" />
+              <!-- Duplicate for infinite loop -->
+              <img src="/transformations/13.avif" alt="Result" />
+              <img src="/transformations/14.avif" alt="Result" />
+              <img src="/transformations/3.avif" alt="Result" />
+              <img src="/transformations/5.avif" alt="Result" />
+              <img src="/transformations/7.avif" alt="Result" />
+              <img src="/transformations/Amy.avif" alt="Result" />
+              <img src="/transformations/Euan.avif" alt="Result" />
+              <img src="/transformations/Ferguson.avif" alt="Result" />
+              <img src="/transformations/Harrison.avif" alt="Result" />
+            </div>
+          </div>
+
+          <!-- Row 2 (Right to Left) -->
+          <div class="marquee-row marquee-right-left" style="margin-top: 20px;">
+            <div class="marquee-content">
+              <img src="/transformations/James .avif" alt="Result" />
+              <img src="/transformations/James.avif" alt="Result" />
+              <img src="/transformations/Marcus.avif" alt="Result" />
+              <img src="/transformations/Mark.avif" alt="Result" />
+              <img src="/transformations/Morgaine.avif" alt="Result" />
+              <img src="/transformations/Rihana.avif" alt="Result" />
+              <img src="/transformations/Roelof.avif" alt="Result" />
+              <img src="/transformations/Toby.avif" alt="Result" />
+              <img src="/transformations/Tom.avif" alt="Result" />
+              <!-- Duplicate for infinite loop -->
+              <img src="/transformations/James .avif" alt="Result" />
+              <img src="/transformations/James.avif" alt="Result" />
+              <img src="/transformations/Marcus.avif" alt="Result" />
+              <img src="/transformations/Mark.avif" alt="Result" />
+              <img src="/transformations/Morgaine.avif" alt="Result" />
+              <img src="/transformations/Rihana.avif" alt="Result" />
+              <img src="/transformations/Roelof.avif" alt="Result" />
+              <img src="/transformations/Toby.avif" alt="Result" />
+              <img src="/transformations/Tom.avif" alt="Result" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Is Included Section -->
+    <section class="included-section" style="padding: 80px 0; background-color: var(--bg-light);">
+      <div class="container" style="max-width: 1400px; padding: 0 20px;">
+        <div class="text-center" style="margin-bottom: 50px;">
+          <h2 class="section-headline dark-text"
+            style="font-family: var(--font-heading); font-size: 50px; margin-bottom: 20px;">What Is <span
+              class="green-text">Included</span> in our <span class="green-text">Welcome Offer</span>?</h2>
+          <p class="section-subheadline dark-text">Everything you need to guarantee results, built into one seamless
+            local experience.</p>
+        </div>
+
+        <div class="included-grid">
+          <!-- Card 1 -->
+          <div class="included-card" style="background-image: url('/images/IMG_9247.jpg');" data-modal="modal-training">
+            <div class="included-content">
+              <h3 class="included-title">Training Plan</h3>
+              <div class="included-btn">+</div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="included-card" style="background-image: url('/images/IMG_9579.jpg');"
+            data-modal="modal-accountability">
+            <div class="included-content">
+              <h3 class="included-title">Accountability</h3>
+              <div class="included-btn">+</div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="included-card" style="background-image: url('/images/IMG_9255.jpg');" data-modal="modal-coaches">
+            <div class="included-content">
+              <h3 class="included-title">Coaches</h3>
+              <div class="included-btn">+</div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="included-card" style="background-image: url('/images/IMG_0885.jpg');"
+            data-modal="modal-nutrition">
+            <div class="included-content">
+              <h3 class="included-title">Nutrition</h3>
+              <div class="included-btn">+</div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="included-card" style="background-image: url('/images/IMG_9676.jpg');"
+            data-modal="modal-community">
+            <div class="included-content">
+              <h3 class="included-title">Community</h3>
+              <div class="included-btn">+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 50px;">
+          <button class="btn btn-dark survey-trigger">Reserve Your Spot</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / Welcome Offer Section -->
+    <section class="pricing-section" id="pricing" style="padding: 80px 0; background-color: #ffffff;">
+      <div class="container" style="max-width: 1100px;">
+        <div class="pricing-card"
+          style="display: flex; border: 4px solid var(--primary-color); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);">
+          <!-- Left: Image (Mirroring the user's reference) -->
+          <div class="pricing-image"
+            style="flex: 1; min-height: 500px; background-image: url('/images/IMG_9247.jpg'); background-size: cover; background-position: center;">
+          </div>
+
+          <!-- Right: Content -->
+          <div class="pricing-content"
+            style="flex: 1.2; padding: 60px; display: flex; flex-direction: column; justify-content: center; text-align: center; background: #fff;">
+            <p class="section-subtext-small"
+              style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #666; margin-bottom: 10px;">
+              The Investment</p>
+            <h2 class="font-playfair" style="font-size: 36px; margin-bottom: 5px; color: #111;">Today Just:</h2>
+            <h3 class="green-text font-playfair" style="font-size: 64px; margin-bottom: 40px; font-weight: 700;">£299
+            </h3>
+
+            <ul class="pricing-features" style="text-align: left; list-style: none; padding: 0; margin-bottom: 45px;">
+              <li
+                style="margin-bottom: 18px; font-size: 16px; line-height: 1.4; color: #333; display: flex; align-items: baseline;">
+                <span class="green-text"
+                  style="font-weight: bold; min-width: 180px; display: inline-block;">Personalized Training Plan</span>
+                <span style="color: #666; margin-left: 10px;">– Crafted just for you, every step of the way.</span>
+              </li>
+              <li
+                style="margin-bottom: 18px; font-size: 16px; line-height: 1.4; color: #333; display: flex; align-items: baseline;">
+                <span class="green-text" style="font-weight: bold; min-width: 180px; display: inline-block;">20 Small
+                  Group Classes</span>
+                <span style="color: #666; margin-left: 10px;">– Professional guidance to ensure you succeed.</span>
+              </li>
+              <li
+                style="margin-bottom: 18px; font-size: 16px; line-height: 1.4; color: #333; display: flex; align-items: baseline;">
+                <span class="green-text" style="font-weight: bold; min-width: 180px; display: inline-block;">Online
+                  Coaching via Trainerize</span>
+                <span style="color: #666; margin-left: 10px;">– Access your plan and stay accountable anywhere.</span>
+              </li>
+              <li
+                style="margin-bottom: 18px; font-size: 16px; line-height: 1.4; color: #333; display: flex; align-items: baseline;">
+                <span class="green-text" style="font-weight: bold; min-width: 180px; display: inline-block;">Nutritional
+                  Support</span>
+                <span style="color: #666; margin-left: 10px;">– Tailored advice to fuel your specific fitness
+                  journey.</span>
+              </li>
+              <li
+                style="margin-bottom: 18px; font-size: 16px; line-height: 1.4; color: #333; display: flex; align-items: baseline;">
+                <span class="green-text" style="font-weight: bold; min-width: 180px; display: inline-block;">Exclusive
+                  Community Access</span>
+                <span style="color: #666; margin-left: 10px;">– Join a tribe of locals that motivates and
+                  supports.</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-dark survey-trigger"
+              style="width: fit-content; margin: 0 auto; padding: 18px 45px; font-size: 18px;">Claim Your Spot</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="padding-bottom: 60px;">
+      <div class="testimonial-wrapper">
+        <div class="testimonial-overlay"></div>
+        <div class="testimonial-content">
+          <div class="testimonial-left">
+            <h2 class="section-headline white-text font-playfair">Hear From Our Members</h2>
+            <button class="btn btn-primary survey-trigger" style="margin-top: 20px;">Claim Your Spot</button>
+          </div>
+          <div class="testimonial-right">
+            <!-- Functional Video Carousel -->
+            <div class="video-carousel-placeholder" id="testimonialSlider">
+              <div class="carousel-nav prev" id="carouselPrev">&#10094;</div>
+              <div class="carousel-nav next" id="carouselNext">&#10095;</div>
+              <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                  <video src="/testimonial1.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial2.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial3.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial4.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial5.mp4" controls playsinline></video>
+                </div>
+                <div class="carousel-slide">
+                  <video src="/testimonial6.mp4" controls playsinline></video>
+                </div>
+              </div>
+              <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="container text-center">
+        <h2 class="footer-headline">Join The Next Welcome Offer Block</h2>
+        <p class="footer-subtext">Our Welcome Offer is designed to give you the exact structure and
+          accountability you need to succeed around the Etchingham area.</p>
+
+        <button class="btn btn-dark survey-trigger" style="margin-bottom: 50px;">Claim Your Spot</button>
+
+        <div class="footer-logo">
+          <img src="/logos/Barn Gym Logo transparent copy.png" alt="Barn Community"
+            style="max-width: 150px; margin: 0 auto; display: block;" />
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+
+        <p class="legal-text">
+          This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by
+          Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+        </p>
+      </div>
+      <!-- HTML for Survey Modal -->
+      <div class="modal-overlay" id="surveyModal">
+        <div class="survey-card">
+          <button class="modal-close" id="closeSurvey">&times;</button>
+
+          <!-- Step 1 -->
+          <div class="survey-step active" id="step1">
+            <h3 class="survey-title">What is your main goal for the next 6 weeks?</h3>
+            <button class="option-btn next-step">Build Muscle & Get Stronger</button>
+            <button class="option-btn next-step">Lose Body Fat & Lean Out</button>
+            <button class="option-btn next-step">Improve Energy & Health</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="survey-step" id="step2">
+            <h3 class="survey-title">What has stopped you from seeing results in the past?</h3>
+            <button class="option-btn next-step">I don't have enough time</button>
+            <button class="option-btn next-step">I didn't have a structured plan</button>
+            <button class="option-btn next-step">I struggled with consistency</button>
+          </div>
+
+          <!-- Step 3 (Lead Capture) -->
+          <div class="survey-step" id="step3">
+            <h3 class="survey-title">Where should we send your local action plan?</h3>
+            <div id="exitBadgePlaceholder"></div> <!-- Injected during exit intent -->
+            <form id="leadForm">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input class="form-input" type="text" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input class="form-input" type="email" name="email" placeholder="john@example.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number (Optional)</label>
+                <input class="form-input" type="tel" name="phone" placeholder="+44 7700 900077" />
+              </div>
+              <button type="submit" class="submit-btn" id="surveySubmitBtn">Secure My Spot</button>
+            </form>
+          </div>
+
+          <!-- Success State -->
+          <div class="survey-step" id="step4">
+            <div style="font-size: 60px; margin-bottom: 20px;">✅</div>
+            <h3 class="survey-title">You're on the list!</h3>
+            <p style="font-size: 18px; color: #555;">Our head coach will be in touch shortly to finalize your 6-Week
+              Transformation secure spot.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </footer>
+  </main>
+
+  <!-- Script for Step Interactivity -->
+  <script>
+    const stepsData = {
+      1: {
+        num: '01',
+        head: 'Personalized Training & Nutrition',
+        desc: 'Crafted just for you, every step of the way. You get a fully tailored routine and nutrition protocol to guarantee you hit your goals in 6 weeks.',
+        img: '/images/Step 1 .avif'
+      },
+      2: {
+        num: '02',
+        head: 'One-on-One Coaching',
+        desc: 'Professional guidance to ensure you succeed. We will check in with you directly, monitor your form, and keep your momentum high.',
+        img: '/images/Step 2.avif'
+      },
+      3: {
+        num: '03',
+        head: 'Serene Workouts & Private Community',
+        desc: 'Train in an environment designed to inspire. Join a tribe that motivates and supports you every day inside our exclusive app.',
+        img: '/images/Step 3.avif'
+      }
+    };
+
+    const tabs = document.querySelectorAll('.step-tab');
+    const stepNum = document.getElementById('step-num');
+    const stepHead = document.getElementById('step-head');
+    const stepDesc = document.getElementById('step-desc');
+    const stepImg = document.getElementById('step-img');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all
+        tabs.forEach(t => t.classList.remove('active'));
+        // Add to clicked
+        tab.classList.add('active');
+
+        // Update content
+        const stepId = tab.getAttribute('data-step');
+        const data = stepsData[stepId];
+
+        stepNum.textContent = data.num;
+        stepHead.textContent = data.head;
+        stepDesc.textContent = data.desc;
+        stepImg.src = data.img;
+      });
+    });
+
+    // Testimonial Carousel Logic
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+
+    let currentIndex = 0;
+    const totalSlides = dots.length;
+
+    function updateCarousel(index) {
+      currentIndex = index;
+
+      // Update dots
+      dots.forEach(d => d.classList.remove('active'));
+      dots[currentIndex].classList.add('active');
+
+      // Move track via native scrolling for smooth drag support
+      const slideWidth = track.clientWidth;
+      track.scrollTo({
+        left: slideWidth * currentIndex,
+        behavior: 'smooth'
+      });
+
+      // Pause all videos
+      const allVideos = track.querySelectorAll('video');
+      allVideos.forEach(v => {
+        v.pause();
+      });
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        const index = parseInt(e.target.getAttribute('data-index'));
+        updateCarousel(index);
+      });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = totalSlides - 1;
+      updateCarousel(newIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= totalSlides) newIndex = 0;
+      updateCarousel(newIndex);
+    });
+
+    // Optional: Add drag to scroll support using mouse events
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      track.classList.add('active');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('mouseleave', () => {
+      isDown = false;
+      track.classList.remove('active');
+    });
+    track.addEventListener('mouseup', () => {
+      isDown = false;
+      track.classList.remove('active');
+      // Snap to nearest slide
+      const slideWidth = track.clientWidth;
+      const nearestIndex = Math.round(track.scrollLeft / slideWidth);
+      updateCarousel(nearestIndex);
+    });
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 2; // scroll-fast
+      track.scrollLeft = scrollLeft - walk;
+    });
+
+    // ─── Analytics & Lead Capture ───────────────────────────────────────────
+
+    // Session ID
+    const SESSION_ID = (() => {
+      let id = sessionStorage.getItem('bg_session');
+      if (!id) { id = crypto.randomUUID(); sessionStorage.setItem('bg_session', id); }
+      return id;
+    })();
+
+    // PostHog page view
+    posthog.capture('$pageview', { page: window.PAGE_SOURCE_PREFIX, url: location.href });
+
+    async function trackEvent(event_type, event_data = {}) {
+      posthog.capture(event_type, { ...event_data, page: window.PAGE_SOURCE_PREFIX });
+      fetch(window.API_BASE + '/api/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session_id: SESSION_ID, page: window.PAGE_SOURCE_PREFIX, event_type, event_data })
+      }).catch(() => { });
+    }
+
+    // Scroll depth tracking
+    const scrollMilestones = { 25: false, 50: false, 75: false, 100: false };
+    window.addEventListener('scroll', () => {
+      const scrollPct = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
+      [25, 50, 75, 100].forEach(m => {
+        if (!scrollMilestones[m] && scrollPct >= m) {
+          scrollMilestones[m] = true;
+          trackEvent('scroll_' + m, { depth: m });
+        }
+      });
+    });
+
+    // ─── Survey Modal & Exit Intent Logic ───────────────────────────────────
+    const modal = document.getElementById('surveyModal');
+    const triggers = document.querySelectorAll('.survey-trigger');
+    const closeBtn = document.getElementById('closeSurvey');
+    const steps = document.querySelectorAll('.survey-step');
+    const nextBtns = document.querySelectorAll('.next-step');
+    const leadForm = document.getElementById('leadForm');
+    const exitBadgePlaceholder = document.getElementById('exitBadgePlaceholder');
+    let exitIntentFired = false;
+    let currentStep = 0;
+    let surveyAnswers = {};
+
+    function openModal(isExitIntent = false) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      trackEvent('modal_open', { trigger: isExitIntent ? 'exit_intent' : 'button' });
+
+      if (isExitIntent) {
+        exitBadgePlaceholder.innerHTML = '<div class="exit-badge">Wait! Before You Go...</div>';
+        goToStep(2);
+      } else {
+        exitBadgePlaceholder.innerHTML = '';
+        goToStep(0);
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function goToStep(index) {
+      steps.forEach(s => s.classList.remove('active'));
+      steps[index].classList.add('active');
+      currentStep = index;
+      trackEvent('survey_step', { step: index + 1 });
+      // Track form start when reaching lead capture step
+      if (index === 2) trackEvent('form_start', { source: window.PAGE_SOURCE_PREFIX + '-modal' });
+    }
+
+    triggers.forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); openModal(); }); });
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+    nextBtns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        surveyAnswers['q' + (currentStep + 1)] = btn.textContent.trim();
+        if (currentStep < steps.length - 1) goToStep(currentStep + 1);
+      });
+    });
+
+    // ─── Modal lead form submit ─────────────────────────────────────────────
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('surveySubmitBtn');
+      submitBtn.innerText = 'Securing...';
+      submitBtn.disabled = true;
+
+      const name = leadForm.querySelector('[name="name"]')?.value.trim();
+      const email = leadForm.querySelector('[name="email"]')?.value.trim();
+      const phone = leadForm.querySelector('[name="phone"]')?.value.trim();
+      const source = window.PAGE_SOURCE_PREFIX + '-modal';
+
+      try {
+        const res = await fetch(window.API_BASE + '/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name, email, phone, source, session_id: SESSION_ID,
+            survey_q1: surveyAnswers.q1, survey_q2: surveyAnswers.q2
+          })
+        });
+        const json = await res.json();
+        if (!json.success) throw new Error(json.error);
+        posthog.identify(email, { name, email, phone });
+        trackEvent('lead_captured', { source, method: 'modal' });
+        goToStep(3);
+      } catch (err) {
+        console.error('Lead submit error:', err);
+        submitBtn.innerText = 'Try Again';
+        submitBtn.disabled = false;
+      }
+    });
+
+    // What's Included Modals Logic
+    const includedCards = document.querySelectorAll('.included-card');
+    const infoCloseBtns = document.querySelectorAll('.info-close');
+    includedCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const infoModal = document.getElementById(card.getAttribute('data-modal'));
+        if (infoModal) { infoModal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+      });
+    });
+    infoCloseBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const overlay = btn.closest('.info-modal-overlay');
+        if (overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+      });
+    });
+    document.querySelectorAll('.info-modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+      });
+    });
+
+    // ─── Hero lead form submit ──────────────────────────────────────────────
+    const heroLeadForm = document.getElementById('heroLeadForm');
+    if (heroLeadForm) {
+      heroLeadForm.querySelector('input')?.addEventListener('focus', () => {
+        trackEvent('form_start', { source: window.PAGE_SOURCE_PREFIX + '-hero' });
+      }, { once: true });
+
+      heroLeadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = heroLeadForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = 'Securing Your Spot...';
+        submitBtn.disabled = true;
+
+        const name = heroLeadForm.querySelector('[name="name"]').value.trim();
+        const email = heroLeadForm.querySelector('[name="email"]').value.trim();
+        const phone = heroLeadForm.querySelector('[name="phone"]')?.value.trim();
+        const source = window.PAGE_SOURCE_PREFIX + '-hero';
+
+        try {
+          const res = await fetch(window.API_BASE + '/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, phone, source, session_id: SESSION_ID })
+          });
+          const json = await res.json();
+          if (!json.success) throw new Error(json.error);
+          posthog.identify(email, { name, email, phone });
+          trackEvent('lead_captured', { source, method: 'hero-form' });
+          submitBtn.innerText = "You're In! Check Your Email ✅";
+          heroLeadForm.reset();
+          setTimeout(() => { submitBtn.innerText = originalText; submitBtn.disabled = false; }, 4000);
+        } catch (err) {
+          console.error('Hero form error:', err);
+          submitBtn.innerText = 'Try Again';
+          submitBtn.disabled = false;
+        }
+      });
+    }
+
+    // Exit Intent
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY < 0 && !exitIntentFired && !modal.classList.contains('active')) {
+        exitIntentFired = true;
+        openModal(true);
+      }
+    });
+  </script>
+
+  <!-- Info Modals for "What Is Included" -->
+  <div class="info-modal-overlay" id="modal-training">
+    <div class="info-modal-card">
+      <button class="info-close">&times;</button>
+      <div class="info-modal-content">
+        <div class="info-modal-text">
+          <h3 class="info-modal-title">Training Plan</h3>
+          <p>Unlock your potential with a personalized training plan designed to challenge and motivate you. Tailored to
+            suit all fitness levels, our plans help you achieve your unique goals with a clear, structured approach.</p>
+          <h4 class="info-modal-subtitle">Key Focus</h4>
+          <ul class="info-modal-list">
+            <li><span>(1)</span> Customized Progress Tracking</li>
+            <li><span>(2)</span> Inclusive and Adaptable Workouts</li>
+            <li><span>(3)</span> Supportive Coaching</li>
+          </ul>
+        </div>
+        <div class="info-modal-image">
+          <img src="/images/IMG_9247.jpg" alt="Training Plan" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-modal-overlay" id="modal-accountability">
+    <div class="info-modal-card">
+      <button class="info-close">&times;</button>
+      <div class="info-modal-content">
+        <div class="info-modal-text">
+          <h3 class="info-modal-title">Accountability</h3>
+          <p>Having someone in your corner makes all the difference. Our community is built on support and
+            accountability that keep you showing up, staying motivated, and progressing week after week.</p>
+          <h4 class="info-modal-subtitle">Key Focus</h4>
+          <ul class="info-modal-list">
+            <li><span>(1)</span> Regular Progress Check in's</li>
+            <li><span>(2)</span> 1-on-1 and Group Accountability</li>
+            <li><span>(3)</span> Supportive Community Structure</li>
+          </ul>
+        </div>
+        <div class="info-modal-image">
+          <img src="/images/IMG_9579.jpg" alt="Accountability" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-modal-overlay" id="modal-coaches">
+    <div class="info-modal-card">
+      <button class="info-close">&times;</button>
+      <div class="info-modal-content">
+        <div class="info-modal-text">
+          <h3 class="info-modal-title">Coaches</h3>
+          <p>Our expert coaches at Barn Gym are here to guide you every step of the way. They're not just trainers;
+            they're mentors, motivators, and dedicated partners in your fitness journey. With years of experience and a
+            passion for helping others, they'll push you to be your best.</p>
+          <h4 class="info-modal-subtitle">Key Focus</h4>
+          <ul class="info-modal-list">
+            <li><span>(1)</span> Expert Guidance and Support</li>
+            <li><span>(2)</span> Specialized Training Techniques</li>
+            <li><span>(3)</span> Goal-Oriented Coaching</li>
+          </ul>
+        </div>
+        <div class="info-modal-image">
+          <img src="/images/IMG_9255.jpg" alt="Coaches" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-modal-overlay" id="modal-nutrition">
+    <div class="info-modal-card">
+      <button class="info-close">&times;</button>
+      <div class="info-modal-content">
+        <div class="info-modal-text">
+          <h3 class="info-modal-title">Nutrition</h3>
+          <p>Fuel your body with the right guidance. Our nutrition plans are crafted to complement your training,
+            enhancing your energy levels and supporting recovery. With sustainable meal ideas and expert tips, you'll
+            learn how to eat for both performance and wellness.</p>
+          <h4 class="info-modal-subtitle">Key Focus</h4>
+          <ul class="info-modal-list">
+            <li><span>(1)</span> Personalized Nutrition Plans</li>
+            <li><span>(2)</span> Calorie Deficit / Surplus</li>
+            <li><span>(3)</span> Meal planning</li>
+          </ul>
+        </div>
+        <div class="info-modal-image">
+          <img src="/images/IMG_0885.jpg" alt="Nutrition" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-modal-overlay" id="modal-community">
+    <div class="info-modal-card">
+      <button class="info-close">&times;</button>
+      <div class="info-modal-content">
+        <div class="info-modal-text">
+          <h3 class="info-modal-title">Community</h3>
+          <p>Train in an environment designed to inspire. Join a tribe that motivates and supports you every day.
+            Consistency doesn't happen alone, it happens when you're surrounded by people who lift you up.</p>
+          <h4 class="info-modal-subtitle">Key Focus</h4>
+          <ul class="info-modal-list">
+            <li><span>(1)</span> Private Members App</li>
+            <li><span>(2)</span> Exclusive Events & Workshops</li>
+            <li><span>(3)</span> Unmatched Support System</li>
+          </ul>
+        </div>
+        <div class="info-modal-image">
+          <img src="/images/IMG_9676.jpg" alt="Community" />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

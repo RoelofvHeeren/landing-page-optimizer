@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community A | Barn Gym</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/components.js" defer></script>
+    <style>
+        .hero {
+            position: relative;
+            background-image: url('/images/community_a/plBZtQwlPXyrABG0Y6SCNrt78vo.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px 80px;
+            text-align: center;
+            color: white;
+            border-radius: 0 0 40px 40px;
+            overflow: hidden;
+            margin: 20px;
+            margin-top: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-box {
+            background-image: url('/images/community_a/plBZtQwlPXyrABG0Y6SCNrt78vo.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            height: 350px;
+            margin: 40px auto;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .video-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .play-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .persona-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .persona-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .persona-card .body {
+            padding: 20px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .results-grid img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .step-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .step-tab {
+            padding: 10px 40px;
+            background: #80c1a6;
+            color: white;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .step-tab.active {
+            background: #2b7a58;
+        }
+
+        .testimonials {
+            background-image: url('/images/community_a/klAPamP99oehtJkM8VrJH6e6UY.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 40px;
+            padding: 80px 40px;
+            margin: 40px 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .testimonials-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .testimonials-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .testimonial-video {
+            flex: 1;
+            background: #222;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 9/16;
+            max-height: 500px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .testimonial-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .minimal-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: #2b7a58;
+            font-style: italic;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        style="position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" class="brand-logo">
+            <img src="/logos/white.png" alt="Barn Gym" style="height: 60px;">
+        </a>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="font-playfair" style="font-size: 50px; margin-bottom: 20px;">The Training System For Busy People
+            </h1>
+            <p style="font-size: 16px; color: #ddd; max-width: 600px; margin: 0 auto;">Structured plans. Real
+                accountability. A community that guarantees you stay consistent.</p>
+
+            <div class="video-box">
+                <div class="play-content">
+                    <h2 class="font-playfair" style="font-size: 32px; letter-spacing: 2px;">THE STRUCTURE YOU'VE<br>BEEN
+                        MISSING</h2>
+                    <div style="font-size: 40px; margin-top: 10px;">▶</div>
+                </div>
+            </div>
+
+            <a href="#join" class="btn btn-white" style="margin-bottom: 15px;">Start My 7-Day Free Trial</a>
+            <p style="font-size: 12px; color: #ccc;">Start today for £0. Cancel anytime inside the app with one click.
+            </p>
+        </div>
+    </header>
+
+    <!-- Built For -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">Who Is <span class="text-green">Barn Community</span> Built
+            For</h2>
+
+        <div class="cards-grid">
+            <div class="persona-card">
+                <img src="/images/community_a/BdeQwtmYvJGvH4DssR78etpBW4A.png" alt="The Busy Parent">
+                <div class="body">
+                    <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">The Busy Parent</h3>
+                    <p style="color: #666; font-size: 13px; line-height: 1.5;">Train at home during nap time or after
+                        bedtime. 30-min workouts, zero commute, real results.</p>
+                </div>
+            </div>
+            <div class="persona-card">
+                <img src="/images/community_a/znRh1BJ1V9ByMXk56ZpDAvmurE.png" alt="The Remote Worker">
+                <div class="body">
+                    <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">The Remote Worker</h3>
+                    <p style="color: #666; font-size: 13px; line-height: 1.5;">Lunch-break workouts or early morning
+                        sessions. Train from your home gym, hotel, or Barn Gym studio.</p>
+                </div>
+            </div>
+            <div class="persona-card">
+                <img src="/images/community_a/cLeYkNvfvPcPtNAWAEUCdnDJKiE.jpg" alt="Beginners Welcome">
+                <div class="body">
+                    <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">Beginners Welcome</h3>
+                    <p style="color: #666; font-size: 13px; line-height: 1.5;">Don't know what to do in the gym? Every
+                        exercise has video guidance, modifications, and coach support.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 20px;">Start My 7-Day Free Trial</a>
+    </section>
+
+    <!-- Results -->
+    <section style="padding: 40px 20px; text-align: center;">
+        <h3
+            style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #888; letter-spacing: 2px; margin-bottom: 10px;">
+            Results</h3>
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 10px;">Real <span
+                class="text-green">People</span>, Real <span class="text-green">Results</span></h2>
+        <p style="color: #666; font-size: 14px;">No influencers. No fake transformations. Just everyday members.</p>
+
+        <div class="results-grid">
+            <img src="/images/community_a/QaOyn6jNUtjOrdUHFFnKT9MVs.png" alt="Result 1">
+            <img src="/images/community_a/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" alt="Result 2">
+            <img src="/images/community_a/9J5iAVZ8VVUTgQVe9UrWcDnFyA.png" alt="Result 3">
+            <img src="/images/community_a/MQXUREqWoWFLTlXfctHe2R93Hy4.png" alt="Result 4">
+            <img src="/images/community_a/KlnSH1pj2dWHmSPYNOqYgmY22E.png" alt="Result 5">
+            <img src="/images/community_a/UsbTqN9UUaNoR2izuW4ESSkeA0.png" alt="Result 6">
+            <img src="/images/community_a/XnREanv8IV35FkZu8cAOlU3m19A.png" alt="Result 7">
+            <img src="/images/community_a/ZmIUk2Yz0TLDAkub7K9n0MHoJU.png" alt="Result 8">
+            <img src="/images/community_a/OfQlzJgEzxzsK0doz9ZE3UxO1d4.png" alt="Result 9">
+            <img src="/images/community_a/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" alt="Result 10">
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 40px;">Start My 7-Day Free Trial</a>
+    </section>
+
+    <!-- How It Works -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">How It <span class="text-green">Works</span></h2>
+        <p style="color: #666; font-size: 14px; margin-top: 10px;">Join a community designed to guide you through every
+            step - from setting your foundation to reaching your goals.</p>
+
+        <div class="step-tabs">
+            <div class="step-tab active">STEP 1</div>
+            <div class="step-tab">STEP 2</div>
+            <div class="step-tab">STEP 3</div>
+        </div>
+
+        <div
+            style="display: flex; max-width: 900px; margin: 40px auto; align-items: center; gap: 40px; text-align: left;">
+            <div style="flex: 1;">
+                <img src="/images/community_a/o9WC17XLlP8A54i0EZIWsWrjbo.png" alt="App Preview"
+                    style="width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 10px;">
+            </div>
+            <div style="flex: 1;">
+                <div
+                    style="font-size: 12px; color: #888; font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 10px;">
+                    01</div>
+                <h3 class="font-playfair" style="font-size: 28px; margin-bottom: 15px;">Free 7 Day Trial</h3>
+                <p style="color: #666; font-size: 14px; line-height: 1.6;">Kickstart your journey with daily action
+                    steps that build the right habits fast. You'll follow a simple roadmap and share progress inside the
+                    community for instant accountability.</p>
+            </div>
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 40px;">Start My 7-Day Free Trial</a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-overlay"></div>
+        <div class="testimonials-content">
+            <div style="flex: 1; color: white;">
+                <h2 class="font-playfair" style="font-size: 48px; margin-bottom: 40px;">Hear From Our<br>Members</h2>
+                <a href="#join" class="btn btn-white">Start My 7 Day Free Trial</a>
+            </div>
+
+            <div class="testimonial-video">
+                <img src="/images/community_a/suHiUZG5vNHpMqsU3KF83Ck344.png" alt="Video cover">
+                <div
+                    style="position: absolute; bottom: 20px; left: 20px; right: 20px; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.9); padding: 10px 20px; border-radius: 30px; color: #333;">
+                    <span>▶</span>
+                    <span style="font-size: 12px;">0:00 / 0:12</span>
+                    <div style="background: #ccc; height: 4px; flex: 1; margin: 0 10px; border-radius: 2px;">
+                        <div style="width: 30%; height: 100%; background: #333; border-radius: 2px;"></div>
+                    </div>
+                    <span>🔉</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="padding: 80px 20px; text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 20px;">Start My 7-Day <span
+                class="text-green">Free</span> Trial</h2>
+        <p style="color: #888; font-size: 14px; line-height: 1.6; margin-bottom: 40px;">
+            <span class="text-green" style="font-style: italic; font-weight: 500;">Consistency</span> doesn't happen
+            alone. It happens when you're surrounded by a <span class="text-green"
+                style="font-style: italic; font-weight: 500;">community</span> that notices, supports, and keeps you
+            going, even on the busy days.
+        </p>
+
+        <a href="#join" class="btn btn-dark">Start My 7-Day Free Trial</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="minimal-footer">
+        <div class="footer-links">
+            <a href="/legal/privacy-policy">Privacy</a>
+            <a href="/contact">Contact</a>
+            <a href="/legal/terms-and-conditions">Terms & Conditions</a>
+        </div>
+        <p style="color: #ccc; font-size: 10px; margin-bottom: 40px;">This site is not a part of the Facebook website or
+            Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of
+            FACEBOOK, Inc.</p>
+        <img src="/images/community_a/I734FSV8rW9jHpU8ratkFEbnSzI.png" alt="Barn Community" style="width: 120px;">
+    </footer>
+
+</body>
+
+</html>

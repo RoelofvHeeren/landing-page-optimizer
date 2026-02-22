@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes | Barn Gym</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/components.js" defer></script>
+    <style>
+        /* Classes specific styles */
+        .page-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            border-radius: 0 0 40px 40px;
+            overflow: hidden;
+            margin: 20px;
+            margin-top: 0;
+            background-image: url('/images/classes/QJjc2XOh1nfqYUe0CoQcRIzPH2c.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .page-hero-text {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .page-hero-video {
+            flex: 1;
+            max-width: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .membership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .membership-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .membership-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .membership-content {
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .membership-price {
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            margin: 15px 0 5px;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .class-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .class-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .class-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .specialist-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .specialist-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero-content {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 60px;
+            }
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .results-img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            aspect-ratio: 1;
+        }
+
+        @media (max-width: 900px) {
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: #f9f9f9;
+            padding: 20px 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <header class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-hero-text">
+                <h1 class="font-playfair" style="font-size: 56px; margin-bottom: 20px; line-height: 1.1;">Classes</h1>
+                <p style="font-size: 16px; margin-bottom: 30px; color: #ddd;">With a maximum of 8 participants per
+                    session, you'll benefit from personal coaching, shared accountability, and an engaging, fun
+                    atmosphere.</p>
+                <a href="#classes" class="btn btn-outline" style="color: white; border-color: white;">View Classes</a>
+            </div>
+            <div class="page-hero-video">
+                <img src="/images/classes/plBZtQwlPXyrABG0Y6SCNrt78vo.png" alt="Class Video"
+                    style="width: 100%; display: block;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Timetable Section -->
+    <section style="padding: 80px 0; text-align: center; background: #fff;">
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 40px;">Timetable</h2>
+        <div
+            style="max-width: 1000px; margin: 0 auto; min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed #ccc; border-radius: 20px; padding: 40px;">
+            <p style="color: #666; margin-bottom: 10px;">[Glofox Integration Placeholder]</p>
+            <a href="#" style="color: blue; font-size: 12px; text-decoration: underline;">powered by Glofox</a>
+        </div>
+    </section>
+
+    <!-- Membership Options -->
+    <section style="padding: 80px 0; background: #fdfdfd;">
+        <h2 class="font-playfair section-header" style="font-size: 40px;">Available <span
+                class="text-green">Membership</span> Options</h2>
+
+        <div class="membership-grid">
+            <div class="membership-card">
+                <img src="/images/classes/KoMh6Ze1WWPIwtJ2fvPRFAFFfA.png" class="membership-img" alt="1 Month">
+                <div class="membership-content">
+                    <h3 style="font-size: 20px; margin-bottom: 5px;">1 Month Rolling</h3>
+                    <p style="font-size: 12px; color: #666;">15 Classes</p>
+                    <div class="membership-price">£125</div>
+                    <p style="font-size: 10px; color: #888; margin-bottom: 20px;">Cost Per Class: £8.33</p>
+                    <div style="margin-top: auto;">
+                        <a href="#" class="btn btn-dark" style="width: 100%;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="membership-card">
+                <img src="/images/classes/dC34LOkiZJ4QPBMFbMqgiHddI.jpeg" class="membership-img" alt="3 Month">
+                <div class="membership-content">
+                    <h3 style="font-size: 20px; margin-bottom: 5px;">3 Month Membership</h3>
+                    <p style="font-size: 12px; color: #666;">45 Classes</p>
+                    <div class="membership-price">£355</div>
+                    <p style="font-size: 10px; color: #888; margin-bottom: 20px;">Cost Per Class: £7.89</p>
+                    <div style="margin-top: auto;">
+                        <a href="#" class="btn btn-dark" style="width: 100%;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="membership-card">
+                <img src="/images/classes/lUTo4eg1bG7sOuRT67u1vNVrlvY.png" class="membership-img" alt="6 Month">
+                <div class="membership-content">
+                    <h3 style="font-size: 20px; margin-bottom: 5px;">6 Month Membership</h3>
+                    <p style="font-size: 12px; color: #666;">90 Classes</p>
+                    <div class="membership-price">£675</div>
+                    <p style="font-size: 10px; color: #888; margin-bottom: 20px;">Cost Per Class: £7.50</p>
+                    <div style="margin-top: auto;">
+                        <a href="#" class="btn btn-dark" style="width: 100%;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 14px; color: #555;">*One-off classes available for
+            £15*</p>
+    </section>
+
+    <!-- Core Classes -->
+    <section id="classes" style="padding: 80px 0; background: #fff;">
+        <div class="section-header">
+            <h2 class="font-playfair" style="font-size: 40px;">View Our Classes</h2>
+            <h3 class="font-playfair" style="font-size: 32px; margin-top: 10px;"><span class="text-green">Core</span>
+                Classes</h3>
+            <p style="color: #666; max-width: 600px; margin: 15px auto 0; font-size: 14px;">Discover the different ways
+                you can train with us and find the path that fits your goals.</p>
+        </div>
+
+        <div class="class-grid">
+            <div class="class-card">
+                <img src="/images/classes/N0kemVywKYaiWlv3zF9h2RhMVo.png" class="class-img" alt="Conditioning">
+                <div class="class-content">
+                    <h4 style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">Conditioning Class</h4>
+                    <p style="font-size: 12px; color: #888; margin-bottom: 20px;">60 minutes</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 15px;">High-energy cardio, high-rep work, and
+                        fast-paced circuits to boost endurance and improve your engine.</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 30px;">Ideal if you enjoy challenging
+                        sessions that push your pace and stamina.</p>
+                    <div style="margin-top: auto; text-align: center;">
+                        <a href="#" class="btn btn-dark">Schedule Class</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="/images/classes/6tyhQtToLRbVHAukuoBcZTZi2uY.png" class="class-img" alt="Hybrid">
+                <div class="class-content">
+                    <h4 style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">Hybrid Fitness</h4>
+                    <p style="font-size: 12px; color: #888; margin-bottom: 20px;">60 minutes</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 15px;">A blend of strength, conditioning, and
+                        functional movements performed at high intensity.</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 30px;">Designed to improve full-body fitness
+                        and suitable for all levels looking for a balanced challenge.</p>
+                    <div style="margin-top: auto; text-align: center;">
+                        <a href="#" class="btn btn-dark">Schedule Class</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" class="class-img" alt="Strength">
+                <div class="class-content">
+                    <h4 style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">Strength Training</h4>
+                    <p style="font-size: 12px; color: #888; margin-bottom: 20px;">60 minutes</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 15px;">Focused on heavier lifts, proper
+                        technique, and progressive overload.</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 30px;">Perfect if you want to build power,
+                        increase muscle, and improve overall strength in a safe, structured way.</p>
+                    <div style="margin-top: auto; text-align: center;">
+                        <a href="#" class="btn btn-dark">Schedule Class</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialist Classes -->
+    <section style="padding: 0 0 80px 0; background: #fff;">
+        <div class="section-header">
+            <h3 class="font-playfair" style="font-size: 32px;"><span class="text-green">Specialist</span> Classes</h3>
+        </div>
+
+        <div class="specialist-grid">
+            <div class="class-card">
+                <img src="/images/classes/VlZXM4L9FlSxxc2VbUlhIHgHuUA.jpeg" class="class-img" alt="Farm Fitness">
+                <div class="class-content">
+                    <h4 style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">Farm Fitness</h4>
+                    <p style="font-size: 12px; color: #888; margin-bottom: 20px;">60 minutes</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 15px;">A dynamic outdoor workout inspired by
+                        nature and real-world movements.</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 30px;">Expect varied, adventurous training
+                        that keeps things fresh while giving you a powerful weekend sweat.</p>
+                    <div style="margin-top: auto; text-align: center;">
+                        <a href="#" class="btn btn-dark">Schedule Class</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" class="class-img" alt="Olympic">
+                <div class="class-content">
+                    <h4 style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">Olympic Weightlifting</h4>
+                    <p style="font-size: 12px; color: #888; margin-bottom: 20px;">60 minutes</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 15px;">A technical class focused on the
+                        Snatch and Clean & Jerk.</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 30px;">Get expert coaching to refine your
+                        form, build explosive power, and develop confidence in your lifts, whether you're new or
+                        experienced.</p>
+                    <div style="margin-top: auto; text-align: center;">
+                        <a href="#" class="btn btn-primary">Schedule Class</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="/images/classes/JPfSFPhXTu1hwORIVRHUEhWas0c.png" class="class-img" alt="Yoga">
+                <div class="class-content">
+                    <h4 style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">Yoga</h4>
+                    <p style="font-size: 12px; color: #888; margin-bottom: 20px;">60 minutes</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 15px;">A calm but challenging mix of breath
+                        work, stretching, and flowing sequences.</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 30px;">Designed to improve mobility, balance,
+                        and body awareness while helping you unwind and reset.</p>
+                    <div style="margin-top: auto; text-align: center;">
+                        <a href="#" class="btn btn-primary">Schedule Class</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <img src="/images/classes/kYTls71hRhsrTUCDpMPUn9U6ZCE.png" class="class-img" alt="Mobility">
+                <div class="class-content">
+                    <h4 style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">Mobility</h4>
+                    <p style="font-size: 12px; color: #888; margin-bottom: 20px;">60 minutes</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 15px;">Targeted mobility training to improve
+                        joint health, flexibility, and full range of motion.</p>
+                    <p style="font-size: 13px; color: #444; margin-bottom: 30px;">Great for recovery, staying pain-free,
+                        and supporting better performance across all other training.</p>
+                    <div style="margin-top: auto; text-align: center;">
+                        <a href="#" class="btn btn-primary">Schedule Class</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section style="padding: 80px 0; background: #fff; text-align: center;">
+        <p style="font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">Results</p>
+        <h2 class="font-playfair"
+            style="font-size: 40px; margin-bottom: 10px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.2;">
+            When You <span class="text-green">Enjoy</span> Your Work out,<br>Results Come <span
+                class="text-green">Easy</span></h2>
+        <p style="color: #666; font-size: 16px; margin-bottom: 50px;">See how everyday members have transformed their
+            bodies through guidance, structure, and commitment.</p>
+
+        <div class="results-grid">
+            <img src="/images/classes/3kbyj1SN0wU8nOsudmvr8L7KY.png" class="results-img" alt="Result 1">
+            <img src="/images/classes/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" class="results-img" alt="Result 2">
+            <img src="/images/classes/9J5iAVZ8VVUTgQVe9UrWcDnFyA.png" class="results-img" alt="Result 3">
+            <img src="/images/classes/gt8CTiGQH2lt0W1X9sZs7p6iI2w.png" class="results-img" alt="Result 4">
+
+            <img src="/images/classes/KlnSH1pj2dWHmSPYNOqYgmY22E.png" class="results-img" alt="Result 5">
+            <img src="/images/classes/MQXUREqWoWFLTlXfctHe2R93Hy4.png" class="results-img" alt="Result 6">
+            <img src="/images/classes/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" class="results-img" alt="Result 7">
+            <img src="/images/classes/OfQlzJgEzxzsK0doz9ZE3UxO1d4.png" class="results-img" alt="Result 8">
+        </div>
+
+        <div style="margin-top: 50px;">
+            <a href="#" class="btn btn-primary">Speak To Our Team</a>
+        </div>
+    </section>
+
+    <!-- Hear From Our Members -->
+    <section class="banner-section"
+        style="background-image: url('/images/classes/QJjc2XOh1nfqYUe0CoQcRIzPH2c.jpg'); margin: 40px 20px; border-radius: 40px; padding: 60px;">
+        <div style="display: flex; gap: 40px; align-items: center; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px; text-align: center; color: white;">
+                <h2 class="font-playfair" style="font-size: 48px; margin-bottom: 20px;">Hear From Our Members</h2>
+                <img src="/logos/white.png" alt="Barn Gym" style="width: 150px;">
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <img src="/images/classes/QaOyn6jNUtjOrdUHFFnKT9MVs.png"
+                    style="width: 100%; max-width: 450px; border-radius: 20px; border: 4px solid rgba(255,255,255,0.2);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Talk To Our Team -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 40px;">Talk To Our <span
+                class="text-green">Team</span></h2>
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="/images/classes/ZrsdRHryjq2CX6vqhENghzcHNXg.webp" alt="Talk to Team"
+                    style="width: 100%; border-radius: 20px; max-height: 400px; object-fit: cover;">
+            </div>
+            <div
+                style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: center;">
+                <a href="#" class="btn btn-primary" style="width: 80%; max-width: 300px;">Book Via Whatsapp</a>
+                <a href="#" class="btn btn-primary" style="background: #222; width: 80%; max-width: 300px;">Call Our
+                    Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 80px 0; background: #fff;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 class="font-playfair" style="font-size: 40px;">Your Questions, <span class="text-green">Answered</span>
+            </h2>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item"><span>How many classes per week can I attend?</span> <span>+</span></div>
+            <div class="faq-item"><span>What do the classes involve?</span> <span>+</span></div>
+            <div class="faq-item"><span>Is the first class really free?</span> <span>+</span></div>
+            <div class="faq-item"><span>Do I need any experience?</span> <span>+</span></div>
+            <div class="faq-item"><span>What if I can't attend regularly?</span> <span>+</span></div>
+            <div class="faq-item"><span>How do I book a class?</span> <span>+</span></div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

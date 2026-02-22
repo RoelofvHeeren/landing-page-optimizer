@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barn Gym – Tracking Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0a0a0f;
+            --surface: #13131a;
+            --surface2: #1c1c27;
+            --border: rgba(255, 255, 255, 0.08);
+            --green: #4ade80;
+            --green-dim: rgba(74, 222, 128, 0.12);
+            --yellow: #facc15;
+            --pink: #f472b6;
+            --blue: #60a5fa;
+            --text: #f1f5f9;
+            --muted: #64748b;
+            --radius: 14px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* ── Header ── */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 32px;
+            border-bottom: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 10px var(--green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0.4
+            }
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -.3px;
+        }
+
+        .last-updated {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .refresh-btn {
+            background: var(--green-dim);
+            color: var(--green);
+            border: 1px solid var(--green);
+            border-radius: 8px;
+            padding: 7px 16px;
+            font-size: 13px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all .2s;
+        }
+
+        .refresh-btn:hover {
+            background: var(--green);
+            color: #000;
+        }
+
+        /* ── Layout ── */
+        main {
+            padding: 28px 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* ── KPI Cards ── */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .kpi-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .2s;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent, var(--green));
+        }
+
+        .kpi-label {
+            font-size: 12px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            margin-bottom: 10px;
+        }
+
+        .kpi-value {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .kpi-sub {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        /* ── Section headers ── */
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            margin-bottom: 14px;
+        }
+
+        /* ── Charts row ── */
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        @media (max-width: 900px) {
+            .charts-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px;
+        }
+
+        .chart-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .chart-wrap {
+            position: relative;
+            height: 220px;
+        }
+
+        /* ── Scroll depth bars ── */
+        .scroll-pages {
+            display: grid;
+            gap: 12px;
+        }
+
+        .scroll-page-name {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .scroll-bars {
+            display: grid;
+            gap: 6px;
+        }
+
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bar-label {
+            font-size: 11px;
+            color: var(--muted);
+            width: 60px;
+            flex-shrink: 0;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 8px;
+            background: var(--surface2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .bar-count {
+            font-size: 11px;
+            color: var(--muted);
+            width: 36px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        /* ── Source table ── */
+        .table-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+
+        .table-header {
+            padding: 18px 22px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px 22px;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-green {
+            background: var(--green-dim);
+            color: var(--green);
+        }
+
+        .badge-yellow {
+            background: rgba(250, 204, 21, .12);
+            color: var(--yellow);
+        }
+
+        .badge-pink {
+            background: rgba(244, 114, 182, .12);
+            color: var(--pink);
+        }
+
+        .badge-blue {
+            background: rgba(96, 165, 250, .12);
+            color: var(--blue);
+        }
+
+        .badge-gray {
+            background: rgba(100, 116, 139, .12);
+            color: var(--muted);
+        }
+
+        /* ── Loading ── */
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border: 3px solid var(--border);
+            border-top-color: var(--green);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error-msg {
+            background: rgba(239, 68, 68, .12);
+            border: 1px solid rgba(239, 68, 68, .3);
+            color: #f87171;
+            border-radius: var(--radius);
+            padding: 14px 18px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-dot"></div>
+            <h1>Barn Gym · Tracking Dashboard</h1>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+            <span class="last-updated" id="lastUpdated">Loading...</span>
+            <button class="refresh-btn" onclick="loadStats()">↻ Refresh</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="error-msg" id="errorMsg"></div>
+
+        <!-- KPI Cards -->
+        <div id="kpiSection">
+            <div class="loading">
+                <div class="spinner"></div><br>Loading data...
+            </div>
+        </div>
+
+        <!-- Charts row -->
+        <div class="charts-row" id="chartsRow" style="display:none">
+            <div class="chart-card">
+                <div class="chart-title">Leads by Source</div>
+                <div class="chart-wrap"><canvas id="sourceChart"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">Page Scroll Depth</div>
+                <div id="scrollDepthContainer" class="scroll-pages"></div>
+            </div>
+        </div>
+
+        <!-- Form Conversions -->
+        <div id="conversionSection" style="display:none">
+            <div class="section-title">Form Conversion Rates</div>
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Page / Source</th>
+                            <th>Form Starts</th>
+                            <th>Form Submits</th>
+                            <th>Conversion Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="conversionBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Recent Leads -->
+        <div id="leadsSection" style="display:none">
+            <div class="section-title">Recent Leads</div>
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Source</th>
+                            <th>GHL Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let sourceChartInstance = null;
+
+        const SOURCE_COLOURS = {
+            '6-week-hero': '#4ade80',
+            '6-week-modal': '#86efac',
+            'pt-hero': '#f472b6',
+            'pt-modal': '#f9a8d4',
+            'main-contact': '#60a5fa',
+            'unknown': '#64748b'
+        };
+
+        function badgeForSource(s) {
+            const map = {
+                '6-week-hero': 'badge-green',
+                '6-week-modal': 'badge-green',
+                'pt-hero': 'badge-pink',
+                'pt-modal': 'badge-pink',
+                'main-contact': 'badge-blue'
+            };
+            return `<span class="badge ${map[s] || 'badge-gray'}">${s || 'unknown'}</span>`;
+        }
+
+        function badgeForGHL(status) {
+            const map = { success: 'badge-green', failed: 'badge-yellow', pending: 'badge-blue' };
+            return `<span class="badge ${map[status] || 'badge-gray'}">${status || '–'}</span>`;
+        }
+
+        function fmtDate(iso) {
+            if (!iso) return '–';
+            const d = new Date(iso);
+            return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+                + ' ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        }
+
+        async function loadStats() {
+            try {
+                document.getElementById('errorMsg').style.display = 'none';
+                const res = await fetch('/api/stats');
+                if (!res.ok) throw new Error('Server returned ' + res.status);
+                const data = await res.json();
+                renderDashboard(data);
+                document.getElementById('lastUpdated').textContent = 'Updated ' + new Date().toLocaleTimeString('en-GB');
+            } catch (e) {
+                const el = document.getElementById('errorMsg');
+                el.style.display = 'block';
+                el.textContent = '⚠ Could not load stats: ' + e.message;
+                console.error(e);
+            }
+        }
+
+        function renderDashboard(data) {
+            // ── KPI Cards ──────────────────────────────────
+            const totalPageViews = Object.values(data.pageViews || {}).reduce((a, b) => a + b, 0);
+            const totalStarts = Object.values(data.formConversions || {}).reduce((a, v) => a + (v.starts || 0), 0);
+            const totalSubmits = Object.values(data.formConversions || {}).reduce((a, v) => a + (v.submits || 0), 0);
+            const convRate = totalStarts ? ((totalSubmits / totalStarts) * 100).toFixed(1) + '%' : '–';
+
+            const kpis = [
+                { label: 'Total Leads', value: data.totalLeads || 0, sub: 'All time', accent: '#4ade80' },
+                { label: 'Page Views', value: totalPageViews, sub: 'Tracked sessions', accent: '#60a5fa' },
+                { label: 'Form Starts', value: totalStarts, sub: 'Users opened form', accent: '#facc15' },
+                { label: 'Conversion Rate', value: convRate, sub: 'Form starts → submits', accent: '#f472b6' }
+            ];
+
+            document.getElementById('kpiSection').innerHTML = `
+        <div class="kpi-grid">
+          ${kpis.map(k => `
+            <div class="kpi-card" style="--accent:${k.accent}">
+              <div class="kpi-label">${k.label}</div>
+              <div class="kpi-value">${k.value}</div>
+              <div class="kpi-sub">${k.sub}</div>
+            </div>
+          `).join('')}
+          ${Object.entries(data.pageViews || {}).map(([page, count]) => `
+            <div class="kpi-card" style="--accent:#818cf8">
+              <div class="kpi-label">Views</div>
+              <div class="kpi-value" style="font-size:28px">${count}</div>
+              <div class="kpi-sub">${page}</div>
+            </div>
+          `).join('')}
+        </div>`;
+
+            // ── Source Chart ──────────────────────────────
+            document.getElementById('chartsRow').style.display = 'grid';
+            const labels = Object.keys(data.bySource || {});
+            const values = Object.values(data.bySource || {});
+            const colours = labels.map(l => SOURCE_COLOURS[l] || '#64748b');
+
+            if (sourceChartInstance) sourceChartInstance.destroy();
+            sourceChartInstance = new Chart(document.getElementById('sourceChart'), {
+                type: 'doughnut',
+                data: { labels, datasets: [{ data: values, backgroundColor: colours, borderWidth: 2, borderColor: '#13131a' }] },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#94a3b8', font: { size: 12 }, padding: 16 } }
+                    }
+                }
+            });
+
+            // ── Scroll Depth ──────────────────────────────
+            const sd = data.scrollDepth || {};
+            const scrollHtml = Object.keys(sd).length === 0
+                ? '<p style="color:var(--muted);font-size:13px">No scroll data yet</p>'
+                : Object.entries(sd).map(([page, depths]) => {
+                    const max = Math.max(...Object.values(depths), 1);
+                    const levels = ['scroll_25', 'scroll_50', 'scroll_75', 'scroll_100'];
+                    const colours25 = ['#4ade80', '#86efac', '#facc15', '#f472b6'];
+                    return `
+            <div>
+              <div class="scroll-page-name">${page}</div>
+              <div class="scroll-bars">
+                ${levels.map((lvl, i) => {
+                        const count = depths[lvl] || 0;
+                        const pct = (count / max * 100).toFixed(0);
+                        return `
+                    <div class="bar-row">
+                      <div class="bar-label">${lvl.replace('scroll_', '').replace('%', '') + '%'}</div>
+                      <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${colours25[i]}"></div></div>
+                      <div class="bar-count">${count}</div>
+                    </div>`;
+                    }).join('')}
+              </div>
+            </div>`;
+                }).join('<hr style="border:none;border-top:1px solid var(--border);margin:12px 0">');
+            document.getElementById('scrollDepthContainer').innerHTML = scrollHtml;
+
+            // ── Form Conversions ──────────────────────────
+            const fcs = data.formConversions || {};
+            if (Object.keys(fcs).length > 0) {
+                document.getElementById('conversionSection').style.display = 'block';
+                document.getElementById('conversionBody').innerHTML = Object.entries(fcs).map(([page, v]) => `
+          <tr>
+            <td>${badgeForSource(page)}</td>
+            <td>${v.starts}</td>
+            <td>${v.submits}</td>
+            <td style="font-weight:600;color:${parseFloat(v.rate) > 20 ? '#4ade80' : '#facc15'}">${v.rate}</td>
+          </tr>`).join('');
+            }
+
+            // ── Recent Leads ──────────────────────────────
+            if (data.recentLeads && data.recentLeads.length > 0) {
+                document.getElementById('leadsSection').style.display = 'block';
+                document.getElementById('leadsBody').innerHTML = data.recentLeads.map(l => `
+          <tr>
+            <td style="font-weight:500">${l.name || '–'}</td>
+            <td style="color:var(--muted)">${l.email || '–'}</td>
+            <td style="color:var(--muted)">${l.phone || '–'}</td>
+            <td>${badgeForSource(l.source)}</td>
+            <td>${badgeForGHL(l.ghl_status)}</td>
+            <td style="color:var(--muted)">${fmtDate(l.created_at)}</td>
+          </tr>`).join('');
+            }
+        }
+
+        // Auto-refresh every 30 seconds
+        loadStats();
+        setInterval(loadStats, 30000);
+    </script>
+</body>
+
+</html>

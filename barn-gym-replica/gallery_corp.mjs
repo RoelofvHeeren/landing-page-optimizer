@@ -1,0 +1,41 @@
+import fs from 'fs';
+import { chromium } from 'playwright';
+
+const images = fs.readdirSync('public/images/corp').filter(f => !f.startsWith('.'));
+
+const html = `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; background: #fff; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .card { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        img { max-width: 100%; height: auto; max-height: 200px; object-fit: contain; }
+        p { font-size: 10px; margin-top: 5px; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <h2>Downloaded Images Gallery (Corp)</h2>
+    <div class="grid">
+        ${images.map(img => `
+            <div class="card">
+                <img src="${process.cwd()}/public/images/corp/${encodeURIComponent(img)}" />
+                <p>${img}</p>
+            </div>
+        `).join('')}
+    </div>
+</body>
+</html>
+`;
+
+fs.writeFileSync('gallery_corp.html', html);
+
+(async () => {
+    const browser = await chromium.launch();
+    const page = await browser.newPage({ viewport: { width: 1440, height: 1080 } });
+    await page.goto(`file://${process.cwd()}/gallery_corp.html`);
+    await page.screenshot({ path: 'gallery_corp_full.png', fullPage: true });
+    await browser.close();
+    console.log('Corp gallery screenshot created.');
+})();

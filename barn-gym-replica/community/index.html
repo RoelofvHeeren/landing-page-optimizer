@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | Barn Gym</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/components.js" defer></script>
+    <style>
+        .hero-community {
+            position: relative;
+            background-image: url('/images/community/3h2L9Uo7gCh3lfsTNapQSAbXT4.png');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+        }
+
+        .cards-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 60px auto;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .access-everywhere {
+            background-image: url('/images/community/PC1Jih0r0Byuu6eLePUBpfhbYT8.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            border-radius: 40px;
+            margin: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .access-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 60px auto 0;
+            gap: 40px;
+        }
+
+        .access-features {
+            flex: 1;
+            text-align: left;
+        }
+
+        .access-feature {
+            margin-bottom: 40px;
+        }
+
+        .access-feature h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .access-feature p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 250px;
+        }
+
+        .access-phone {
+            width: 300px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 40px;
+            z-index: 2;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .program-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .program-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .program-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            color: white;
+            text-align: left;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .results-grid img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .phone-stagger-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .phone-stagger-grid img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stagger-col-2 {
+            margin-top: 60px;
+        }
+
+        .horizontal-phones {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .horizontal-phones img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        style="position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" class="brand-logo">
+            <img src="/logos/white.png" alt="Barn Gym" style="height: 60px;">
+        </a>
+    </div>
+
+    <header class="hero-community">
+        <h1 class="font-playfair" style="font-size: 50px; margin-bottom: 20px;">Start Your 7 Day Free Trial</h1>
+        <p style="font-size: 18px; margin-bottom: 10px;">Structured training. Track real progress. Real accountability.
+        </p>
+        <p style="font-size: 16px; margin-bottom: 30px; text-decoration: underline;">£23.99 per month after. Cancel
+            anytime.</p>
+        <a href="#join" class="btn btn-white">Start Your 7 Day Free Trial</a>
+    </header>
+
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px; max-width: 700px; margin: 0 auto;">A <span
+                class="text-green">Healthy</span> Community desinged for those <span class="text-green">committed</span>
+            to their best self</h2>
+
+        <div class="cards-row">
+            <div class="feature-card">
+                <img src="/images/community/16XEFtwZVRjWRqffWrSwQdx0tM.png" alt="Training Plans">
+                <h3>Training Plans That Progress</h3>
+                <p>Follow a clear plan built around structure, progression, and variety. Every session is planned so you
+                    always know what to do and why.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/images/community/DeofM4qaUKHFJasY1iEuiACkQtQ.png" alt="Nutrition Guidance">
+                <h3>Practical Nutrition Guidance</h3>
+                <p>Simple nutrition support that fuels training and recovery. No extremes, just habits that fit your
+                    lifestyle and goals.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/images/community/2yK8fkSi3DTd1vstEgzqZhZt1c.png" alt="Built In Accountability">
+                <h3>Built In Accountability</h3>
+                <p>Train alongside the Barn Community and your coaches. Stay consistent, motivated, and supported every
+                    week.</p>
+            </div>
+        </div>
+
+        <a href="#join" class="btn btn-dark">Start Trial</a>
+    </section>
+
+    <section class="access-everywhere">
+        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #666; margin-bottom: 10px;">
+            Access Everywhere</h3>
+        <h2 class="font-playfair" style="font-size: 40px;">Your Coach & Community<br><span
+                class="text-green">Everywhere</span> You Go</h2>
+
+        <div class="access-grid">
+            <div class="access-features" style="text-align: right;">
+                <div class="access-feature" style="margin-left: auto;">
+                    <h3>Structured<br>Training</h3>
+                    <p style="margin-left: auto;">Clear workouts delivered through Trainerize. No guessing. Just follow
+                        the plan and train with purpose.</p>
+                </div>
+                <div class="access-feature" style="margin-left: auto;">
+                    <h3>Expert Coaching</h3>
+                    <p style="margin-left: auto;">Every session is guided by coaches. Videos, notes, and walkthroughs
+                        show you exactly what to do.</p>
+                </div>
+            </div>
+
+            <img src="/images/community/IFbJBSDNk7oWROw39s7e6hrIL9E.png" alt="App Dashboard" class="access-phone">
+
+            <div class="access-features">
+                <div class="access-feature">
+                    <h3>Simple Nutrition<br>Support</h3>
+                    <p>Fuel your body to perform and progress. Practical guidance that fits real life.</p>
+                </div>
+                <div class="access-feature">
+                    <h3>Built In<br>Accountability</h3>
+                    <p>Train alongside the Barn Community. Stay consistent, motivated, and supported.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 40px;">Join Now</a>
+    </section>
+
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">Obtain <span class="text-green">Access</span> To One Of Our
+            Core Programs</h2>
+
+        <div class="programs-grid">
+            <div class="program-card">
+                <img src="/images/community/FBNmTzwDKQZqHULt7ldGIacvvts.png" alt="Power Building">
+                <div class="program-content">
+                    <h3 class="font-playfair" style="font-size: 24px; margin-bottom: 10px;">Power Building Program</h3>
+                    <p style="font-size: 14px; color: #eee;">Build serious strength while adding muscle and size with
+                        structured barbell focused training.</p>
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="/images/community/U0qY3AsqAUBxw8safzBS6Zsq3iU.png" alt="Hybrid Athlete">
+                <div class="program-content">
+                    <h3 class="font-playfair" style="font-size: 24px; margin-bottom: 10px;">Hybrid Athlete Program</h3>
+                    <p style="font-size: 14px; color: #eee;">Train strength and conditioning together to be strong, fit,
+                        and athletic year round.</p>
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="/images/community/pqwqlpB5Yv9Vtdf7DVHWRqc7Acg.png" alt="Tone and Sculpt">
+                <div class="program-content">
+                    <h3 class="font-playfair" style="font-size: 24px; margin-bottom: 10px;">Tone and Sculpt Program</h3>
+                    <p style="font-size: 14px; color: #eee;">Build lean muscle, improve definition, and feel strong
+                        without living in the gym.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 20px;">Find Your Program</a>
+    </section>
+
+    <section style="padding: 80px 20px; text-align: center; position: relative;">
+        <h2 class="font-playfair" style="font-size: 40px;">Full Trainerize <span class="text-green">Access</span>
+            For<br><span class="text-green">All Members</span></h2>
+        <p style="color: #666; margin-top: 10px;">A system that turns consistency into progress you can measure, not
+            just hope for.</p>
+
+        <div style="display: flex; max-width: 1200px; margin: 60px auto; align-items: flex-start; gap: 40px;">
+            <div
+                style="flex: 1; text-align: left; background: white; padding: 40px; border-radius: 20px; border: 1px solid #eaeaea; box-shadow: 0 20px 40px rgba(0,0,0,0.05); position: sticky; top: 100px;">
+                <h3 class="font-playfair" style="font-size: 28px; margin-bottom: 15px;">Track Everything</h3>
+                <p style="color: #666; line-height: 1.6;">Know exactly what to do every day — it's never been easier to
+                    train with high-definition video guidance, detailed target areas, modifications, and more.</p>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <span
+                        style="width: 10px; height: 10px; background: #666; border-radius: 50%; display: inline-block;"></span>
+                    <span
+                        style="width: 10px; height: 10px; background: #666; border-radius: 50%; display: inline-block;"></span>
+                    <span
+                        style="width: 30px; height: 10px; background: #2b7a58; border-radius: 5px; display: inline-block;"></span>
+                </div>
+            </div>
+
+            <div style="flex: 2;">
+                <div class="phone-stagger-grid">
+                    <div>
+                        <img src="/images/community/qcvPC5fmNrhWL0ObfQrUS7eQA.png" alt="App">
+                        <img src="/images/community/R1ewslccACEWRKxzRmANGxjo.png" alt="App" style="margin-top: 20px;">
+                        <img src="/images/community/pPzat7WEwEi3TrmoHxwHGsyxstw.png" alt="App"
+                            style="margin-top: 20px;">
+                    </div>
+                    <div class="stagger-col-2">
+                        <img src="/images/community/OXRiHgLDjhl1C5703CnMrn2Ubs.png" alt="App">
+                        <img src="/images/community/vm6M7TjRe3yrQYqoiBXXYdRW4.png" alt="App" style="margin-top: 20px;">
+                        <img src="/images/community/rCSkVtQ4bBhwZKt6rDA5WnjfMzU.png" alt="App"
+                            style="margin-top: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 60px;">Start Today</a>
+    </section>
+
+    <!-- Results -->
+    <section style="padding: 80px 20px; text-align: center; background: #fafafa;">
+        <h2 class="font-playfair" style="font-size: 40px;">When You <span class="text-green">Enjoy</span> Your Work
+            out,<br>Results Come <span class="text-green">Easy</span></h2>
+        <p style="color: #666; margin-top: 10px; max-width: 600px; margin: 10px auto 40px;">See how everyday members
+            have transformed their bodies through guidance, structure, and commitment.</p>
+
+        <div class="results-grid">
+            <img src="/images/community/QaOyn6jNUtjOrdUHFFnKT9MVs.png" alt="Result 1">
+            <img src="/images/community/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" alt="Result 2">
+            <img src="/images/community/eHwZqRT0Kq5XS2TEyCNbCKBjBs8.png" alt="Result 3">
+            <img src="/images/community/xbvsybidTcZQoWRLz7kMjc9EJc0.png" alt="Result 4">
+            <img src="/images/community/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" alt="Result 5">
+            <img src="/images/community/h9e4GUMhIll94pIyxFYGkSYas.png" alt="Result 6">
+            <img src="/images/community/s0tcPUvvWB4mMscO4glRB7qGk.png" alt="Result 7">
+            <img src="/images/community/suHiUZG5vNHpMqsU3KF83Ck344.png" alt="Result 8">
+            <img src="/images/community/y6ojNMUEiXdMWVmNNhKaEmxQsKM.png" alt="Result 9">
+            <img src="/images/community/dMOe2dNs8rHeGOso89ngrOg.png" alt="Result 10">
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 40px;">Start Today</a>
+    </section>
+
+    <!-- Community You've Been Looking For -->
+    <section style="padding: 100px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">The <span class="text-green">Community</span> You've<br>Been
+            Looking For</h2>
+        <p style="color: #666; margin-top: 10px; margin-bottom: 60px;">A system that turns consistency into progress you
+            can measure, not just hope for.</p>
+
+        <div style="display: flex; max-width: 1200px; margin: 0 auto; align-items: flex-end; gap: 40px;">
+            <div style="flex: 2;">
+                <div class="horizontal-phones">
+                    <img src="/images/community/GXqp9ty17wb1mSQRimEfvSDQyLI.png" alt="Community">
+                    <img src="/images/community/4aMbswzWjXLdrC54IFkmDjlyCU.png" alt="Community">
+                    <img src="/images/community/lVdPlrdU33EwYWfwifzHg1aiE.png" alt="Community">
+                    <img src="/images/community/GXqp9ty17wb1mSQRimEfvSDQyLI.png" alt="Community">
+                    <!-- Repeating for grid effect as live site has 6 -->
+                    <img src="/images/community/4aMbswzWjXLdrC54IFkmDjlyCU.png" alt="Community">
+                    <img src="/images/community/lVdPlrdU33EwYWfwifzHg1aiE.png" alt="Community">
+                </div>
+            </div>
+
+            <div
+                style="flex: 1; text-align: left; background: white; padding: 40px; border-radius: 20px; border: 1px solid #eaeaea; box-shadow: 0 20px 40px rgba(0,0,0,0.05); margin-bottom: 40px;">
+                <h3 class="font-playfair" style="font-size: 24px; margin-bottom: 15px;">Community Content</h3>
+                <p style="color: #666; line-height: 1.6; font-size: 14px;">Access educational videos, courses, and
+                    resources covering training, nutrition, recovery, and lifestyle habits to support long term
+                    progress.</p>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <span
+                        style="width: 10px; height: 10px; background: #666; border-radius: 50%; display: inline-block;"></span>
+                    <span
+                        style="width: 10px; height: 10px; background: #666; border-radius: 50%; display: inline-block;"></span>
+                    <span
+                        style="width: 30px; height: 10px; background: #2b7a58; border-radius: 5px; display: inline-block;"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="padding: 80px 20px; text-align: center; max-width: 800px; margin: 0 auto;">
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 20px;">Join Barn Community Today</h2>
+        <p style="color: #666; font-size: 18px; line-height: 1.6; margin-bottom: 40px;">
+            <span class="text-green" style="font-style: italic; font-weight: 500;">Consistency</span> doesn't happen
+            alone. It happens when you're surrounded by a <span class="text-green"
+                style="font-style: italic; font-weight: 500;">community</span> that notices, supports, and keeps you
+            going, on the busy days.
+        </p>
+
+        <a href="#join" class="btn btn-dark">Join Today</a>
+    </section>
+
+    <!-- Footer injected by JS -->
+</body>
+
+</html>

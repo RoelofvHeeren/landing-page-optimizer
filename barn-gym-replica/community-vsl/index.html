@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community VSL | Barn Gym</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/components.js" defer></script>
+    <style>
+        .page-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            border-radius: 0 0 40px 40px;
+            overflow: hidden;
+            margin: 20px;
+            margin-top: 0;
+            background-image: url('/images/community_vsl/tbg36Glb9bMpJ6JglmoiZcKnsqU.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .page-hero-text {
+            flex: 1;
+            color: white;
+            max-width: 500px;
+        }
+
+        .page-hero-video {
+            flex: 1;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .dark-feature-section {
+            background-image: url('/images/community_vsl/klAPamP99oehtJkM8VrJH6e6UY.jpg');
+            /* placeholder */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+            border-radius: 40px;
+            margin: 40px 20px;
+            overflow: hidden;
+        }
+
+        .dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .dark-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Program Slider Placeholder */
+        .program-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scrollbar-width: none;
+        }
+
+        .program-card {
+            min-width: 300px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            color: #333;
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .program-body {
+            padding: 20px;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 40px 0;
+        }
+
+        .step-btn {
+            padding: 10px 40px;
+            border-radius: 5px;
+            background: #80c1a6;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .step-btn.active {
+            background: #2b7a58;
+        }
+
+        .app-features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .app-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-section {
+            background: #fafafa;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .pricing-card {
+            flex: 1;
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pricing-img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <header class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <div class="page-hero-text">
+                <h1 class="font-playfair" style="font-size: 56px; margin-bottom: 20px; line-height: 1.1;">Welcome to The
+                    Online Barn Community</h1>
+                <p style="font-size: 16px; margin-bottom: 30px; color: #ddd;">Because staying consistent is easier when
+                    you're surrounded by people who push, support, and show up with you.</p>
+                <a href="#pricing" class="btn btn-white">Start 7 Day Free Trial</a>
+            </div>
+            <div class="page-hero-video">
+                <img src="/images/community_vsl/z9kKmCEJBNmLWXqCP4lfU4pnVo.png" alt="VSL Video Placeholder"
+                    style="width: 100%; display: block;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Text -->
+    <section style="padding: 80px 20px; text-align: center; max-width: 800px; margin: 0 auto;">
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 20px;">Welcome To Barn Gym <span
+                class="text-green">Community</span></h2>
+        <p style="font-size: 24px; color: #444; line-height: 1.5;" class="font-playfair">
+            <span class="text-green" style="font-style: italic;">Consistency</span> doesn't happen alone. It happens
+            when you're surrounded by a <span class="text-green" style="font-style: italic;">community</span> that
+            notices, supports, and keeps you going, even on the busy days.
+        </p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px;">
+            <img src="/images/community_vsl/EO0cm2moSKEhe6KrZuAmDwno.webp" alt="Guy Kennedy"
+                style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+            <span style="font-size: 12px; color: #666;">Guy Kennedy - Founder & Head coach @ Barn Gym</span>
+        </div>
+        <a href="#pricing" class="btn btn-dark" style="margin-top: 30px;">Join Now</a>
+    </section>
+
+    <!-- Programs Slider Section -->
+    <section class="dark-feature-section">
+        <div class="dark-overlay"></div>
+        <div class="dark-content">
+            <img src="/logos/white.png" alt="Barn Gym" style="width: 80px; margin-bottom: 20px;">
+            <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 40px;">We've got programs for everybody
+            </h2>
+
+            <div class="program-slider">
+                <!-- Power Building -->
+                <div class="program-card">
+                    <img src="/images/community_vsl/QM9gd9ODuKKhnnUj95gm615b4.png" alt="Power Building">
+                    <div class="program-body">
+                        <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">Power Building</h3>
+                        <a href="#" class="btn btn-dark" style="width: 100%; padding: 10px;">Learn More</a>
+                    </div>
+                </div>
+                <!-- Sculpt & Tone -->
+                <div class="program-card">
+                    <img src="/images/community_vsl/o9WC17XLiP8A54i0EZIWsWrjbo.png" alt="Sculpt & Tone">
+                    <div class="program-body">
+                        <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">Sculpt & Tone</h3>
+                        <a href="#" class="btn btn-dark" style="width: 100%; padding: 10px;">Learn More</a>
+                    </div>
+                </div>
+                <!-- Running -->
+                <div class="program-card">
+                    <img src="/images/community_vsl/3kbyj1SN0wU8nOsudmvr8L7KY.png" alt="Running">
+                    <div class="program-body">
+                        <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">Running</h3>
+                        <a href="#" class="btn btn-dark" style="width: 100%; padding: 10px;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#pricing" class="btn btn-white" style="margin-top: 40px;">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">Our Simple <span class="text-green">&</span> Smart Process
+        </h2>
+        <p style="color: #666; font-size: 14px; margin-top: 10px;">Join a community designed to guide you through every
+            step - from setting your foundation to reaching your goals.</p>
+
+        <div class="process-steps">
+            <div class="step-btn active">Step 1</div>
+            <div class="step-btn">Step 2</div>
+            <div class="step-btn">Step 3</div>
+        </div>
+
+        <div style="display: flex; max-width: 900px; margin: 0 auto; align-items: center; gap: 40px; text-align: left;">
+            <div style="flex: 1;">
+                <img src="/images/community_vsl/siOqLxtVnRigI4Ha8xnQ0kuc0GU.webp" alt="Challenge"
+                    style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+            <div style="flex: 1;">
+                <div style="font-size: 12px; color: #888; margin-bottom: 10px;">01</div>
+                <h3 class="font-playfair" style="font-size: 28px; margin-bottom: 15px;">Free 7 Day Starter Challenge
+                </h3>
+                <p style="color: #666; font-size: 14px; line-height: 1.6;">Kickstart your journey with daily action
+                    steps that build the right habits fast. You'll follow a simple roadmap and share progress inside the
+                    community for instant accountability.</p>
+            </div>
+        </div>
+
+        <a href="#pricing" class="btn btn-dark" style="margin-top: 60px;">Start Today</a>
+    </section>
+
+    <!-- Community Sections -->
+    <section class="dark-feature-section">
+        <div class="dark-overlay"></div>
+        <div class="dark-content">
+            <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 10px;">Community Sections</h2>
+            <p style="color: #ccc; font-size: 14px; margin-bottom: 40px;">Join a community designed to guide you through
+                every step - from setting your foundation to reaching your goals.</p>
+
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                <span
+                    style="border: 1px solid #2b7a58; padding: 5px 15px; border-radius: 20px; font-size: 12px; color: #80c1a6;">Foundations
+                    & Onboarding</span>
+                <span
+                    style="border: 1px solid #444; padding: 5px 15px; border-radius: 20px; font-size: 12px; color: #888;">Core
+                    Training</span>
+                <span
+                    style="border: 1px solid #444; padding: 5px 15px; border-radius: 20px; font-size: 12px; color: #888;">Community
+                    Engagement</span>
+                <span
+                    style="border: 1px solid #444; padding: 5px 15px; border-radius: 20px; font-size: 12px; color: #888;">Premium
+                    Content</span>
+            </div>
+            <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #888; margin-bottom: 20px;">01
+            </p>
+
+            <h3 class="font-playfair" style="font-size: 28px; margin-bottom: 15px;">Foundations & Onboarding</h3>
+            <p style="color: #ccc; font-size: 14px; line-height: 1.6; max-width: 600px; margin: 0 auto 40px;">Your
+                starting point. Learn how the community works, meet the coaches, and get set up properly from day one.
+                No confusion, no wasted time, just a clear path forward.</p>
+
+            <img src="/images/community_vsl/soayts033PAHEQdgsolbXVjQBrI.png" alt="Community Platform"
+                style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+
+            <div style="margin-top: 40px;">
+                <a href="#pricing" class="btn btn-white">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase Sections -->
+    <section class="app-display-area" style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">Full Trainerize <span class="text-green">Access</span> For
+        </h2>
+        <h2 class="font-playfair" style="font-size: 40px; color: #2b7a58;">All Members</h2>
+        <p style="color: #666; font-size: 14px; margin-top: 10px;">A system that turns consistency into progress you can
+            measure, not just hope for.</p>
+
+        <div class="app-features-grid" style="margin-top: 60px;">
+            <img src="/images/community_vsl/IFbJBSDNk7oWROw39s7e6hrIL9E.png" alt="App" class="app-img">
+            <img src="/images/community_vsl/f585OatPncDfaQbqauLE7Z0k3U.png" alt="App" class="app-img">
+            <img src="/images/community_vsl/OXRiHgLDjhl1C5703CnMrn2Ubs.png" alt="App" class="app-img"
+                style="grid-column: 3 / 4; grid-row: 1 / 3; align-self: center;">
+            <img src="/images/community_vsl/rCSkVtQ4bBhwZKt6rDA5WnjfMzU.png" alt="App" class="app-img"
+                style="grid-column: 4 / 5; grid-row: 1 / 3; align-self: center;">
+            <img src="/images/community_vsl/pPzat7WEwEi3TrmoHxwHGsyxstw.png" alt="App" class="app-img">
+            <img src="/images/community_vsl/qcvPC5fmNrhWL0ObfQrUS7eQA.png" alt="App" class="app-img">
+
+            <!-- Banner Box -->
+            <div
+                style="grid-column: 1 / 3; background: #fdfdfd; border: 1px solid #eee; border-radius: 20px; padding: 40px; text-align: left; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h3 class="font-playfair" style="font-size: 24px; color: #2b7a58; margin-bottom: 10px;">Easy To Follow
+                    Videos</h3>
+                <p style="color: #666; font-size: 13px; line-height: 1.5;">Know exactly what to do every day — it's
+                    never been easier to train with high-definition video guidance, detailed target areas,
+                    modifications, and more.</p>
+                <div style="display: flex; gap: 5px; margin-top: 15px;">
+                    <div style="width: 30px; height: 6px; background: #2b7a58; border-radius: 3px;"></div>
+                    <div style="width: 8px; height: 6px; background: #aaa; border-radius: 3px;"></div>
+                    <div style="width: 8px; height: 6px; background: #aaa; border-radius: 3px;"></div>
+                    <div style="width: 8px; height: 6px; background: #aaa; border-radius: 3px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#pricing" class="btn btn-dark" style="margin-top: 40px;">Talk To Our Team</a>
+    </section>
+
+    <!-- Features Overview -->
+    <section class="dark-feature-section"
+        style="background-image: url('/images/community_vsl/h9e4GUMhIll94pIyxFYGkSYas.png');">
+        <div class="dark-overlay"></div>
+        <div class="dark-content">
+            <img src="/logos/white.png" alt="Barn Gym" style="width: 80px; margin-bottom: 20px;">
+            <h2 class="font-playfair" style="font-size: 40px;">All features in one place</h2>
+            <p style="color: #ccc; font-size: 14px; margin-bottom: 40px;">Everything you need to train, connect, and
+                transform - all in one place.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <!-- Card 1 -->
+                <div style="background: white; color: #333; border-radius: 20px; padding: 20px;">
+                    <img src="/images/community_vsl/Sd1yZlaFANbI8qsMPVo0dMjkF4.png" alt="Feature"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <h3 class="font-playfair" style="font-size: 18px; margin-bottom: 10px;">Time-Efficient Workouts</h3>
+                    <p style="font-size: 11px; color: #666;">Science-backed programs designed to deliver results in just
+                        25-45 minutes.</p>
+                </div>
+                <!-- Card 2 -->
+                <div style="background: white; color: #333; border-radius: 20px; padding: 20px;">
+                    <img src="/images/community_vsl/rFpTnwbbVZ8Gu8mT7qo3GKHE9YCw.png" alt="Feature"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <h3 class="font-playfair" style="font-size: 18px; margin-bottom: 10px;">Expert Fitness Advice</h3>
+                    <p style="font-size: 11px; color: #666;">Weekly guidance backed by science, designed to help you
+                        train smarter and avoid plateaus.</p>
+                </div>
+                <!-- Card 3 -->
+                <div style="background: white; color: #333; border-radius: 20px; padding: 20px;">
+                    <img src="/images/community_vsl/3siPgVjnPbXfiCzkk0C3BrRafpk.png" alt="Feature"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <h3 class="font-playfair" style="font-size: 18px; margin-bottom: 10px;">Personalised Nutrition</h3>
+                    <p style="font-size: 11px; color: #666;">No extremes, just a clear, sustainable plan designed around
+                        you.</p>
+                </div>
+                <!-- Card 4 -->
+                <div style="background: white; color: #333; border-radius: 20px; padding: 20px;">
+                    <img src="/images/community_vsl/tbg36Glb9bMpJ6JglmoiZcKnsqU.jpeg" alt="Feature"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <h3 class="font-playfair" style="font-size: 18px; margin-bottom: 10px;">Supportive Community</h3>
+                    <p style="font-size: 11px; color: #666;">A thriving network of like-minded individuals pushing
+                        toward the same goals.</p>
+                </div>
+                <!-- Card 5 -->
+                <div style="background: white; color: #333; border-radius: 20px; padding: 20px;">
+                    <img src="/images/community_vsl/yMCo0RB13fhijqdzt9DCOx61Kc.png" alt="Feature"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <h3 class="font-playfair" style="font-size: 18px; margin-bottom: 10px;">Accountability & Coaching
+                    </h3>
+                    <p style="font-size: 11px; color: #666;">One-on-one coaching calls and ongoing expert support to
+                        keep you consistent.</p>
+                </div>
+                <!-- Card 6 -->
+                <div style="background: white; color: #333; border-radius: 20px; padding: 20px;">
+                    <img src="/images/community_vsl/QM9gd9ODuKKhnnUj95gm615b4.png" alt="Feature"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+                    <h3 class="font-playfair" style="font-size: 18px; margin-bottom: 10px;">Workshops & Live Events</h3>
+                    <p style="font-size: 11px; color: #666;">Monthly deep dives on training, nutrition, and mindset,
+                        plus live Q&A sessions.</p>
+                </div>
+            </div>
+
+            <a href="#pricing" class="btn btn-white" style="margin-top: 40px;">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section style="padding: 80px 20px; text-align: center; background: #fff;">
+        <h3
+            style="font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 10px;">
+            Results</h3>
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 10px;">When You <span
+                class="text-green">Enjoy</span> Your Work out,</h2>
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 20px;">Results Come <span
+                class="text-green">Easy</span></h2>
+        <p style="color: #666; max-width: 600px; margin: 0 auto 40px; font-size: 14px;">See how everyday members have
+            transformed their bodies through guidance, structure, and commitment.</p>
+
+        <!-- Reuse Results Grid from other pages -->
+        <div
+            style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 1000px; margin: 0 auto;">
+            <img src="/images/community_vsl/XnREanv8IV35FkZu8cAOlU3m19A.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+            <img src="/images/community_vsl/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+            <img src="/images/community_vsl/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+            <img src="/images/community_vsl/KlnSH1pj2dWHmSPYNOqYgmY22E.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+
+            <img src="/images/community_vsl/s0tcPUvvWB4mMscO4glRB7qGk.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+            <img src="/images/community_vsl/ZmIUk2Yz0TLDAkub7K9n0MHoJU.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+            <img src="/images/community_vsl/UsbTqN9UUaNoR2izuW4ESSkeA0.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+            <img src="/images/community_vsl/MQXUREqWoWFLTlXfctHe2R93Hy4.png" alt="Result"
+                style="width: 100%; border-radius: 10px;">
+        </div>
+
+        <a href="#pricing" class="btn btn-dark" style="margin-top: 40px;">Start Today</a>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <h2 class="font-playfair" style="font-size: 40px;">Flexible Plans for <span class="text-green">Everyone</span>
+        </h2>
+        <p style="color: #666; font-size: 14px; margin-top: 10px;">Join the community at the level that suits you and
+            stay committed as you progress.</p>
+
+        <div class="pricing-grid">
+            <!-- Silver -->
+            <div class="pricing-card">
+                <img src="/images/community_vsl/vZ01eS5s1IoNjpfCfHgwGZr80.png" alt="Silver" class="pricing-img">
+                <h3 class="font-playfair" style="font-size: 24px; margin-bottom: 10px;">Silver</h3>
+                <p style="text-decoration: underline; font-size: 14px; margin-bottom: 10px;">Includes 7 Day Free Trial
+                </p>
+                <div class="font-playfair" style="font-size: 32px; font-weight: 600; margin-bottom: 20px;">£23.99 <span
+                        style="font-size: 14px; font-weight: 400; font-family: 'Inter', sans-serif;">/ month</span>
+                </div>
+
+                <p style="font-size: 12px; font-weight: 500; margin-bottom: 15px;">Included:</p>
+                <ul
+                    style="list-style: none; padding: 0; font-size: 12px; color: #444; margin-bottom: 30px; line-height: 2;">
+                    <li>1 Training Plan</li>
+                    <li>1 Nutrition Plan</li>
+                    <li>Premium Fitness Content</li>
+                    <li>All Courses For Free</li>
+                </ul>
+
+                <a href="#" class="btn btn-dark" style="background: #333; margin-top: auto; padding: 15px 40px;">Start
+                    Free Trial</a>
+            </div>
+
+            <!-- Gold -->
+            <div class="pricing-card">
+                <img src="/images/community_vsl/gt8CTiGQH2lt0W1X9sZs7p6iI2w.png" alt="Gold" class="pricing-img">
+                <h3 class="font-playfair" style="font-size: 24px; margin-bottom: 10px; color: #f2a900;">Gold</h3>
+                <div class="font-playfair"
+                    style="font-size: 32px; font-weight: 600; margin-bottom: 20px; color: #f2a900; margin-top: 31px;">
+                    £200 <span
+                        style="font-size: 14px; font-weight: 400; font-family: 'Inter', sans-serif; color: #333;">/
+                        month</span></div>
+
+                <p style="font-size: 12px; font-weight: 500; margin-bottom: 15px;">Included:</p>
+                <ul
+                    style="list-style: none; padding: 0; font-size: 12px; color: #444; margin-bottom: 30px; line-height: 2;">
+                    <li>Dedicated Online Coach</li>
+                    <li>Personalised Nutrition Plan</li>
+                    <li>Custom Workout Plan</li>
+                    <li>1-on-1 Accountability</li>
+                    <li>All Courses For Free</li>
+                </ul>
+
+                <a href="#" class="btn btn-dark" style="margin-top: auto; padding: 15px 40px;">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 80px 20px; text-align: center; background: #fff;">
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 40px;">Your Questions, <span
+                class="text-green">Answered</span></h2>
+
+        <div class="faq-container">
+            <!-- Left Column equivalent -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left;">
+                <div>
+                    <div class="faq-item">
+                        <span style="font-size: 14px; color: #444;">What is the Barn Community?</span>
+                        <span style="font-size: 18px; color: #888;">+</span>
+                    </div>
+                    <div class="faq-item">
+                        <span style="font-size: 14px; color: #444;">What if I'm not doing classes or PT?</span>
+                        <span style="font-size: 18px; color: #888;">+</span>
+                    </div>
+                    <div class="faq-item">
+                        <span style="font-size: 14px; color: #444;">What kind of support do I get?</span>
+                        <span style="font-size: 18px; color: #888;">+</span>
+                    </div>
+                </div>
+                <!-- Right Column equivalent -->
+                <div>
+                    <div class="faq-item">
+                        <span style="font-size: 14px; color: #444;">Do I get access if I'm already a member?</span>
+                        <span style="font-size: 18px; color: #888;">+</span>
+                    </div>
+                    <div class="faq-item">
+                        <span style="font-size: 14px; color: #444;">What makes the community effective?</span>
+                        <span style="font-size: 18px; color: #888;">+</span>
+                    </div>
+                    <div class="faq-item">
+                        <span style="font-size: 14px; color: #444;">Can I try it for free?</span>
+                        <span style="font-size: 18px; color: #888;">+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>
