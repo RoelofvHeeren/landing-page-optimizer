@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', /\.railway\.app$/],
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', /\.railway\.app$/, 'https://join.barn-gym.com'],
     credentials: true
 }));
 app.use(express.json());
@@ -28,11 +28,9 @@ app.post('/api/leads', async (req, res) => {
             return res.status(400).json({ success: false, error: 'name and email are required' });
         }
 
-        // 1. Save to DB (pending GHL status)
         const lead = await saveLead({ name, email, phone, source, survey_q1, survey_q2, ghl_contact_id: null, ghl_status: 'pending' });
         console.log(`[LEAD SAVED] id=${lead.id} name="${name}" email="${email}" source="${source}"`);
 
-        // 2. Track form_submit event
         await saveEvent({
             session_id: req.body.session_id,
             page: source,
@@ -42,7 +40,6 @@ app.post('/api/leads', async (req, res) => {
             ip: req.ip
         });
 
-        // 3. Push to GHL async (don't block the response)
         pushLeadToGHL({ name, email, phone, source })
             .then(async ({ contactId }) => {
                 await updateLeadGHL(lead.id, contactId, 'success');
@@ -65,10 +62,7 @@ app.post('/api/events', async (req, res) => {
     try {
         const { session_id, page, event_type, event_data } = req.body;
         await saveEvent({
-            session_id,
-            page,
-            event_type,
-            event_data,
+            session_id, page, event_type, event_data,
             user_agent: req.headers['user-agent'],
             ip: req.ip
         });
@@ -96,10 +90,23 @@ app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'dashboard', 'index.html'));
 });
 
+// ─── Landing Pages ────────────────────────────────────────────────────────────
+// 6-Week: https://join.barn-gym.com/6week
+const sixWeekDir = path.join(__dirname, '..', 'barn-gym-6-week-replica');
+app.use('/6week', express.static(path.join(sixWeekDir, 'public')));
+app.get('/6week', (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
+
+// PT: https://join.barn-gym.com/pt
+const ptDir = path.join(__dirname, '..', 'barn-gym-pt-replica');
+app.use('/pt', express.static(path.join(ptDir, 'public')));
+app.get('/pt', (req, res) => res.sendFile(path.join(ptDir, 'index.html')));
+
 // ─── Health check ────────────────────────────────────────────────────────────
 app.get('/health', (req, res) => res.json({ ok: true, ts: new Date().toISOString() }));
 
 app.listen(PORT, () => {
     console.log(`🚀 Barn Gym API running at http://localhost:${PORT}`);
-    console.log(`📊 Dashboard: http://localhost:${PORT}/dashboard`);
+    console.log(`📊 Dashboard:   http://localhost:${PORT}/dashboard`);
+    console.log(`📄 6-week page: http://localhost:${PORT}/6week`);
+    console.log(`📄 PT page:     http://localhost:${PORT}/pt`);
 });
