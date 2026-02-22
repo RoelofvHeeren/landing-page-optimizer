@@ -81,19 +81,15 @@ app.get(['/dashboard', '/dashboard/'], (req, res) => {
 });
 
 // ─── PT landing page at /pt ───────────────────────────────────────────────────
-// Assets: serve PT's public dir under /pt so that /pt/images/... works
-// But PT uses absolute paths like /style.css and /images/... so we also serve them
-// from the PT public dir at root ONLY when the referer is /pt (via a sub-router)
+// PT's own stylesheet served at /pt-style.css
+app.get('/pt-style.css', (req, res) => res.sendFile(path.join(ptDir, 'style.css')));
+// PT public assets (images shared via root /images path, same as 6-week)
+app.use(express.static(path.join(ptDir, 'public')));
 const ptRouter = express.Router();
-ptRouter.use(express.static(path.join(ptDir, 'public')));
-ptRouter.use(express.static(ptDir));  // serves style.css etc.
 ptRouter.get('/', (req, res) => res.sendFile(path.join(ptDir, 'index.html')));
 app.use('/pt', ptRouter);
 
 // ─── 6-week landing page at root / ───────────────────────────────────────────
-// Served last so API routes above take priority.
-// The 6-week page uses absolute paths (/style.css, /images/...) which resolve
-// correctly at root level.
 app.use(express.static(path.join(sixWeekDir, 'public'))); // /images, /logos, /videos
 app.use(express.static(sixWeekDir));                       // /style.css
 app.get(['/'], (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
