@@ -83,15 +83,18 @@ app.get(['/dashboard', '/dashboard/'], (req, res) => {
 // ─── PT landing page at /pt ───────────────────────────────────────────────────
 // PT's own stylesheet served at /pt-style.css
 app.get('/pt-style.css', (req, res) => res.sendFile(path.join(ptDir, 'style.css')));
-// PT public assets (images shared via root /images path, same as 6-week)
-app.use(express.static(path.join(ptDir, 'public')));
 const ptRouter = express.Router();
 ptRouter.get('/', (req, res) => res.sendFile(path.join(ptDir, 'index.html')));
 app.use('/pt', ptRouter);
 
+// ─── Shared static assets (images, logos, videos) ────────────────────────────
+// Both PT and 6-week use absolute /images/... paths, so serve both public dirs at root.
+// PT is listed first so its unique images (blueprint_step.png etc.) take priority.
+app.use(express.static(path.join(ptDir, 'public')));
+app.use(express.static(path.join(sixWeekDir, 'public')));
+app.use(express.static(sixWeekDir)); // /style.css
+
 // ─── 6-week landing page at root / ───────────────────────────────────────────
-app.use(express.static(path.join(sixWeekDir, 'public'))); // /images, /logos, /videos
-app.use(express.static(sixWeekDir));                       // /style.css
 app.get(['/'], (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
 
 app.listen(PORT, () => {
