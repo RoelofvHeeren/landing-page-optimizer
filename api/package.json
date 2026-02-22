@@ -2,6 +2,7 @@
     "name": "barn-gym-api",
     "version": "1.0.0",
     "description": "API server for Barn Gym landing pages – lead capture, GHL integration, and analytics",
+    "type": "module",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
