@@ -6,15 +6,6 @@ node_modules/
 .env.local
 .env.production
 
-# Large binary assets – store via Git LFS or leave out of the repo
-*.png
-*.jpg
-*.jpeg
-*.avif
-*.mp4
-*.webp
-*.gif
-
 # Mac OS
 .DS_Store
 **/.DS_Store
