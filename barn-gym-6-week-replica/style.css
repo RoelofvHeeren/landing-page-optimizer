@@ -1275,11 +1275,11 @@ h4,
 
 @media (max-width: 768px) {
   .hero-headline {
-    font-size: 32px !important;
+    font-size: 24px !important;
   }
 
   .hero-headline em {
-    font-size: 48px !important;
+    font-size: 42px !important;
   }
 
   .hero-subheadline {
@@ -1330,7 +1330,7 @@ h4,
   }
 
   .info-modal-image img {
-    height: 150px !important;
+    height: 225px !important;
     object-fit: cover !important;
   }
 
@@ -1340,5 +1340,9 @@ h4,
     width: 32px !important;
     height: 32px !important;
     font-size: 20px !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
   }
 }
