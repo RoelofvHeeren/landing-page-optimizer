@@ -576,6 +576,7 @@
     const totalSlides = dots.length;
 
     function updateCarousel(index) {
+      const isNewIndex = index !== currentIndex;
       currentIndex = index;
 
       // Update dots
@@ -589,15 +590,17 @@
         behavior: 'smooth'
       });
 
-      // Manage video playback: play visible, pause others
-      const allVideos = track.querySelectorAll('video');
-      allVideos.forEach((v, i) => {
-        if (i === currentIndex) {
-          v.play().catch(() => { });
-        } else {
-          v.pause();
-        }
-      });
+      // Only manage playback if the slide actually changed
+      if (isNewIndex) {
+        const allVideos = track.querySelectorAll('video');
+        allVideos.forEach((v, i) => {
+          if (i === currentIndex) {
+            v.play().catch(() => { });
+          } else {
+            v.pause();
+          }
+        });
+      }
     }
 
     dots.forEach(dot => {
