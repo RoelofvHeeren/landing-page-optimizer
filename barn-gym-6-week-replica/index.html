@@ -395,27 +395,27 @@
               <div class="carousel-track" id="carouselTrack">
                 <div class="carousel-slide">
                   <video src="/testimonial1.mp4" muted loop playsinline autoplay controls
-                    controlsList="nodownload noplaybackrate"></video>
+                    disablePictureInPicture></video>
                 </div>
                 <div class="carousel-slide">
                   <video src="/testimonial2.mp4" muted loop playsinline autoplay controls
-                    controlsList="nodownload noplaybackrate"></video>
+                    disablePictureInPicture></video>
                 </div>
                 <div class="carousel-slide">
                   <video src="/testimonial3.mp4" muted loop playsinline autoplay controls
-                    controlsList="nodownload noplaybackrate"></video>
+                    disablePictureInPicture></video>
                 </div>
                 <div class="carousel-slide">
                   <video src="/testimonial4.mp4" muted loop playsinline autoplay controls
-                    controlsList="nodownload noplaybackrate"></video>
+                    disablePictureInPicture></video>
                 </div>
                 <div class="carousel-slide">
                   <video src="/testimonial5.mp4" muted loop playsinline autoplay controls
-                    controlsList="nodownload noplaybackrate"></video>
+                    disablePictureInPicture></video>
                 </div>
                 <div class="carousel-slide">
                   <video src="/testimonial6.mp4" muted loop playsinline autoplay controls
-                    controlsList="nodownload noplaybackrate"></video>
+                    disablePictureInPicture></video>
                 </div>
               </div>
               <div class="carousel-dots" id="carouselDots">
@@ -589,10 +589,14 @@
         behavior: 'smooth'
       });
 
-      // Pause all videos
+      // Manage video playback: play visible, pause others
       const allVideos = track.querySelectorAll('video');
-      allVideos.forEach(v => {
-        v.pause();
+      allVideos.forEach((v, i) => {
+        if (i === currentIndex) {
+          v.play().catch(() => { });
+        } else {
+          v.pause();
+        }
       });
     }
 
