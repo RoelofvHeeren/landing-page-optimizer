@@ -1300,26 +1300,45 @@ h4,
     padding: 0 20px;
   }
 
+  .info-modal-card {
+    padding: 25px 20px !important;
+  }
+
+  .info-modal-title {
+    font-size: 24px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .info-modal-text p {
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .info-modal-subtitle {
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .info-modal-list li {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+  }
+
   .info-modal-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
 
   .info-modal-image img {
-    max-height: 250px !important;
+    height: 150px !important;
+    object-fit: cover !important;
   }
 
   .info-close {
     top: 10px;
     right: 10px;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 20px !important;
   }
-}
-
-.info-modal-image img {
-  width: 100%;
-  height: auto;
-  max-height: 350px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid var(--primary-color);
 }
