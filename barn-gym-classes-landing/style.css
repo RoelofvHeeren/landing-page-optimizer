@@ -21,6 +21,7 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 h1,
