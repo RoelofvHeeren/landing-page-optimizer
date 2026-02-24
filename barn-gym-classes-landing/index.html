@@ -372,22 +372,34 @@
                             <div class="carousel-nav next" id="carouselNext">&#10095;</div>
                             <div class="carousel-track" id="carouselTrack">
                                 <div class="carousel-slide">
-                                    <video src="/testimonial1.mp4" muted loop playsinline autoplay controls></video>
+                                    <video muted loop playsinline autoplay>
+                                        <source src="/testimonial1.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video src="/testimonial2.mp4" muted loop playsinline autoplay controls></video>
+                                    <video muted loop playsinline autoplay>
+                                        <source src="/testimonial2.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video src="/testimonial3.mp4" muted loop playsinline autoplay controls></video>
+                                    <video muted loop playsinline autoplay>
+                                        <source src="/testimonial3.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video src="/testimonial4.mp4" muted loop playsinline autoplay controls></video>
+                                    <video muted loop playsinline autoplay>
+                                        <source src="/testimonial4.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video src="/testimonial5.mp4" muted loop playsinline autoplay controls></video>
+                                    <video muted loop playsinline autoplay>
+                                        <source src="/testimonial5.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video src="/testimonial6.mp4" muted loop playsinline autoplay controls></video>
+                                    <video muted loop playsinline autoplay>
+                                        <source src="/testimonial6.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
                             <div class="carousel-dots" id="carouselDots">
@@ -620,6 +632,14 @@
 
         document.getElementById('heroLeadForm').addEventListener('submit', (e) => handleLead(e, 'classes-hero'));
         document.getElementById('modalLeadForm').addEventListener('submit', (e) => handleLead(e, 'classes-modal'));
+
+        // Mobile Video Unlock
+        document.addEventListener('click', () => {
+            const allVideos = document.querySelectorAll('video');
+            allVideos.forEach(v => {
+                v.play().catch(() => { });
+            });
+        }, { once: true });
     </script>
 </body>
 
