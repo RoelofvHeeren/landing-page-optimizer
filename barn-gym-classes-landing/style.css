@@ -284,8 +284,39 @@ h4,
 }
 
 /* Timetable Section */
+.timetable-section,
+.classes-overview-section,
+.specialist-overview-section,
+.results-grid-section,
+.pricing-section,
+.testimonials-section {
+    padding: 60px 0;
+}
+
+.classes-overview-section {
+    background: #fafafa;
+}
+
+.results-grid-section {
+    background: #fff;
+}
+
+.section-headline {
+    font-size: 56px;
+    margin-bottom: 24px;
+}
+
+.specialist-overview-section {
+    padding-top: 0;
+}
+
+.results-grid-section,
+.pricing-section,
+.footer-section {
+    padding-top: 20px;
+}
+
 .timetable-section {
-    padding: 100px 0;
     background: #fff;
 }
 
@@ -400,7 +431,6 @@ h4,
 
 /* Pricing Section - Ported from PT */
 .pricing-section {
-    padding: 100px 0;
     background-color: #fafafa;
 }
 
@@ -616,7 +646,7 @@ h4,
 .footer-section {
     background: #ffffff;
     color: #131415;
-    padding: 100px 0 60px;
+    padding: 60px 0 60px;
     border-top: 1px solid #eee;
 }
 
@@ -757,19 +787,26 @@ h4,
     }
 
     .hero-headline {
-        font-size: 48px;
+        font-size: 36px;
     }
 
-    .testimonial-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .testimonial-wrapper {
-        padding: 60px 20px;
+    .section-headline {
+        font-size: 32px !important;
     }
 
     .footer-headline {
-        font-size: 36px !important;
+        font-size: 32px !important;
+    }
+
+    /* Center stars under text in hero on mobile */
+    .hero-trust-elements {
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .rating-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
     }
 }
