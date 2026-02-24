@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3000;
 // ─── Resolve landing page directories ────────────────────────────────────────
 const sixWeekDir = path.join(__dirname, '..', 'barn-gym-6-week-replica');
 const ptDir = path.join(__dirname, '..', 'barn-gym-pt-replica');
+const classesDir = path.join(__dirname, '..', 'barn-gym-classes-landing');
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
@@ -93,6 +94,7 @@ app.use('/pt', ptRouter);
 // PT is listed first so its unique images (blueprint_step.png etc.) take priority.
 app.use(express.static(path.join(ptDir, 'public')));
 app.use(express.static(path.join(sixWeekDir, 'public')));
+app.use(express.static(path.join(classesDir, 'public')));
 app.use(express.static(sixWeekDir)); // /style.css
 
 // ─── 6-week landing page at /6week ───────────────────────────────────────────
@@ -100,6 +102,12 @@ const sixWeekRouter = express.Router();
 sixWeekRouter.get('/', (req, res) => res.sendFile(path.join(sixWeekDir, 'index.html')));
 sixWeekRouter.get('/thank-you', (req, res) => res.sendFile(path.join(sixWeekDir, 'thank-you.html')));
 app.use('/6week', sixWeekRouter);
+
+// ─── Classes landing page at /classes ─────────────────────────────────────────
+const classesRouter = express.Router();
+classesRouter.get('/', (req, res) => res.sendFile(path.join(classesDir, 'index.html')));
+classesRouter.get('/thank-you', (req, res) => res.sendFile(path.join(classesDir, 'thank-you.html')));
+app.use('/classes', classesRouter);
 
 // ─── Root redirect to /6week ─────────────────────────────────────────────────
 app.get('/', (req, res) => res.redirect(301, '/6week'));
@@ -109,4 +117,5 @@ app.listen(PORT, () => {
     console.log(`📊 Dashboard     → http://localhost:${PORT}/dashboard`);
     console.log(`📄 6-week page   → http://localhost:${PORT}/`);
     console.log(`📄 PT page       → http://localhost:${PORT}/pt`);
+    console.log(`📄 Classes page  → http://localhost:${PORT}/classes`);
 });
