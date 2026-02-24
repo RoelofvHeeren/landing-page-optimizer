@@ -372,34 +372,28 @@
                             <div class="carousel-nav next" id="carouselNext">&#10095;</div>
                             <div class="carousel-track" id="carouselTrack">
                                 <div class="carousel-slide">
-                                    <video muted loop playsinline autoplay>
-                                        <source src="/testimonial1.mp4" type="video/mp4">
-                                    </video>
+                                    <video src="/testimonial1.mp4" muted loop playsinline autoplay controls
+                                        disablePictureInPicture></video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video muted loop playsinline autoplay>
-                                        <source src="/testimonial2.mp4" type="video/mp4">
-                                    </video>
+                                    <video src="/testimonial2.mp4" muted loop playsinline autoplay controls
+                                        disablePictureInPicture></video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video muted loop playsinline autoplay>
-                                        <source src="/testimonial3.mp4" type="video/mp4">
-                                    </video>
+                                    <video src="/testimonial3.mp4" muted loop playsinline autoplay controls
+                                        disablePictureInPicture></video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video muted loop playsinline autoplay>
-                                        <source src="/testimonial4.mp4" type="video/mp4">
-                                    </video>
+                                    <video src="/testimonial4.mp4" muted loop playsinline autoplay controls
+                                        disablePictureInPicture></video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video muted loop playsinline autoplay>
-                                        <source src="/testimonial5.mp4" type="video/mp4">
-                                    </video>
+                                    <video src="/testimonial5.mp4" muted loop playsinline autoplay controls
+                                        disablePictureInPicture></video>
                                 </div>
                                 <div class="carousel-slide">
-                                    <video muted loop playsinline autoplay>
-                                        <source src="/testimonial6.mp4" type="video/mp4">
-                                    </video>
+                                    <video src="/testimonial6.mp4" muted loop playsinline autoplay controls
+                                        disablePictureInPicture></video>
                                 </div>
                             </div>
                             <div class="carousel-dots" id="carouselDots">
@@ -516,27 +510,31 @@
         const totalSlides = dots.length;
 
         function updateCarousel(index) {
-            if (index < 0) index = totalSlides - 1;
-            if (index >= totalSlides) index = 0;
-
+            const isNewIndex = index !== currentIndex;
             currentIndex = index;
 
             // Update dots
             dots.forEach(d => d.classList.remove('active'));
             dots[currentIndex].classList.add('active');
 
-            // Move track
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-            // Manage playback
-            const allVideos = track.querySelectorAll('video');
-            allVideos.forEach((v, i) => {
-                if (i === currentIndex) {
-                    v.play().catch(() => { });
-                } else {
-                    v.pause();
-                }
+            // Move track via native scrolling for smooth drag support
+            const slideWidth = track.clientWidth;
+            track.scrollTo({
+                left: slideWidth * currentIndex,
+                behavior: 'smooth'
             });
+
+            // Only manage playback if the slide actually changed
+            if (isNewIndex) {
+                const allVideos = track.querySelectorAll('video');
+                allVideos.forEach((v, i) => {
+                    if (i === currentIndex) {
+                        v.play().catch(() => { });
+                    } else {
+                        v.pause();
+                    }
+                });
+            }
         }
 
         dots.forEach(dot => {
