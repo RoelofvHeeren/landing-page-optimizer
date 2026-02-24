@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/logos/Barn gym white logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barn Gym - Professional Classes | First Class Free</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PostHog Analytics -->
+    <script>
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        const POSTHOG_KEY = window.__ENV_POSTHOG_KEY__ || 'phc_placeholder';
+        posthog.init(POSTHOG_KEY, { api_host: 'https://app.posthog.com', autocapture: false, capture_pageview: false });
+    </script>
+
+    <!-- API config -->
+    <script>
+        window.API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://join.barn-gym.com';
+        window.PAGE_SOURCE_PREFIX = 'classes';
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "vlgo47lhtg");
+    </script>
+</head>
+
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="claim-free-class">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-grid">
+                    <div class="hero-text-content animate-fade-up">
+                        <h1 class="hero-headline">Fast-Track Your Results With <span class="underline-highlight">Expert
+                                Classes</span></h1>
+                        <p class="hero-subheadline"><strong>Special Offer:</strong> Your First Class Is 100% Free. Join
+                            a community that pushes you, supports you, and gets you to your goals faster.</p>
+
+                        <div id="heroSocialProof" class="hero-trust-elements">
+                            <p class="location-copy">Classes Serving: <span id="rotatingTown">Etchingham</span></p>
+                            <div class="rating-box">
+                                <div class="stars">★★★★★</div>
+                                <p class="micro-copy-premium">East Sussex's Premier Training Ground</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-form-container animate-fade-up" style="animation-delay: 0.2s;">
+                        <div class="glass-form-card">
+                            <h3 class="form-title">Claim Your Free Class</h3>
+                            <p class="form-subtitle">Fill in the form below to secure your spot.</p>
+
+                            <form id="heroLeadForm" class="premium-form">
+                                <input type="text" name="name" placeholder="Full Name" required class="premium-input">
+                                <input type="email" name="email" placeholder="Email Address" required
+                                    class="premium-input">
+                                <input type="tel" name="phone" placeholder="Phone Number" required
+                                    class="premium-input">
+                                <button type="submit" class="btn-premium-submit">Get My Free Class →</button>
+                                <p class="form-footer-note">Limited spots available for new members</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timetable Section -->
+        <section class="timetable-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-headline">Our <span class="green-text">Class Schedule</span></h2>
+                    <p class="section-subheadline" style="margin-bottom: 40px;">Check our real-time timetable below.
+                        Please note: To claim your first
+                        class for free, you must use the form above (not the timetable booking system).</p>
+                </div>
+
+                <div class="timetable-container">
+                    <div class="timetable-disclaimer">
+                        <span style="font-size: 24px;">ℹ️</span>
+                        <span><strong>Friendly Reminder:</strong> Don't book directly through the timetable for your
+                            first
+                            session—use the "Claim Your Free Class" form above!</span>
+                    </div>
+                    <iframe src="https://app.glofox.com/portal/#/branch/6387329792aa3afe480951f7/classes-day-view"
+                        frameborder="0" width="100%" height="1200"></iframe>
+                    <div class="text-center" style="margin-top: 10px;">
+                        <a href="https://www.glofox.com"
+                            style="color: #666; text-decoration: none; font-size: 14px;">powered by <b>Glofox</b></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Options -->
+        <section class="membership-section">
+            <div class="container">
+                <h2 class="section-headline text-center">Available <span class="green-text">Membership</span> Options
+                </h2>
+                <div class="membership-grid">
+                    <div class="membership-card">
+                        <img src="./public/images/classes/KoMh6Ze1WWPIwtJ2fvPRFAFFfA.png" class="membership-img"
+                            alt="1 Month Rolling">
+                        <div class="membership-content">
+                            <h3>1 Month Rolling</h3>
+                            <p class="membership-meta">15 Classes</p>
+                            <div class="membership-price">£125</div>
+                            <p class="membership-subprice">Cost Per Class: £8.33</p>
+                            <button class="btn-dark-premium survey-trigger">Enquire Now</button>
+                        </div>
+                    </div>
+                    <div class="membership-card">
+                        <img src="./public/images/classes/dC34LOkiZJ4QPBMFbMqgiHddI.jpeg" class="membership-img"
+                            alt="3 Month Membership">
+                        <div class="membership-content">
+                            <h3>3 Month Membership</h3>
+                            <p class="membership-meta">45 Classes</p>
+                            <div class="membership-price">£355</div>
+                            <p class="membership-subprice">Cost Per Class: £7.89</p>
+                            <button class="btn-dark-premium survey-trigger">Enquire Now</button>
+                        </div>
+                    </div>
+                    <div class="membership-card">
+                        <img src="./public/images/classes/lUTo4eg1bG7sOuRT67u1vNVrlvY.png" class="membership-img"
+                            alt="6 Month Membership">
+                        <div class="membership-content">
+                            <h3>6 Month Membership</h3>
+                            <p class="membership-meta">90 Classes</p>
+                            <div class="membership-price">£675</div>
+                            <p class="membership-subprice">Cost Per Class: £7.50</p>
+                            <button class="btn-dark-premium survey-trigger">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="membership-note text-center">*One-off classes available for £15*</p>
+            </div>
+        </section>
+
+        <!-- Core Classes -->
+        <section class="classes-overview-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-headline">View Our Classes</h2>
+                    <h3 class="font-playfair" style="font-size: 32px; margin-top: 10px;"><span
+                            class="green-text">Core</span> Classes</h3>
+                    <p class="section-subheadline" style="max-width: 600px; margin: 15px auto;">Discover the different
+                        ways you can train with us and find the path that fits your goals.</p>
+                </div>
+
+                <div class="class-grid">
+                    <div class="class-card">
+                        <img src="./public/images/classes/N0kemVywKYaiWlv3zF9h2RhMVo.png" class="class-img"
+                            alt="Conditioning Class">
+                        <div class="class-content">
+                            <h4>Conditioning Class</h4>
+                            <p class="class-duration">60 minutes</p>
+                            <p class="class-desc">High-energy cardio, high-rep work, and fast-paced circuits to boost
+                                endurance and improve your engine.</p>
+                            <p class="class-desc">Ideal if you enjoy challenging sessions that push your pace and
+                                stamina.</p>
+                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <img src="./public/images/classes/6tyhQtToLRbVHAukuoBcZTZi2uY.png" class="class-img"
+                            alt="Hybrid Fitness">
+                        <div class="class-content">
+                            <h4>Hybrid Fitness</h4>
+                            <p class="class-duration">60 minutes</p>
+                            <p class="class-desc">A blend of strength, conditioning, and functional movements performed
+                                at high intensity.</p>
+                            <p class="class-desc">Designed to improve full-body fitness and suitable for all levels
+                                looking for a balanced challenge.</p>
+                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <img src="./public/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" class="class-img"
+                            alt="Strength Training">
+                        <div class="class-content">
+                            <h4>Strength Training</h4>
+                            <p class="class-duration">60 minutes</p>
+                            <p class="class-desc">Focused on heavier lifts, proper technique, and progressive overload.
+                            </p>
+                            <p class="class-desc">Perfect if you want to build power, increase muscle, and improve
+                                overall strength in a safe, structured way.</p>
+                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialist Classes -->
+        <section class="specialist-overview-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h3 class="font-playfair" style="font-size: 32px;"><span class="green-text">Specialist</span>
+                        Classes</h3>
+                </div>
+
+                <div class="specialist-grid">
+                    <div class="class-card">
+                        <img src="./public/images/classes/VlZXM4L9FlSxxc2VbUlhIHgHuUA.jpeg" class="class-img"
+                            alt="Farm Fitness">
+                        <div class="class-content">
+                            <h4>Farm Fitness</h4>
+                            <p class="class-duration">60 minutes</p>
+                            <p class="class-desc">A dynamic outdoor workout inspired by nature and real-world movements.
+                            </p>
+                            <p class="class-desc">Expect varied, adventurous training that keeps things fresh while
+                                giving you a powerful weekend sweat.</p>
+                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <img src="./public/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" class="class-img"
+                            alt="Olympic Weightlifting">
+                        <div class="class-content">
+                            <h4>Olympic Weightlifting</h4>
+                            <p class="class-duration">60 minutes</p>
+                            <p class="class-desc">A technical class focused on the Snatch and Clean & Jerk.</p>
+                            <p class="class-desc">Get expert coaching to refine your form, build explosive power, and
+                                develop confidence in your lifts.</p>
+                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <img src="./public/images/classes/JPfSFPhXTu1hwORIVRHUEhWas0c.png" class="class-img" alt="Yoga">
+                        <div class="class-content">
+                            <h4>Yoga</h4>
+                            <p class="class-duration">60 minutes</p>
+                            <p class="class-desc">A calm but challenging mix of breath work, stretching, and flowing
+                                sequences.</p>
+                            <p class="class-desc">Designed to improve mobility, balance, and body awareness while
+                                helping you unwind and reset.</p>
+                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <img src="./public/images/classes/kYTls71hRhsrTUCDpMPUn9U6ZCE.png" class="class-img"
+                            alt="Mobility">
+                        <div class="class-content">
+                            <h4>Mobility</h4>
+                            <p class="class-duration">60 minutes</p>
+                            <p class="class-desc">Targeted mobility training to improve joint health, flexibility, and
+                                full range of motion.</p>
+                            <p class="class-desc">Great for recovery, staying pain-free, and supporting better
+                                performance.</p>
+                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-grid-section">
+            <div class="container text-center">
+                <p class="section-label">Results</p>
+                <h2 class="section-headline">When You <span class="green-text">Enjoy</span> Your Workout,<br>Results
+                    Come <span class="green-text">Easy</span></h2>
+                <p class="section-subheadline" style="margin-bottom: 50px;">See how everyday members have transformed
+                    their bodies through guidance, structure, and commitment.</p>
+
+                <div class="results-grid">
+                    <img src="./public/images/classes/3kbyj1SN0wU8nOsudmvr8L7KY.png" class="results-img" alt="Result 1">
+                    <img src="./public/images/classes/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" class="results-img"
+                        alt="Result 2">
+                    <img src="./public/images/classes/9J5iAVZ8VVUTgQVe9UrWcDnFyA.png" class="results-img"
+                        alt="Result 3">
+                    <img src="./public/images/classes/gt8CTiGQH2lt0W1X9sZs7p6iI2w.png" class="results-img"
+                        alt="Result 4">
+                    <img src="./public/images/classes/KlnSH1pj2dWHmSPYNOqYgmY22E.png" class="results-img"
+                        alt="Result 5">
+                    <img src="./public/images/classes/MQXUREqWoWFLTlXfctHe2R93Hy4.png" class="results-img"
+                        alt="Result 6">
+                    <img src="./public/images/classes/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" class="results-img"
+                        alt="Result 7">
+                    <img src="./public/images/classes/OfQlzJgEzxzsK0doz9ZE3UxO1d4.png" class="results-img"
+                        alt="Result 8">
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <button class="btn-primary-premium survey-trigger">Speak To Our Team</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hear From Our Members Section (Banner) -->
+        <section class="member-banner-section">
+            <div class="container">
+                <div class="banner-grid">
+                    <div class="banner-text-content">
+                        <h2 class="section-headline white-text">Hear From Our Members</h2>
+                        <img src="./public/logos/white.png" alt="Barn Gym" class="banner-logo">
+                    </div>
+                    <div class="banner-image-content">
+                        <img src="./public/images/classes/QaOyn6jNUtjOrdUHFFnKT9MVs.png" alt="Members training"
+                            class="banner-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talk To Our Team -->
+        <section class="team-contact-section">
+            <div class="container text-center">
+                <h2 class="section-headline">Talk To Our <span class="green-text">Team</span></h2>
+                <div class="team-grid">
+                    <div class="team-image">
+                        <img src="./public/images/classes/ZrsdRHryjq2CX6vqhENghzcHNXg.webp" alt="Barn Gym Team">
+                    </div>
+                    <div class="team-cta">
+                        <a href="https://wa.me/yournumber" class="btn-primary-premium w-100"
+                            style="display: block;">Book Via Whatsapp</a>
+                        <a href="tel:yournumber" class="btn-dark-premium w-100"
+                            style="display: block; margin-top: 20px;">Call Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 50px;">
+                    <h2 class="section-headline">Your Questions, <span class="green-text">Answered</span></h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item"><span>How many classes per week can I attend?</span> <span
+                            class="faq-plus">+</span></div>
+                    <div class="faq-item"><span>What do the classes involve?</span> <span class="faq-plus">+</span>
+                    </div>
+                    <div class="faq-item"><span>Is the first class really free?</span> <span class="faq-plus">+</span>
+                    </div>
+                    <div class="faq-item"><span>Do I need any experience?</span> <span class="faq-plus">+</span></div>
+                    <div class="faq-item"><span>What if I can't attend regularly?</span> <span class="faq-plus">+</span>
+                    </div>
+                    <div class="faq-item"><span>How do I book a class?</span> <span class="faq-plus">+</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container text-center">
+                <img src="./public/logos/Barn Gym Logo transparent copy.png" alt="Barn Gym" class="footer-logo">
+                <h2 class="white-text">Join The Community Today</h2>
+                <p style="color: #aaa; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Don't wait for "perfect timing." The best time to start was yesterday. The second best time is now.
+                </p>
+
+                <button class="btn-primary-premium survey-trigger">Claim Your Free Class →</button>
+
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+                <p
+                    style="margin-top: 40px; color: #555; font-size: 12px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT
+                    endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Rotating Town Logic
+        const towns = ["Etchingham", "Robertsbridge", "Burwash", "Hurst Green", "Ticehurst", "Heathfield", "Battle"];
+        let townIndex = 0;
+        const townEl = document.getElementById('rotatingTown');
+        if (townEl) {
+            setInterval(() => {
+                townEl.classList.add('fade-out');
+                setTimeout(() => {
+                    townIndex = (townIndex + 1) % towns.length;
+                    townEl.textContent = towns[townIndex];
+                    townEl.classList.remove('fade-out');
+                }, 500);
+            }, 3000);
+        }
+
+        // Form submission
+        const SESSION_ID = crypto.randomUUID();
+        const heroForm = document.getElementById('heroLeadForm');
+
+        heroForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = heroForm.querySelector('button');
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            const formData = new FormData(heroForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                source: 'classes-hero',
+                session_id: SESSION_ID
+            };
+
+            try {
+                const res = await fetch(window.API_BASE + '/api/leads', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) {
+                    window.location.href = '/thank-you.html';
+                } else {
+                    throw new Error('Failed to submit');
+                }
+            } catch (err) {
+                console.error(err);
+                btn.innerText = 'Try Again';
+                btn.disabled = false;
+            }
+        });
+
+        // Trigger scroll to top for CTA buttons
+        document.querySelectorAll('.survey-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Tracking
+        if (window.posthog) {
+            posthog.capture('$pageview', { page: 'classes' });
+        }
+    </script>
+</body>
+
+</html>

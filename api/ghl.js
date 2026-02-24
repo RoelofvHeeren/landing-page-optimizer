@@ -4,7 +4,7 @@ dotenv.config();
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || 'pit-c75a6455-5051-473a-bf4b-5980cf32e7a3';
 const GHL_API_KEY = process.env.GHL_API_KEY || 'VYZcxHGdxD0Dj1cj1ZU4';
 
-const GHL_BASE_URL = 'https://rest.gohighlevel.com/v1';
+const GHL_BASE_URL = 'https://services.leadconnectorhq.com';
 
 /**
  * Push a new lead as a contact in GoHighLevel.
@@ -29,7 +29,8 @@ export async function pushLeadToGHL({ name, email, phone, source }) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${GHL_API_KEY}`
+            'Authorization': `Bearer ${GHL_API_KEY}`,
+            'Version': '2021-07-28'
         },
         body: JSON.stringify(body)
     });
