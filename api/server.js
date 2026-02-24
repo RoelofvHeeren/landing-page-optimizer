@@ -105,6 +105,7 @@ app.use('/6week', sixWeekRouter);
 
 // ─── Classes landing page at /classes ─────────────────────────────────────────
 const classesRouter = express.Router();
+classesRouter.use(express.static(classesDir)); // Serve style.css, thank-you.html etc.
 classesRouter.get('/', (req, res) => res.sendFile(path.join(classesDir, 'index.html')));
 classesRouter.get('/thank-you', (req, res) => res.sendFile(path.join(classesDir, 'thank-you.html')));
 app.use('/classes', classesRouter);
