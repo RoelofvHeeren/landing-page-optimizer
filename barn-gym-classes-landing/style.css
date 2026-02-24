@@ -614,19 +614,20 @@ h4,
 
 /* Footer Section */
 .footer-section {
-    background: #131415;
-    color: #fff;
+    background: #ffffff;
+    color: #131415;
     padding: 100px 0 60px;
+    border-top: 1px solid #eee;
 }
 
 .footer-headline {
-    color: #fff !important;
+    color: #131415 !important;
     font-size: 56px !important;
     margin-bottom: 20px;
 }
 
 .footer-subtext {
-    color: #aaa;
+    color: #555;
     font-size: 18px;
     max-width: 700px;
     margin: 0 auto 50px;
@@ -640,18 +641,19 @@ h4,
 }
 
 .footer-links a {
-    color: #777;
+    color: #666;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .legal-text {
     margin-top: 60px;
-    color: #444;
+    color: #999;
     font-size: 13px;
     max-width: 900px;
     margin: 0 auto;
