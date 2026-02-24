@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/logos/Barn gym white logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/logos/Barn gym white logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barn Gym - Professional Classes | First Class Free</title>
 
@@ -43,38 +43,41 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section" id="claim-free-class">
-            <div class="hero-overlay"></div>
-            <div class="container hero-container">
-                <div class="hero-grid">
-                    <div class="hero-text-content animate-fade-up">
-                        <h1 class="hero-headline">Fast-Track Your Results With <span class="underline-highlight">Expert
-                                Classes</span></h1>
-                        <p class="hero-subheadline"><strong>Special Offer:</strong> Your First Class Is 100% Free. Join
-                            a community that pushes you, supports you, and gets you to your goals faster.</p>
+            <div class="hero-wrapper">
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-grid">
+                        <div class="hero-text-content animate-fade-up">
+                            <h1 class="hero-headline">Fast-Track Your Results With <span
+                                    class="underline-highlight">Expert Classes</span></h1>
+                            <p class="hero-subheadline"><strong>Special Offer:</strong> Your First Class Is 100% Free.
+                                Join a community that pushes you, supports you, and gets you to your goals faster.</p>
 
-                        <div id="heroSocialProof" class="hero-trust-elements">
-                            <p class="location-copy">Classes Serving: <span id="rotatingTown">Etchingham</span></p>
-                            <div class="rating-box">
-                                <div class="stars">★★★★★</div>
-                                <p class="micro-copy-premium">East Sussex's Premier Training Ground</p>
+                            <div id="heroSocialProof" class="hero-trust-elements">
+                                <p class="location-copy">Classes Serving: <span id="rotatingTown">Etchingham</span></p>
+                                <div class="rating-box">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="micro-copy-premium">East Sussex's Premier Training Ground</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="hero-form-container animate-fade-up" style="animation-delay: 0.2s;">
-                        <div class="glass-form-card">
-                            <h3 class="form-title">Claim Your Free Class</h3>
-                            <p class="form-subtitle">Fill in the form below to secure your spot.</p>
+                        <div class="hero-form-container animate-fade-up" style="animation-delay: 0.2s;">
+                            <div class="glass-form-card">
+                                <h3 class="form-title">Claim Your Free Class</h3>
+                                <p class="form-subtitle">Fill in the form below to secure your spot.</p>
 
-                            <form id="heroLeadForm" class="premium-form">
-                                <input type="text" name="name" placeholder="Full Name" required class="premium-input">
-                                <input type="email" name="email" placeholder="Email Address" required
-                                    class="premium-input">
-                                <input type="tel" name="phone" placeholder="Phone Number" required
-                                    class="premium-input">
-                                <button type="submit" class="btn-premium-submit">Get My Free Class →</button>
-                                <p class="form-footer-note">Limited spots available for new members</p>
-                            </form>
+                                <form id="heroLeadForm" class="premium-form">
+                                    <input type="text" name="name" placeholder="Full Name" required
+                                        class="premium-input">
+                                    <input type="email" name="email" placeholder="Email Address" required
+                                        class="premium-input">
+                                    <input type="tel" name="phone" placeholder="Phone Number" required
+                                        class="premium-input">
+                                    <button type="submit" class="btn-premium-submit">Get My Free Class →</button>
+                                    <p class="form-footer-note">Limited spots available for new members</p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,22 +88,23 @@
         <section class="timetable-section">
             <div class="container">
                 <div class="text-center">
+                    <p class="section-subtext-small">Live Schedule</p>
                     <h2 class="section-headline">Our <span class="green-text">Class Schedule</span></h2>
-                    <p class="section-subheadline" style="margin-bottom: 40px;">Check our real-time timetable below.
-                        Please note: To claim your first
-                        class for free, you must use the form above (not the timetable booking system).</p>
+                    <p class="section-subheadline">Check our real-time timetable below. To claim your first class for
+                        free, you must use the form above (not the timetable booking system).</p>
                 </div>
 
                 <div class="timetable-container">
                     <div class="timetable-disclaimer">
                         <span style="font-size: 24px;">ℹ️</span>
                         <span><strong>Friendly Reminder:</strong> Don't book directly through the timetable for your
-                            first
-                            session—use the "Claim Your Free Class" form above!</span>
+                            first session—use the "Claim Your Free Class" form above!</span>
                     </div>
-                    <iframe src="https://app.glofox.com/portal/#/branch/6387329792aa3afe480951f7/classes-day-view"
-                        frameborder="0" width="100%" height="1200"></iframe>
-                    <div class="text-center" style="margin-top: 10px;">
+                    <div class="timetable-wrapper">
+                        <iframe src="https://app.glofox.com/portal/#/branch/6387329792aa3afe480951f7/classes-day-view"
+                            frameborder="0" width="100%" height="800"></iframe>
+                    </div>
+                    <div class="text-center" style="margin-top: 20px;">
                         <a href="https://www.glofox.com"
                             style="color: #666; text-decoration: none; font-size: 14px;">powered by <b>Glofox</b></a>
                     </div>
@@ -108,99 +112,54 @@
             </div>
         </section>
 
-        <!-- Membership Options -->
-        <section class="membership-section">
-            <div class="container">
-                <h2 class="section-headline text-center">Available <span class="green-text">Membership</span> Options
-                </h2>
-                <div class="membership-grid">
-                    <div class="membership-card">
-                        <img src="./public/images/classes/KoMh6Ze1WWPIwtJ2fvPRFAFFfA.png" class="membership-img"
-                            alt="1 Month Rolling">
-                        <div class="membership-content">
-                            <h3>1 Month Rolling</h3>
-                            <p class="membership-meta">15 Classes</p>
-                            <div class="membership-price">£125</div>
-                            <p class="membership-subprice">Cost Per Class: £8.33</p>
-                            <button class="btn-dark-premium survey-trigger">Enquire Now</button>
-                        </div>
-                    </div>
-                    <div class="membership-card">
-                        <img src="./public/images/classes/dC34LOkiZJ4QPBMFbMqgiHddI.jpeg" class="membership-img"
-                            alt="3 Month Membership">
-                        <div class="membership-content">
-                            <h3>3 Month Membership</h3>
-                            <p class="membership-meta">45 Classes</p>
-                            <div class="membership-price">£355</div>
-                            <p class="membership-subprice">Cost Per Class: £7.89</p>
-                            <button class="btn-dark-premium survey-trigger">Enquire Now</button>
-                        </div>
-                    </div>
-                    <div class="membership-card">
-                        <img src="./public/images/classes/lUTo4eg1bG7sOuRT67u1vNVrlvY.png" class="membership-img"
-                            alt="6 Month Membership">
-                        <div class="membership-content">
-                            <h3>6 Month Membership</h3>
-                            <p class="membership-meta">90 Classes</p>
-                            <div class="membership-price">£675</div>
-                            <p class="membership-subprice">Cost Per Class: £7.50</p>
-                            <button class="btn-dark-premium survey-trigger">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-                <p class="membership-note text-center">*One-off classes available for £15*</p>
-            </div>
-        </section>
-
         <!-- Core Classes -->
-        <section class="classes-overview-section">
+        <section class="classes-overview-section" style="padding: 80px 0; background: #fafafa;">
             <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-headline">View Our Classes</h2>
-                    <h3 class="font-playfair" style="font-size: 32px; margin-top: 10px;"><span
-                            class="green-text">Core</span> Classes</h3>
-                    <p class="section-subheadline" style="max-width: 600px; margin: 15px auto;">Discover the different
-                        ways you can train with us and find the path that fits your goals.</p>
+                <div class="text-center">
+                    <p class="section-subtext-small">What We Offer</p>
+                    <h2 class="section-headline">View Our <span class="green-text">Core Classes</span></h2>
+                    <p class="section-subheadline">Discover the different ways you can train with us and find the path
+                        that fits your goals.</p>
                 </div>
 
                 <div class="class-grid">
-                    <div class="class-card">
-                        <img src="./public/images/classes/N0kemVywKYaiWlv3zF9h2RhMVo.png" class="class-img"
-                            alt="Conditioning Class">
-                        <div class="class-content">
-                            <h4>Conditioning Class</h4>
-                            <p class="class-duration">60 minutes</p>
-                            <p class="class-desc">High-energy cardio, high-rep work, and fast-paced circuits to boost
-                                endurance and improve your engine.</p>
-                            <p class="class-desc">Ideal if you enjoy challenging sessions that push your pace and
-                                stamina.</p>
-                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/N0kemVywKYaiWlv3zF9h2RhMVo.png" alt="Conditioning Class">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-duration">60 minutes</p>
+                            <h3 class="font-playfair">Conditioning Class</h3>
+                            <p class="card-text">High-energy cardio, high-rep work, and fast-paced circuits to boost
+                                endurance and improve your engine. Ideal for those who enjoy challenging sessions.</p>
+                            <button class="btn btn-dark survey-trigger" style="margin-top: auto;">Schedule
+                                Class</button>
                         </div>
                     </div>
-                    <div class="class-card">
-                        <img src="./public/images/classes/6tyhQtToLRbVHAukuoBcZTZi2uY.png" class="class-img"
-                            alt="Hybrid Fitness">
-                        <div class="class-content">
-                            <h4>Hybrid Fitness</h4>
-                            <p class="class-duration">60 minutes</p>
-                            <p class="class-desc">A blend of strength, conditioning, and functional movements performed
-                                at high intensity.</p>
-                            <p class="class-desc">Designed to improve full-body fitness and suitable for all levels
-                                looking for a balanced challenge.</p>
-                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/6tyhQtToLRbVHAukuoBcZTZi2uY.png" alt="Hybrid Fitness">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-duration">60 minutes</p>
+                            <h3 class="font-playfair">Hybrid Fitness</h3>
+                            <p class="card-text">A blend of strength, conditioning, and functional movements performed
+                                at high intensity. Designed to improve full-body fitness for all levels.</p>
+                            <button class="btn btn-dark survey-trigger" style="margin-top: auto;">Schedule
+                                Class</button>
                         </div>
                     </div>
-                    <div class="class-card">
-                        <img src="./public/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" class="class-img"
-                            alt="Strength Training">
-                        <div class="class-content">
-                            <h4>Strength Training</h4>
-                            <p class="class-duration">60 minutes</p>
-                            <p class="class-desc">Focused on heavier lifts, proper technique, and progressive overload.
-                            </p>
-                            <p class="class-desc">Perfect if you want to build power, increase muscle, and improve
-                                overall strength in a safe, structured way.</p>
-                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" alt="Strength Training">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-duration">60 minutes</p>
+                            <h3 class="font-playfair">Strength Training</h3>
+                            <p class="card-text">Focused on heavier lifts, proper technique, and progressive overload.
+                                Perfect if you want to build power and increase muscle safely.</p>
+                            <button class="btn btn-dark survey-trigger" style="margin-top: auto;">Schedule
+                                Class</button>
                         </div>
                     </div>
                 </div>
@@ -208,166 +167,192 @@
         </section>
 
         <!-- Specialist Classes -->
-        <section class="specialist-overview-section">
+        <section class="specialist-overview-section" style="padding: 80px 0;">
             <div class="container">
-                <div class="section-header text-center">
-                    <h3 class="font-playfair" style="font-size: 32px;"><span class="green-text">Specialist</span>
-                        Classes</h3>
+                <div class="text-center">
+                    <h2 class="section-headline"><span class="green-text">Specialist</span> Classes</h2>
                 </div>
 
-                <div class="specialist-grid">
-                    <div class="class-card">
-                        <img src="./public/images/classes/VlZXM4L9FlSxxc2VbUlhIHgHuUA.jpeg" class="class-img"
-                            alt="Farm Fitness">
-                        <div class="class-content">
-                            <h4>Farm Fitness</h4>
-                            <p class="class-duration">60 minutes</p>
-                            <p class="class-desc">A dynamic outdoor workout inspired by nature and real-world movements.
-                            </p>
-                            <p class="class-desc">Expect varied, adventurous training that keeps things fresh while
-                                giving you a powerful weekend sweat.</p>
-                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                <div class="class-grid">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/VlZXM4L9FlSxxc2VbUlhIHgHuUA.jpeg" alt="Farm Fitness">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-duration">60 minutes</p>
+                            <h3 class="font-playfair">Farm Fitness</h3>
+                            <p class="card-text">A dynamic outdoor workout inspired by nature and real-world movements.
+                                Varied, adventurous training that keeps things fresh.</p>
+                            <button class="btn btn-dark survey-trigger" style="margin-top: auto;">Schedule
+                                Class</button>
                         </div>
                     </div>
-                    <div class="class-card">
-                        <img src="./public/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" class="class-img"
-                            alt="Olympic Weightlifting">
-                        <div class="class-content">
-                            <h4>Olympic Weightlifting</h4>
-                            <p class="class-duration">60 minutes</p>
-                            <p class="class-desc">A technical class focused on the Snatch and Clean & Jerk.</p>
-                            <p class="class-desc">Get expert coaching to refine your form, build explosive power, and
-                                develop confidence in your lifts.</p>
-                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/M6cY0fNNhnIOX9EkNq5JQAiex1E.png" alt="Olympic Weightlifting">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-duration">60 minutes</p>
+                            <h3 class="font-playfair">Olympic Weightlifting</h3>
+                            <p class="card-text">A technical class focused on the Snatch and Clean & Jerk. Get expert
+                                coaching to refine your form and build explosive power.</p>
+                            <button class="btn btn-dark survey-trigger" style="margin-top: auto;">Schedule
+                                Class</button>
                         </div>
                     </div>
-                    <div class="class-card">
-                        <img src="./public/images/classes/JPfSFPhXTu1hwORIVRHUEhWas0c.png" class="class-img" alt="Yoga">
-                        <div class="class-content">
-                            <h4>Yoga</h4>
-                            <p class="class-duration">60 minutes</p>
-                            <p class="class-desc">A calm but challenging mix of breath work, stretching, and flowing
-                                sequences.</p>
-                            <p class="class-desc">Designed to improve mobility, balance, and body awareness while
-                                helping you unwind and reset.</p>
-                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/JPfSFPhXTu1hwORIVRHUEhWas0c.png" alt="Yoga">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-duration">60 minutes</p>
+                            <h3 class="font-playfair">Yoga</h3>
+                            <p class="card-text">A calm but challenging mix of breath work, stretching, and flowing
+                                sequences. Designed to improve mobility, balance, and awareness.</p>
+                            <button class="btn btn-dark survey-trigger" style="margin-top: auto;">Schedule
+                                Class</button>
                         </div>
                     </div>
-                    <div class="class-card">
-                        <img src="./public/images/classes/kYTls71hRhsrTUCDpMPUn9U6ZCE.png" class="class-img"
-                            alt="Mobility">
-                        <div class="class-content">
-                            <h4>Mobility</h4>
-                            <p class="class-duration">60 minutes</p>
-                            <p class="class-desc">Targeted mobility training to improve joint health, flexibility, and
-                                full range of motion.</p>
-                            <p class="class-desc">Great for recovery, staying pain-free, and supporting better
-                                performance.</p>
-                            <button class="btn-dark-premium survey-trigger">Schedule Class</button>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/kYTls71hRhsrTUCDpMPUn9U6ZCE.png" alt="Mobility">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-duration">60 minutes</p>
+                            <h3 class="font-playfair">Mobility</h3>
+                            <p class="card-text">Targeted mobility training to improve joint health, flexibility, and
+                                full range of motion. Great for recovery and staying pain-free.</p>
+                            <button class="btn btn-dark survey-trigger" style="margin-top: auto;">Schedule
+                                Class</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Results Section -->
-        <section class="results-grid-section">
+        <!-- Results Marquee -->
+        <section class="results-section" style="padding: 80px 0; background: #fff;">
             <div class="container text-center">
-                <p class="section-label">Results</p>
-                <h2 class="section-headline">When You <span class="green-text">Enjoy</span> Your Workout,<br>Results
-                    Come <span class="green-text">Easy</span></h2>
-                <p class="section-subheadline" style="margin-bottom: 50px;">See how everyday members have transformed
-                    their bodies through guidance, structure, and commitment.</p>
+                <p class="section-subtext-small">Results</p>
+                <h2 class="section-headline">When You <span class="green-text">Enjoy</span> Your Workout, Results Come
+                    <span class="green-text">Easy</span></h2>
+                <p class="section-subheadline">See how everyday members have transformed their bodies through guidance
+                    and community.</p>
 
-                <div class="results-grid">
-                    <img src="./public/images/classes/3kbyj1SN0wU8nOsudmvr8L7KY.png" class="results-img" alt="Result 1">
-                    <img src="./public/images/classes/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" class="results-img"
-                        alt="Result 2">
-                    <img src="./public/images/classes/9J5iAVZ8VVUTgQVe9UrWcDnFyA.png" class="results-img"
-                        alt="Result 3">
-                    <img src="./public/images/classes/gt8CTiGQH2lt0W1X9sZs7p6iI2w.png" class="results-img"
-                        alt="Result 4">
-                    <img src="./public/images/classes/KlnSH1pj2dWHmSPYNOqYgmY22E.png" class="results-img"
-                        alt="Result 5">
-                    <img src="./public/images/classes/MQXUREqWoWFLTlXfctHe2R93Hy4.png" class="results-img"
-                        alt="Result 6">
-                    <img src="./public/images/classes/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" class="results-img"
-                        alt="Result 7">
-                    <img src="./public/images/classes/OfQlzJgEzxzsK0doz9ZE3UxO1d4.png" class="results-img"
-                        alt="Result 8">
+                <div class="marquee-wrapper">
+                    <div class="marquee-row marquee-left-right">
+                        <div class="marquee-content">
+                            <img src="/transformations/13.avif" alt="Result" />
+                            <img src="/transformations/14.avif" alt="Result" />
+                            <img src="/transformations/3.avif" alt="Result" />
+                            <img src="/transformations/5.avif" alt="Result" />
+                            <img src="/transformations/7.avif" alt="Result" />
+                            <img src="/transformations/Amy.avif" alt="Result" />
+                            <img src="/transformations/Euan.avif" alt="Result" />
+                            <!-- Duplicate -->
+                            <img src="/transformations/13.avif" alt="Result" />
+                            <img src="/transformations/14.avif" alt="Result" />
+                            <img src="/transformations/3.avif" alt="Result" />
+                            <img src="/transformations/5.avif" alt="Result" />
+                            <img src="/transformations/7.avif" alt="Result" />
+                        </div>
+                    </div>
                 </div>
 
                 <div style="margin-top: 50px;">
-                    <button class="btn-primary-premium survey-trigger">Speak To Our Team</button>
+                    <button class="btn btn-dark survey-trigger">Speak To Our Team</button>
                 </div>
             </div>
         </section>
 
-        <!-- Hear From Our Members Section (Banner) -->
-        <section class="member-banner-section">
+        <!-- Membership Options -->
+        <section class="membership-section" style="padding: 80px 0; background: #fafafa;">
             <div class="container">
-                <div class="banner-grid">
-                    <div class="banner-text-content">
-                        <h2 class="section-headline white-text">Hear From Our Members</h2>
-                        <img src="./public/logos/white.png" alt="Barn Gym" class="banner-logo">
+                <div class="text-center">
+                    <p class="section-subtext-small">Pricing</p>
+                    <h2 class="section-headline">Available <span class="green-text">Membership</span> Options</h2>
+                </div>
+                <div class="membership-grid">
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/KoMh6Ze1WWPIwtJ2fvPRFAFFfA.png" alt="1 Month Rolling">
+                        </div>
+                        <div class="card-content text-center">
+                            <h3 class="font-playfair">1 Month Rolling</h3>
+                            <p style="color: #666;">15 Classes Per Month</p>
+                            <div style="font-size: 48px; font-weight: 900; margin: 20px 0;">£125</div>
+                            <p style="color: #555; margin-bottom: 25px;">Cost Per Class: £8.33</p>
+                            <button class="btn btn-dark survey-trigger">Enquire Now</button>
+                        </div>
                     </div>
-                    <div class="banner-image-content">
-                        <img src="./public/images/classes/QaOyn6jNUtjOrdUHFFnKT9MVs.png" alt="Members training"
-                            class="banner-img">
+                    <div class="card" style="border: 2px solid var(--primary-color);">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/dC34LOkiZJ4QPBMFbMqgiHddI.jpeg" alt="3 Month Membership">
+                        </div>
+                        <div class="card-content text-center">
+                            <h3 class="font-playfair">3 Month Membership</h3>
+                            <p style="color: #666;">45 Classes Per Quarter</p>
+                            <div style="font-size: 48px; font-weight: 900; margin: 20px 0;">£355</div>
+                            <p style="color: #555; margin-bottom: 25px;">Cost Per Class: £7.89</p>
+                            <button class="btn btn-dark survey-trigger">Enquire Now</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="/images/classes/lUTo4eg1bG7sOuRT67u1vNVrlvY.png" alt="6 Month Membership">
+                        </div>
+                        <div class="card-content text-center">
+                            <h3 class="font-playfair">6 Month Membership</h3>
+                            <p style="color: #666;">90 Classes Per 6 Months</p>
+                            <div style="font-size: 48px; font-weight: 900; margin: 20px 0;">£675</div>
+                            <p style="color: #555; margin-bottom: 25px;">Cost Per Class: £7.50</p>
+                            <button class="btn btn-dark survey-trigger">Enquire Now</button>
+                        </div>
                     </div>
                 </div>
+                <p class="text-center" style="margin-top: 30px; color: #666;">*One-off classes available for £15*</p>
             </div>
         </section>
 
-        <!-- Talk To Our Team -->
-        <section class="team-contact-section">
-            <div class="container text-center">
-                <h2 class="section-headline">Talk To Our <span class="green-text">Team</span></h2>
-                <div class="team-grid">
-                    <div class="team-image">
-                        <img src="./public/images/classes/ZrsdRHryjq2CX6vqhENghzcHNXg.webp" alt="Barn Gym Team">
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="testimonial-wrapper">
+                <div class="testimonial-overlay"></div>
+                <div class="testimonial-content">
+                    <div class="testimonial-left">
+                        <h2 class="section-headline white-text" style="font-size: 48px;">Hear From Our Members</h2>
+                        <button class="btn btn-primary survey-trigger" style="margin-top: 20px;">Claim Your Spot
+                            →</button>
                     </div>
-                    <div class="team-cta">
-                        <a href="https://wa.me/yournumber" class="btn-primary-premium w-100"
-                            style="display: block;">Book Via Whatsapp</a>
-                        <a href="tel:yournumber" class="btn-dark-premium w-100"
-                            style="display: block; margin-top: 20px;">Call Our Team</a>
+                    <div class="testimonial-right">
+                        <div class="video-carousel-placeholder" id="testimonialSlider">
+                            <div class="carousel-track" id="carouselTrack">
+                                <div class="carousel-slide">
+                                    <video src="/testimonial1.mp4" muted loop playsinline autoplay controls></video>
+                                </div>
+                                <div class="carousel-slide">
+                                    <video src="/testimonial2.mp4" muted loop playsinline autoplay controls></video>
+                                </div>
+                                <div class="carousel-slide">
+                                    <video src="/testimonial3.mp4" muted loop playsinline autoplay controls></video>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 50px;">
-                    <h2 class="section-headline">Your Questions, <span class="green-text">Answered</span></h2>
-                </div>
-                <div class="faq-grid">
-                    <div class="faq-item"><span>How many classes per week can I attend?</span> <span
-                            class="faq-plus">+</span></div>
-                    <div class="faq-item"><span>What do the classes involve?</span> <span class="faq-plus">+</span>
-                    </div>
-                    <div class="faq-item"><span>Is the first class really free?</span> <span class="faq-plus">+</span>
-                    </div>
-                    <div class="faq-item"><span>Do I need any experience?</span> <span class="faq-plus">+</span></div>
-                    <div class="faq-item"><span>What if I can't attend regularly?</span> <span class="faq-plus">+</span>
-                    </div>
-                    <div class="faq-item"><span>How do I book a class?</span> <span class="faq-plus">+</span></div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer-section">
             <div class="container text-center">
-                <img src="./public/logos/Barn Gym Logo transparent copy.png" alt="Barn Gym" class="footer-logo">
+                <img src="/logos/Barn Gym Logo transparent copy.png" alt="Barn Gym"
+                    style="max-width: 180px; margin-bottom: 30px;">
                 <h2 class="white-text">Join The Community Today</h2>
-                <p style="color: #aaa; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Don't wait for "perfect timing." The best time to start was yesterday. The second best time is now.
-                </p>
+                <p style="color: #888; max-width: 600px; margin: 0 auto 40px;">Don't wait for "perfect timing." The best
+                    time to start was yesterday. The second best time is now.</p>
 
-                <button class="btn-primary-premium survey-trigger">Claim Your Free Class →</button>
+                <button class="btn btn-primary survey-trigger">Claim Your Free Class →</button>
 
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
@@ -375,13 +360,51 @@
                     <a href="#">Terms & Conditions</a>
                 </div>
 
-                <p
-                    style="margin-top: 40px; color: #555; font-size: 12px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div style="margin-top: 20px; color: #ffffff; font-weight: 500;">
+                    <a href="tel:+447739790874" style="color: inherit; text-decoration: none;">📞 +44 7739 790874 (Call
+                        or Text)</a>
+                </div>
+
+                <p style="margin-top: 40px; color: #555; font-size: 12px; max-width: 800px; margin: 0 auto;">
                     This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT
                     endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
                 </p>
             </div>
         </footer>
+
+        <!-- Survey Modal -->
+        <div class="modal-overlay" id="surveyModal">
+            <div class="survey-card">
+                <button id="closeSurvey"
+                    style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+
+                <div class="survey-step active" id="step1">
+                    <h3 class="form-title" style="margin-bottom: 20px;">What is your primary fitness goal?</h3>
+                    <button class="option-btn next-step">Build Strength & Muscle</button>
+                    <button class="option-btn next-step">Improve Cardio & Fitness</button>
+                    <button class="option-btn next-step">Weight Loss & Toning</button>
+                </div>
+
+                <div class="survey-step" id="step2">
+                    <h3 class="form-title" style="margin-bottom: 20px;">Tell us where to send your free class pass</h3>
+                    <form id="modalLeadForm">
+                        <input type="text" name="name" placeholder="Full Name" required class="premium-input">
+                        <input type="email" name="email" placeholder="Email Address" required class="premium-input">
+                        <input type="tel" name="phone" placeholder="Phone Number" required class="premium-input">
+                        <button type="submit" class="btn-premium-submit">Get My Free Pass →</button>
+                    </form>
+                </div>
+
+                <div class="survey-step" id="step3">
+                    <div class="text-center">
+                        <div style="font-size: 64px; margin-bottom: 20px;">✅</div>
+                        <h3 class="form-title">You're All Set!</h3>
+                        <p style="color: #666;">A member of our team will be in touch shortly to help you book your
+                            first free class.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script>
@@ -400,22 +423,49 @@
             }, 3000);
         }
 
-        // Form submission
-        const SESSION_ID = crypto.randomUUID();
-        const heroForm = document.getElementById('heroLeadForm');
+        // Survey Modal Logic
+        const modal = document.getElementById('surveyModal');
+        const steps = document.querySelectorAll('.survey-step');
+        const nextBtns = document.querySelectorAll('.next-step');
+        const closeBtn = document.getElementById('closeSurvey');
+        let currentStep = 0;
 
-        heroForm.addEventListener('submit', async (e) => {
+        function goToStep(step) {
+            steps.forEach(s => s.classList.remove('active'));
+            steps[step].classList.add('active');
+            currentStep = step;
+        }
+
+        document.querySelectorAll('.survey-trigger').forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('active');
+                goToStep(0);
+            });
+        });
+
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => goToStep(1));
+        });
+
+        closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+
+        // Form Logic
+        const SESSION_ID = crypto.randomUUID();
+
+        async function handleLead(e, source) {
             e.preventDefault();
-            const btn = heroForm.querySelector('button');
-            btn.innerText = 'Sending...';
+            const form = e.target;
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Securing...';
             btn.disabled = true;
 
-            const formData = new FormData(heroForm);
+            const formData = new FormData(form);
             const data = {
                 name: formData.get('name'),
                 email: formData.get('email'),
                 phone: formData.get('phone'),
-                source: 'classes-hero',
+                source: source,
                 session_id: SESSION_ID
             };
 
@@ -426,28 +476,21 @@
                     body: JSON.stringify(data)
                 });
                 if (res.ok) {
-                    window.location.href = '/thank-you.html';
-                } else {
-                    throw new Error('Failed to submit');
+                    if (source.includes('modal')) {
+                        goToStep(2);
+                    } else {
+                        window.location.href = 'thank-you.html';
+                    }
                 }
             } catch (err) {
                 console.error(err);
                 btn.innerText = 'Try Again';
                 btn.disabled = false;
             }
-        });
-
-        // Trigger scroll to top for CTA buttons
-        document.querySelectorAll('.survey-trigger').forEach(trigger => {
-            trigger.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-
-        // Tracking
-        if (window.posthog) {
-            posthog.capture('$pageview', { page: 'classes' });
         }
+
+        document.getElementById('heroLeadForm').addEventListener('submit', (e) => handleLead(e, 'classes-hero'));
+        document.getElementById('modalLeadForm').addEventListener('submit', (e) => handleLead(e, 'classes-modal'));
     </script>
 </body>
 
