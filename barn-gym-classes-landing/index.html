@@ -564,6 +564,19 @@
             document.body.style.overflow = '';
         });
 
+        // Exit Intent Logic
+        let exitIntentShown = sessionStorage.getItem('exitIntentShown');
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY <= 0 && !exitIntentShown) {
+                modal.classList.add('active');
+                goToStep(0);
+                document.body.style.overflow = 'hidden';
+                exitIntentShown = true;
+                sessionStorage.setItem('exitIntentShown', 'true');
+            }
+        });
+
         // Form Logic
         const SESSION_ID = crypto.randomUUID();
 
