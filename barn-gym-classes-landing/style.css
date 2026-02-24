@@ -132,6 +132,41 @@ h4,
     box-shadow: 0 10px 30px rgba(0, 117, 89, 0.4);
 }
 
+/* Section Spacing & Headlines */
+.timetable-section,
+.classes-overview-section,
+.specialist-overview-section,
+.results-grid-section,
+.pricing-section,
+.testimonials-section {
+    padding: 60px 0;
+}
+
+.classes-overview-section {
+    background: #fafafa;
+}
+
+.results-grid-section {
+    background: #fff;
+}
+
+.section-headline {
+    font-size: 56px;
+    margin-bottom: 24px;
+}
+
+.specialist-overview-section {
+    padding-top: 0;
+    /* Tighten gap between Core and Specialist */
+}
+
+.results-grid-section,
+.pricing-section,
+.footer-section {
+    padding-top: 20px;
+    /* Reduction for Results, Pricing and Footer gaps */
+}
+
 /* Hero Section */
 .hero-wrapper {
     position: relative;
@@ -284,38 +319,6 @@ h4,
 }
 
 /* Timetable Section */
-.timetable-section,
-.classes-overview-section,
-.specialist-overview-section,
-.results-grid-section,
-.pricing-section,
-.testimonials-section {
-    padding: 60px 0;
-}
-
-.classes-overview-section {
-    background: #fafafa;
-}
-
-.results-grid-section {
-    background: #fff;
-}
-
-.section-headline {
-    font-size: 56px;
-    margin-bottom: 24px;
-}
-
-.specialist-overview-section {
-    padding-top: 0;
-}
-
-.results-grid-section,
-.pricing-section,
-.footer-section {
-    padding-top: 20px;
-}
-
 .timetable-section {
     background: #fff;
 }
@@ -627,6 +630,7 @@ h4,
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
+    z-index: 10;
 }
 
 .dot {
@@ -784,6 +788,7 @@ h4,
     .grid-2,
     .pricing-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .hero-headline {
@@ -808,5 +813,22 @@ h4,
         flex-direction: column;
         align-items: center;
         gap: 8px;
+    }
+
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .testimonial-wrapper {
+        padding: 60px 20px;
+        width: 100%;
+        margin: 40px 0;
+        border-radius: 0;
+    }
+
+    .video-carousel-placeholder {
+        max-width: 100%;
     }
 }
