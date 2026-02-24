@@ -288,8 +288,7 @@ h4,
 }
 
 .premium-form .form-group-premium {
-    margin-bottom: 20px;
-    /* More spacing between inputs */
+    margin-bottom: 25px;
 }
 
 .premium-input {
@@ -314,8 +313,7 @@ h4,
     font-weight: bold;
     cursor: pointer;
     font-family: var(--font-heading);
-    margin-top: 15px;
-    /* Spacing above button */
+    margin-top: 25px;
 }
 
 /* Timetable Section */
