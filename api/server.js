@@ -36,8 +36,9 @@ app.post('/api/leads', async (req, res) => {
         }
         const lead = await saveLead({ name, email, phone, source, survey_q1, survey_q2, ghl_contact_id: null, ghl_status: 'pending' });
         console.log(`[LEAD SAVED] id=${lead.id} name="${name}" email="${email}" source="${source}"`);
+        const pageBase = (source || '').split('-')[0]; // matches '6-week' or 'pt' in dashboard grouping
         await saveEvent({
-            session_id: req.body.session_id, page: source, event_type: 'form_submit',
+            session_id: req.body.session_id, page: pageBase, event_type: 'form_submit',
             event_data: { name, email, source }, user_agent: req.headers['user-agent'], ip: req.ip
         });
         pushLeadToGHL({ name, email, phone, source })

@@ -1,0 +1,722 @@
+{
+  "meta": {
+    "title": "Barn Gym - Where Nature Meets Fitness",
+    "description": "A unique countryside fitness space combining expert coaching, outdoor training, and a supportive community. Built for people who want real progress, clarity, and a place to belong."
+  },
+  "textNodes": {
+    "text_0": {
+      "original": "Experience fitness in the open air, where each workout is designed to be as effective as it is enjoyable.",
+      "element": "p"
+    },
+    "text_1": {
+      "original": "Join Barn Gym",
+      "element": "p"
+    },
+    "text_2": {
+      "original": "Explore Corporate",
+      "element": "p"
+    },
+    "text_3": {
+      "original": "Our Offering",
+      "element": "p"
+    },
+    "text_4": {
+      "original": "Personal Training",
+      "element": "h3"
+    },
+    "text_5": {
+      "original": "Personalized one-on-one sessions designed to fit your goals, fitness level, and lifestyle.",
+      "element": "p"
+    },
+    "text_6": {
+      "original": "Learn More",
+      "element": "span"
+    },
+    "text_7": {
+      "original": "6 Week Transformation",
+      "element": "h3"
+    },
+    "text_8": {
+      "original": "Strong strategies for fueling your body, enhancing strength, improving stamina, and achieving sustainable results.",
+      "element": "p"
+    },
+    "text_9": {
+      "original": "Start Today",
+      "element": "span"
+    },
+    "text_10": {
+      "original": "Online Personal Training",
+      "element": "h3"
+    },
+    "text_11": {
+      "original": "Online coaching that keeps you committed, improving, and moving forward.",
+      "element": "p"
+    },
+    "text_12": {
+      "original": "Read More",
+      "element": "span"
+    },
+    "text_13": {
+      "original": "Classes",
+      "element": "h3"
+    },
+    "text_14": {
+      "original": "Get personal-training level coaching, the energy of a group, and real progress—without getting lost in a packed class.",
+      "element": "p"
+    },
+    "text_15": {
+      "original": "View Classes",
+      "element": "span"
+    },
+    "text_16": {
+      "original": "Results",
+      "element": "p"
+    },
+    "text_17": {
+      "original": "Online Community",
+      "element": "p"
+    },
+    "text_18": {
+      "original": "Our Philosophy",
+      "element": "p"
+    },
+    "text_19": {
+      "original": "Community Brings Consistency",
+      "element": "h3"
+    },
+    "text_20": {
+      "original": "Join Barn Community",
+      "element": "span"
+    },
+    "text_21": {
+      "original": "Community Love",
+      "element": "h3"
+    },
+    "text_22": {
+      "original": "Joining Barn Community finally made fitness feel doable. The support keeps me consistent and I’m seeing results every week",
+      "element": "p"
+    },
+    "text_23": {
+      "original": "Professionals You Can Trust",
+      "element": "h3"
+    },
+    "text_24": {
+      "original": "You get structured training and nutrition plans plus guidance from coaches who actually respond and help you move forward.",
+      "element": "p"
+    },
+    "text_25": {
+      "original": "Meet Our Team",
+      "element": "p"
+    },
+    "text_26": {
+      "original": "Members",
+      "element": "p"
+    },
+    "text_27": {
+      "original": "178+",
+      "element": "p"
+    },
+    "text_28": {
+      "original": "Dedicated Coaches",
+      "element": "p"
+    },
+    "text_29": {
+      "original": "Rating",
+      "element": "p"
+    },
+    "text_30": {
+      "original": "5/5",
+      "element": "p"
+    },
+    "text_31": {
+      "original": "Our Promise to You",
+      "element": "p"
+    },
+    "text_32": {
+      "original": "Progress becomes simple when you stop doing it alone. We give you the structure and support you’ve always needed.",
+      "element": "p"
+    },
+    "text_33": {
+      "original": "Join Barn Community",
+      "element": "span"
+    },
+    "text_34": {
+      "original": "Corporate Offering",
+      "element": "p"
+    },
+    "text_35": {
+      "original": "Personal Coaching",
+      "element": "h3"
+    },
+    "text_36": {
+      "original": "Per Staff Member",
+      "element": "p"
+    },
+    "text_37": {
+      "original": "$97 / Month",
+      "element": "p"
+    },
+    "text_38": {
+      "original": "Learn More",
+      "element": "span"
+    },
+    "text_39": {
+      "original": "Retreats",
+      "element": "h3"
+    },
+    "text_40": {
+      "original": "2-3 Days",
+      "element": "p"
+    },
+    "text_41": {
+      "original": "On Request",
+      "element": "p"
+    },
+    "text_42": {
+      "original": "Learn More",
+      "element": "span"
+    },
+    "text_43": {
+      "original": "On Site Workshops",
+      "element": "h3"
+    },
+    "text_44": {
+      "original": "Duration varies",
+      "element": "p"
+    },
+    "text_45": {
+      "original": "On Request",
+      "element": "p"
+    },
+    "text_46": {
+      "original": "Learn More",
+      "element": "span"
+    },
+    "text_47": {
+      "original": "About Us",
+      "element": "p"
+    },
+    "text_48": {
+      "original": "About Barn Gym",
+      "element": "span"
+    },
+    "text_49": {
+      "original": "What are the membership options at Barn Gym?",
+      "element": "p"
+    },
+    "text_50": {
+      "original": "How do I book a class or personal training session?",
+      "element": "p"
+    },
+    "text_51": {
+      "original": "Are there beginner-friendly classes?",
+      "element": "p"
+    },
+    "text_52": {
+      "original": "How big are the classes?",
+      "element": "p"
+    },
+    "text_53": {
+      "original": "Do you offer nutritional guidance?",
+      "element": "p"
+    },
+    "text_54": {
+      "original": "What should I bring to my first session?",
+      "element": "p"
+    },
+    "text_55": {
+      "original": "Location",
+      "element": "p"
+    },
+    "text_56": {
+      "original": "Burwash, TN19 7DE, United Kingdom",
+      "element": "p"
+    },
+    "text_57": {
+      "original": "Opening Hours",
+      "element": "p"
+    },
+    "text_58": {
+      "original": "Monday:",
+      "element": "p"
+    },
+    "text_59": {
+      "original": "6:00 AM – 9:00 PM",
+      "element": "p"
+    },
+    "text_60": {
+      "original": "Tuesday:",
+      "element": "p"
+    },
+    "text_61": {
+      "original": "6:00 AM – 9:00 PM",
+      "element": "p"
+    },
+    "text_62": {
+      "original": "Wednesday:",
+      "element": "p"
+    },
+    "text_63": {
+      "original": "6:00 AM – 9:00 PM",
+      "element": "p"
+    },
+    "text_64": {
+      "original": "Thursday:",
+      "element": "p"
+    },
+    "text_65": {
+      "original": "6:00 AM – 9:00 PM",
+      "element": "p"
+    },
+    "text_66": {
+      "original": "Friday:",
+      "element": "p"
+    },
+    "text_67": {
+      "original": "6:00 AM – 9:00 PM",
+      "element": "p"
+    },
+    "text_68": {
+      "original": "Saturday:",
+      "element": "p"
+    },
+    "text_69": {
+      "original": "7:00 AM – 2:00 PM",
+      "element": "p"
+    },
+    "text_70": {
+      "original": "Sunday:",
+      "element": "p"
+    },
+    "text_71": {
+      "original": "8:00 AM – 12:00 PM",
+      "element": "p"
+    },
+    "text_72": {
+      "original": "Contact Us",
+      "element": "p"
+    },
+    "text_73": {
+      "original": "Guy@barn-gym.com",
+      "element": "p"
+    },
+    "text_74": {
+      "original": "Call Us",
+      "element": "p"
+    },
+    "text_75": {
+      "original": "Pages",
+      "element": "p"
+    },
+    "text_76": {
+      "original": "6 Week Transformation",
+      "element": "p"
+    },
+    "text_77": {
+      "original": "Personal Training",
+      "element": "p"
+    },
+    "text_78": {
+      "original": "Classes",
+      "element": "p"
+    },
+    "text_79": {
+      "original": "Online Coaching",
+      "element": "p"
+    },
+    "text_80": {
+      "original": "Community",
+      "element": "p"
+    },
+    "text_81": {
+      "original": "Corporate Personal Training",
+      "element": "p"
+    },
+    "text_82": {
+      "original": "Retreats",
+      "element": "p"
+    },
+    "text_83": {
+      "original": "On-Site Workshops",
+      "element": "p"
+    },
+    "text_84": {
+      "original": "About",
+      "element": "p"
+    },
+    "text_85": {
+      "original": "Contact",
+      "element": "p"
+    },
+    "text_86": {
+      "original": "Legal",
+      "element": "p"
+    },
+    "text_87": {
+      "original": "Privacy Policy",
+      "element": "p"
+    },
+    "text_88": {
+      "original": "Cookie Policy",
+      "element": "p"
+    },
+    "text_89": {
+      "original": "Terms & Conditions",
+      "element": "p"
+    },
+    "text_90": {
+      "original": "Social Media",
+      "element": "p"
+    },
+    "text_91": {
+      "original": "Instagram",
+      "element": "p"
+    },
+    "text_92": {
+      "original": "LinkedIn",
+      "element": "p"
+    }
+  },
+  "images": {
+    "img_0": {
+      "original": "./assets/images/image_0.png",
+      "alt": ""
+    },
+    "img_1": {
+      "original": "./assets/images/image_1.png",
+      "alt": "Personal Coaching Image"
+    },
+    "img_2": {
+      "original": "./assets/images/image_2.png",
+      "alt": "Personal Coaching Image"
+    },
+    "img_3": {
+      "original": "./assets/images/image_3.png",
+      "alt": "Group Training Image"
+    },
+    "img_4": {
+      "original": "./assets/images/image_4.png",
+      "alt": "Stretching"
+    },
+    "img_5": {
+      "original": "./assets/images/image_5.png",
+      "alt": ""
+    },
+    "img_6": {
+      "original": "./assets/images/image_6.png",
+      "alt": ""
+    },
+    "img_7": {
+      "original": "./assets/images/image_7.png",
+      "alt": ""
+    },
+    "img_8": {
+      "original": "./assets/images/image_8.png",
+      "alt": ""
+    },
+    "img_9": {
+      "original": "./assets/images/image_9.png",
+      "alt": ""
+    },
+    "img_10": {
+      "original": "./assets/images/image_10.png",
+      "alt": ""
+    },
+    "img_11": {
+      "original": "./assets/images/image_11.png",
+      "alt": ""
+    },
+    "img_12": {
+      "original": "./assets/images/image_12.png",
+      "alt": ""
+    },
+    "img_13": {
+      "original": "./assets/images/image_13.png",
+      "alt": ""
+    },
+    "img_14": {
+      "original": "./assets/images/image_14.png",
+      "alt": ""
+    },
+    "img_15": {
+      "original": "./assets/images/image_15.png",
+      "alt": ""
+    },
+    "img_16": {
+      "original": "./assets/images/image_16.png",
+      "alt": ""
+    },
+    "img_17": {
+      "original": "./assets/images/image_17.png",
+      "alt": ""
+    },
+    "img_18": {
+      "original": "./assets/images/image_18.png",
+      "alt": ""
+    },
+    "img_19": {
+      "original": "./assets/images/image_19.png",
+      "alt": ""
+    },
+    "img_20": {
+      "original": "./assets/images/image_20.png",
+      "alt": ""
+    },
+    "img_21": {
+      "original": "./assets/images/image_21.png",
+      "alt": ""
+    },
+    "img_22": {
+      "original": "./assets/images/image_22.png",
+      "alt": ""
+    },
+    "img_23": {
+      "original": "./assets/images/image_23.png",
+      "alt": ""
+    },
+    "img_24": {
+      "original": "./assets/images/image_24.png",
+      "alt": ""
+    },
+    "img_25": {
+      "original": "./assets/images/image_25.png",
+      "alt": ""
+    },
+    "img_26": {
+      "original": "./assets/images/image_26.png",
+      "alt": ""
+    },
+    "img_27": {
+      "original": "./assets/images/image_27.png",
+      "alt": ""
+    },
+    "img_28": {
+      "original": "./assets/images/image_28.png",
+      "alt": ""
+    },
+    "img_29": {
+      "original": "./assets/images/image_29.png",
+      "alt": ""
+    },
+    "img_30": {
+      "original": "./assets/images/image_30.png",
+      "alt": ""
+    },
+    "img_31": {
+      "original": "./assets/images/image_31.png",
+      "alt": ""
+    },
+    "img_32": {
+      "original": "./assets/images/image_32.png",
+      "alt": ""
+    },
+    "img_33": {
+      "original": "./assets/images/image_33.png",
+      "alt": ""
+    },
+    "img_34": {
+      "original": "./assets/images/image_34.png",
+      "alt": ""
+    },
+    "img_35": {
+      "original": "./assets/images/image_35.png",
+      "alt": ""
+    },
+    "img_36": {
+      "original": "./assets/images/image_36.png",
+      "alt": ""
+    },
+    "img_37": {
+      "original": "./assets/images/image_37.png",
+      "alt": ""
+    },
+    "img_38": {
+      "original": "./assets/images/image_38.png",
+      "alt": ""
+    },
+    "img_39": {
+      "original": "./assets/images/image_39.png",
+      "alt": ""
+    },
+    "img_40": {
+      "original": "./assets/images/image_40.png",
+      "alt": ""
+    },
+    "img_41": {
+      "original": "./assets/images/image_41.png",
+      "alt": ""
+    },
+    "img_42": {
+      "original": "./assets/images/image_42.png",
+      "alt": ""
+    },
+    "img_43": {
+      "original": "./assets/images/image_43.png",
+      "alt": ""
+    },
+    "img_44": {
+      "original": "./assets/images/image_44.png",
+      "alt": ""
+    },
+    "img_45": {
+      "original": "./assets/images/image_45.png",
+      "alt": ""
+    },
+    "img_46": {
+      "original": "./assets/images/image_46.png",
+      "alt": ""
+    },
+    "img_47": {
+      "original": "./assets/images/image_47.png",
+      "alt": ""
+    },
+    "img_48": {
+      "original": "./assets/images/image_48.png",
+      "alt": ""
+    },
+    "img_49": {
+      "original": "./assets/images/image_49.png",
+      "alt": ""
+    },
+    "img_50": {
+      "original": "./assets/images/image_50.png",
+      "alt": ""
+    },
+    "img_51": {
+      "original": "./assets/images/image_51.png",
+      "alt": ""
+    },
+    "img_52": {
+      "original": "./assets/images/image_52.png",
+      "alt": ""
+    },
+    "img_53": {
+      "original": "./assets/images/image_53.png",
+      "alt": ""
+    },
+    "img_54": {
+      "original": "./assets/images/image_54.png",
+      "alt": ""
+    },
+    "img_55": {
+      "original": "./assets/images/image_55.png",
+      "alt": ""
+    },
+    "img_56": {
+      "original": "./assets/images/image_56.png",
+      "alt": ""
+    },
+    "img_57": {
+      "original": "./assets/images/image_57.png",
+      "alt": ""
+    },
+    "img_58": {
+      "original": "./assets/images/image_58.png",
+      "alt": ""
+    },
+    "img_59": {
+      "original": "./assets/images/image_59.png",
+      "alt": ""
+    },
+    "img_60": {
+      "original": "./assets/images/image_60.png",
+      "alt": ""
+    },
+    "img_61": {
+      "original": "./assets/images/image_61.png",
+      "alt": ""
+    },
+    "img_62": {
+      "original": "./assets/images/image_62.png",
+      "alt": ""
+    },
+    "img_63": {
+      "original": "./assets/images/image_63.png",
+      "alt": ""
+    },
+    "img_64": {
+      "original": "./assets/images/image_64.png",
+      "alt": ""
+    },
+    "img_65": {
+      "original": "./assets/images/image_65.png",
+      "alt": "Leafs"
+    },
+    "img_66": {
+      "original": "./assets/images/image_66.png",
+      "alt": ""
+    },
+    "img_67": {
+      "original": "./assets/images/image_67.png",
+      "alt": "Woman"
+    },
+    "img_68": {
+      "original": "./assets/images/image_68.png",
+      "alt": "Woman"
+    },
+    "img_69": {
+      "original": "./assets/images/image_69.png",
+      "alt": "Woman"
+    },
+    "img_70": {
+      "original": "./assets/images/image_70.png",
+      "alt": "Woman"
+    },
+    "img_71": {
+      "original": "./assets/images/image_71.jpeg",
+      "alt": "Treatment Spa"
+    },
+    "img_72": {
+      "original": "./assets/images/image_72.png",
+      "alt": "Relaxation"
+    },
+    "img_73": {
+      "original": "./assets/images/image_73.png",
+      "alt": ""
+    },
+    "img_74": {
+      "original": "./assets/images/image_74.jpeg",
+      "alt": ""
+    },
+    "img_75": {
+      "original": "./assets/images/image_75.jpg",
+      "alt": ""
+    },
+    "img_76": {
+      "original": "./assets/images/image_76.png",
+      "alt": ""
+    },
+    "img_77": {
+      "original": "./assets/images/image_77.png",
+      "alt": ""
+    },
+    "img_78": {
+      "original": "./assets/images/image_78.svg",
+      "alt": "Back Arrow"
+    },
+    "img_79": {
+      "original": "./assets/images/image_79.svg",
+      "alt": "Next Arrow"
+    },
+    "img_80": {
+      "original": "./assets/images/image_80.png",
+      "alt": "Purple orchids"
+    },
+    "img_81": {
+      "original": "./assets/images/image_81.png",
+      "alt": "Woman in spa"
+    },
+    "img_82": {
+      "original": "./assets/images/image_82.png",
+      "alt": "Tropical spa"
+    },
+    "img_83": {
+      "original": "./assets/images/image_83.png",
+      "alt": "Woman in spa"
+    },
+    "img_84": {
+      "original": "./assets/images/image_84.png",
+      "alt": ""
+    }
+  }
+}

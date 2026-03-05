@@ -37,12 +37,21 @@
         window.GADS_ID = '';
         window.META_PIXEL_ID = '935413671754852';
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-PLACEHOLDER"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        if (window.GADS_ID) gtag('config', window.GADS_ID);
+        async function trackEvent(event_type, event_data = {}) {
+            const SESSION_ID = sessionStorage.getItem('bg_session');
+            const API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://join.barn-gym.com';
+
+            // PostHog
+            if (window.posthog) posthog.capture(event_type, { ...event_data, page: window.PAGE_SOURCE_PREFIX });
+
+            // Internal Dashboard
+            fetch(API_BASE + '/api/events', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ session_id: SESSION_ID, page: 'classes', event_type, event_data })
+            }).catch(() => { });
+        }
     </script>
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -153,7 +162,7 @@
         </div>
     </div>
     <script>
-        posthog.capture('thank_you_view', { page: window.PAGE_SOURCE_PREFIX });
+        trackEvent('thank_you_view');
     </script>
 </body>
 

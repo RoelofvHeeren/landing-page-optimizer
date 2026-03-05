@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "title": "The Barn Gym Community | Train Smarter, Together",
+    "description": "Join The Barn Gym Community. Elite functional fitness, structured training, and real accountability."
+  },
+  "textNodes": {
+    "text_0": "Jump to the Grind",
+    "text_1": "The Barn Gym Community",
+    "text_2": "Fuel Your Fire →",
+    "text_3": "OUR STORY",
+    "text_4": "THE GRIND BLOG",
+    "text_5": "REACH OUT",
+    "text_6": "Forge Your Path",
+    "text_7": "BARN STRENGTH: Functional Bodybuilding",
+    "text_8": "BARN FIT: All-Around Functional",
+    "text_9": "BARN ELITE: Advanced Performance",
+    "text_10": "IRON MAIDENS: Women's Strength",
+    "text_11": "HYROX READY: Race Day Prep",
+    "text_12": "LEGACY BUILDERS: Pro Athlete Protocol",
+    "text_13": "TRAILBLAZERS: Endurance & Speed",
+    "text_14": "SEE ALL PROGRAMS",
+    "text_15": "ELITE COACHING, REAL RESULTS",
+    "text_16": "FUEL GUIDANCE FOR PEAK PERFORMANCE",
+    "text_17": "TRUSTED BY HUNDREDS IN THE BARN",
+    "text_18": "Shop All Barn Fuel",
+    "text_19": "Find Your Fuel Quiz",
+    "text_20": "Top Sellers",
+    "text_21": "Endurance Edge",
+    "text_22": "Workout Support",
+    "text_23": "Foundation Health",
+    "text_24": "Repair & Rebuild",
+    "text_25": "Quick Fuel",
+    "text_26": "Stack & Save",
+    "text_27": "Fuel Calculator",
+    "text_28": "Gear & Extras",
+    "text_29": "Add to Crate",
+    "text_30": "REST DEEPER",
+    "text_31": "CORE HEALTH",
+    "text_32": "Barn Rest Advanced Recovery Aid",
+    "text_33": "£29.00",
+    "text_34": "Add to Crate",
+    "text_35": "POWER PACK SNACK",
+    "text_36": "GRAB & GO",
+    "text_37": "Barn Power Bar (Box of 12)",
+    "text_38": "£25.00",
+    "text_39": "Add to Crate",
+    "text_40": "BARN BURNER DEAL!",
+    "text_41": "NEW HARVEST FLAVOR!",
+    "text_42": "LAST CHANCE PRICE",
+    "text_43": "HYDRATE & PERFORM",
+    "text_44": "Barn Flow Electrolyte Powder",
+    "text_45": "From £21.60",
+    "text_46": "£27.00",
+    "text_47": "Add to Crate",
+    "text_48": "BUILD & GROW",
+    "text_49": "RECOVERY ESSENTIAL",
+    "text_50": "Barn Core Whey Protein Powder",
+    "text_51": "£42.00",
+    "text_52": "BARN GEAR: Clearance Corner →",
+    "text_53": "Shop All Barn Gear",
+    "text_54": "Tees & Tanks",
+    "text_55": "Hoods & Outerwear",
+    "text_56": "Training Bottoms",
+    "text_57": "Performance Shorts",
+    "text_58": "Collections",
+    "text_59": "FOUNDATION Line",
+    "text_60": "GRIT Series",
+    "text_61": "COMMUNITY Wear",
+    "text_62": "Socks & Essentials",
+    "text_63": "BUILT FOR THE GRIND",
+    "text_64": "RUGGED, PERFORMANCE FABRICS",
+    "text_65": "COMMUNITY-PROVEN DURABILITY",
+    "text_66": "SHOP ALL BARN GEAR",
+    "text_67": "About The Barn Gym Community",
+    "text_68": "Our Barns",
+    "text_69": "The Barn - Eastside",
+    "text_70": "The Barn - City Hub",
+    "text_71": "The Barn - Riverside",
+    "text_72": "The Barn - Meadows",
+    "text_73": "Connect With Us",
+    "text_74": "YOU ARE THE HARVEST. WE ARE THE SOIL.",
+    "text_75": "JOIN THE BARN",
+    "text_76": "Online Training",
+    "text_77": "Barn Fuel",
+    "text_78": "Barn Gear",
+    "text_79": "Our Barns",
+    "text_80": "The Grind Blog",
+    "text_81": "Our Story",
+    "text_82": "Reach Out",
+    "text_83": "Online Training",
+    "text_84": "Forge Your Path: Online Training",
+    "text_85": "START YOUR TRANSFORMATION",
+    "text_86": "Barn Strength",
+    "text_87": "Barn Fit",
+    "text_88": "Barn Elite",
+    "text_89": "Iron Maidens",
+    "text_90": "HYROX Ready",
+    "text_91": "Legacy Builders",
+    "text_92": "Trailblazers",
+    "text_93": "SEE ALL PROGRAMS",
+    "text_94": "BARN RESOURCES",
+    "text_95": "The Grind Blog",
+    "text_96": "Our Story",
+    "text_97": "Reach Out",
+    "text_98": "Barn Fuel",
+    "text_99": "Fuel Your Fire: Barn Fuel",
+    "text_100": "Shop All Barn Fuel",
+    "text_101": "Find Your Fuel Quiz",
+    "text_102": "Top Sellers",
+    "text_103": "Endurance Edge",
+    "text_104": "Workout Support",
+    "text_105": "Foundation Health",
+    "text_106": "Repair & Rebuild",
+    "text_107": "Quick Fuel",
+    "text_108": "Stack & Save",
+    "text_109": "Fuel Calculator",
+    "text_110": "Gear & Extras",
+    "text_111": "Add to Crate",
+    "text_112": "REST DEEPER",
+    "text_113": "CORE HEALTH",
+    "text_114": "Barn Rest Advanced Recovery Aid",
+    "text_115": "£29.00",
+    "text_116": "Add to Crate",
+    "text_117": "POWER PACK SNACK",
+    "text_118": "GRAB & GO",
+    "text_119": "Barn Power Bar (Box of 12)",
+    "text_120": "£25.00",
+    "text_121": "Add to Crate",
+    "text_122": "BARN BURNER DEAL!",
+    "text_123": "NEW HARVEST FLAVOR!",
+    "text_124": "LAST CHANCE PRICE",
+    "text_125": "HYDRATE & PERFORM",
+    "text_126": "Barn Flow Electrolyte Powder",
+    "text_127": "From £21.60",
+    "text_128": "£27.00",
+    "text_129": "Add to Crate",
+    "text_130": "BUILD & GROW",
+    "text_131": "RECOVERY ESSENTIAL",
+    "text_132": "Barn Core Whey Protein Powder",
+    "text_133": "£42.00",
+    "text_134": "BARN RESOURCES",
+    "text_135": "The Grind Blog",
+    "text_136": "Our Story",
+    "text_137": "Reach Out",
+    "text_138": "Barn Gear",
+    "text_139": "Wear Your Grit: Barn Gear",
+    "text_140": "BARN GEAR: Clearance Corner →",
+    "text_141": "Shop All Barn Gear",
+    "text_142": "Tees & Tanks",
+    "text_143": "Hoods & Outerwear",
+    "text_144": "Training Bottoms",
+    "text_145": "Performance Shorts",
+    "text_146": "Collections",
+    "text_147": "Socks & Essentials",
+    "text_148": "SHOP ALL BARN GEAR",
+    "text_149": "BARN RESOURCES",
+    "text_150": "The Grind Blog",
+    "text_151": "Our Story",
+    "text_152": "Reach Out",
+    "text_153": "Barn Gear Collections",
+    "text_154": "Collections",
+    "text_155": "FOUNDATION Line",
+    "text_156": "GRIT Series",
+    "text_157": "COMMUNITY Wear",
+    "text_158": "The Grind Blog",
+    "text_159": "Our Story",
+    "text_160": "Reach Out",
+    "text_161": "Our Barns",
+    "text_162": "Find Your Barn",
+    "text_163": "About The Barn Gym Community",
+    "text_164": "Barn Locations",
+    "text_165": "Connect With Us",
+    "text_166": "THE BARN GYM: WHERE WE FORGE STRENGTH & COMMUNITY",
+    "text_167": "FIND YOUR BARN",
+    "text_168": "BARN RESOURCES",
+    "text_169": "The Grind Blog",
+    "text_170": "Our Story",
+    "text_171": "Reach Out",
+    "text_172": "Our Barns",
+    "text_173": "Barn Locations",
+    "text_174": "The Barn - Eastside",
+    "text_175": "The Barn - City Hub",
+    "text_176": "The Barn - Riverside",
+    "text_177": "The Barn - Meadows",
+    "text_178": "The Grind Blog",
+    "text_179": "Our Story",
+    "text_180": "Reach Out",
+    "text_181": "Your Crate",
+    "text_182": "Your Crate is Empty",
+    "text_183": "Keep Forging On",
+    "text_184": "Your Crate is Empty",
+    "text_185": "Keep Forging On",
+    "text_186": "You Might Also Need",
+    "text_187": "Total Haul",
+    "text_188": "£0.00 GBP",
+    "text_189": "Shipping & Delivery",
+    "text_190": "Checkout",
+    "text_191": "Search The Barn",
+    "text_192": "Most Sought",
+    "text_193": "Protein",
+    "text_194": "Hydration",
+    "text_195": "Creatine",
+    "text_196": "See All Findings",
+    "text_197": "UNLEASH YOUR GRIT. BUILD YOUR LEGACY. JOIN THE BARN.",
+    "text_198": "THE BARN GYM COMMUNITY: STRUCTURED TRAINING. REAL ACCOUNTABILITY. UNRIVALLED PROGRESS.",
+    "text_199": "DISCOVER THE BARN'S FORGED TRAINING",
+    "text_200": "MASTER THE FOUNDATIONS. DOMINATE YOUR GOALS.",
+    "text_201": "Strategic programming that builds strength, skill, and resilience, ensuring you constantly evolve without plateauing. No guesswork, just results.",
+    "text_202": "RAW POWER, REFINED PROGRESS.",
+    "text_203": "YOUR PATH IS PLANNED. YOUR PROGRESS IS TRACKED.",
+    "text_204": "Eliminate decision fatigue and focus purely on execution. Our expertly crafted daily workouts are designed to push you, record your gains, and highlight your next milestone.",
+    "text_205": "COMMUNITY ACCOUNTABILITY. EXPERT GUIDANCE.",
+    "text_206": "You're never alone in The Barn. Our coaches and fellow members provide unwavering support, pushing you harder, celebrating your wins, and holding you to your commitments.",
+    "text_207": "TRAIN WHERE YOU ARE. THRIVE EVERYWHERE.",
+    "text_208": "THE BARN IS MORE THAN A GYM. IT'S A MENTALLY TOUGH COMMUNITY.",
+    "text_209": "FORGED BY FIRE, UNITED BY GRIT.",
+    "text_210": "This isn't just about lifting weights; it's about lifting each other. We cultivate a culture of relentless pursuit, positive reinforcement, and shared dedication to becoming our strongest selves.",
+    "text_211": "BARN STRENGTH: FUNCTIONAL BODYBUILDING",
+    "text_212": "Develop raw power and lean muscle with intelligent programming that builds both aesthetics and real-world performance.",
+    "text_213": "BARN FIT: ALL-AROUND FUNCTIONAL FITNESS",
+    "text_214": "A balanced approach to fitness, improving endurance, strength, and agility for a resilient, capable body ready for anything.",
+    "text_215": "IRON MAIDENS: WOMEN'S STRENGTH PROGRAM",
+    "text_216": "Dedicated programming empowering women to build undeniable strength, confidence, and community in a supportive environment.",
+    "text_217": "CHOOSE YOUR PATH. MASTER YOUR CRAFT.",
+    "text_218": "BARN STRENGTH PROGRAM",
+    "text_219": "Build muscle, increase power, and sculpt a formidable physique.",
+    "text_220": "BARN FIT PROGRAM",
+    "text_221": "Enhance overall functional capacity, conditioning, and robust health.",
+    "text_222": "IRON MAIDENS PROGRAM",
+    "text_223": "Specialized training for women focused on strength, performance, and empowerment.",
+    "text_224": "HYROX READY PROGRAM",
+    "text_225": "Optimal preparation for HYROX races, sharpening skills and endurance.",
+    "text_226": "LEGACY BUILDERS PROGRAM",
+    "text_227": "Elite-level programming for competitive athletes striving for peak performance and podium finishes.",
+    "text_228": "SEE WHAT OUR COMMUNITY SAYS.",
+    "text_229": "NO MATTER YOUR STARTING POINT, THE BARN IS YOUR LAUNCHPAD. From everyday warriors to elite competitors, our tiered programs ensure you're always challenged, always progressing.",
+    "text_230": "91% FASTER PROGRESS",
+    "text_231": "of members report significant strength gains within 3 months.",
+    "text_232": "88% STRONGER BONDS",
+    "text_233": "of members feel a strong sense of community and accountability.",
+    "text_234": "JOIN THE BARN MOVEMENT.",
+    "text_235": "BARN TRAINING",
+    "text_236": "READY TO BUILD YOUR LEGACY?",
+    "text_237": "GET THE LATEST GRIND NEWS",
+    "text_238": "SUBSCRIBE FOR UPDATES",
+    "text_239": "ONLINE TRAINING",
+    "text_240": "BARN FUEL",
+    "text_241": "BARN GEAR",
+    "text_242": "OUR BARNS",
+    "text_243": "Instagram",
+    "text_244": "YouTube",
+    "text_245": "TikTok",
+    "text_246": "Email Us",
+    "text_247": "WHOLESALE INQUIRIES",
+    "text_248": "OUR BARNS",
+    "text_249": "CAREERS AT THE BARN",
+    "text_250": "ABOUT THE BARN",
+    "text_251": "SHIPPING & SUBSCRIPTIONS",
+    "text_252": "TERMS & CONDITIONS",
+    "text_253": "RETURNS PORTAL",
+    "text_254": "PRIVACY POLICY",
+    "text_255": "Added to Your Crate",
+    "text_256": "Go to Crate",
+    "text_257": "Checkout Now",
+    "text_258": "window._RestockRocketConfig = window._RestockRocketConfig || {}\n\n  // Helper function to normalize locale format from hyphen to underscore (e.g., 'en-US' -> 'en_us')\n  // This matches the backend's Mobility.normalize_locale behavior\n  // Returns empty string if locale is empty or invalid (matches original behavior)\n  function normalizeLocale(locale) {\n    if (!locale || locale.trim() === '') {\n      return '';\n    }\n    return locale.toString().toLowerCase().replace(/-/g, '_');\n  }\n\n  window._RestockRocketConfig.locale = 'en';\n  window._RestockRocketConfig.normalizedLocale = normalizeLocale('en');\n  window._RestockRocketConfig.shop = 'marchonsupplements.myshopify.com';\n  window._RestockRocketConfig.pageType = 'page';\n  window._RestockRocketConfig.liquidRenderedAt = 1772464879;window._RestockRocketConfig.marketId = 2389901570;window._RestockRocketConfig.countryName = 'United Kingdom';\n    window._RestockRocketConfig.countryIsoCode = 'GB';window._RestockRocketConfig.cartInventoryQuantity = {};window._RestockRocketConfig.cachedSettings = {\"id\":28374,\"shop_id\":28223,\"currency\":\"GBP\",\"created_at\":\"2025-04-02T21:24:08.745Z\",\"updated_at\":\"2025-12-28T14:05:42.213Z\",\"enable_app\":true,\"enable_signup_widget\":true,\"storefront_button_text\":\"Notify me when available\",\"storefront_button_text_color\":\"#FFFFFF\",\"storefront_button_background_color\":\"#202223\",\"storefront_form_header\":\"Back In Stock Alert\",\"storefront_form_description\":\"Get notified immediately when available.\",\"storefront_form_button_text\":\"Notify Me\",\"storefront_form_button_text_color\":\"#FFFFFF\",\"storefront_form_button_background_color\":\"#202223\",\"storefront_form_terms\":null,\"storefront_form_error\":\"Please enter a valid email address\",\"storefront_form_success\":\"Thank you! We will notify you when the product is available.\",\"enable_powered_by\":false,\"show_button_on_preorder\":false,\"sms_enabled\":true,\"email_enabled\":true,\"storefront_button_disable_tag\":\"rocket-hide\",\"theme_config\":{\"disableDebugLoggingForNonPreorderItem\":false},\"storefront_form_email_placeholder\":\"Email address\",\"storefront_form_phone_placeholder\":\"SMS\",\"storefront_form_phone_label\":\"Phone number\",\"storefront_form_email_label\":\"Email\",\"storefront_form_phone_error\":\"Please enter a valid phone number\",\"storefront_form_customer_name_placeholder\":\"Name\",\"storefront_form_customer_name_error\":\"Please enter your name\",\"storefront_form_did_you_mean_error\":\"Did you mean %{suggested_email}? Or use %{current_email}\",\"form_customer_name_enabled\":false,\"form_customer_name_required\":false,\"css_config\":\"\",\"js_config\":\"\",\"collect_promotion_consent\":true,\"storefront_form_promotion_consent_label\":\"Sign up to the MARCHON™ newsletter. \",\"show_button_on_collection\":false,\"sms_default_country\":\"us\",\"sms_allowed_countries\":[],\"sms_restrict_country\":false,\"sms_default_channel\":true,\"optin_required\":true,\"optin_success_text\":\"Registration confirmed! You'll receive an alert when the product is restocked.\",\"storefront_button_border_radius\":0,\"storefront_button_disable_tag_hides_button\":true,\"storefront_button_disable_tag_enabled\":false,\"quantity_required\":false,\"storefront_form_quantity_label\":\"Quantity\",\"enable_alerts\":true,\"sms_allowed\":true,\"email_allowed\":true,\"collect_promotion_consent_default\":true,\"insert_button_after_selector\":\"\",\"insert_button_after_selector_type\":\"afterend\",\"storefront_button_position_type\":\"float-right\",\"storefront_form_duplicate_error\":\"You've already subscribed for alerts to this product.\",\"storefront_mixed_cart_error\":\"This item needs to be purchased separately. Please check out or clear your cart before adding this item.\",\"storefront_error_heading\":\"Error\",\"default_locale\":\"en\",\"collection_page_button_text_color\":\"#FFFFFF\",\"collection_page_button_background_color\":\"#202223\",\"show_button_if_any_out_of_stock\":false,\"show_button_if_any_variant_out_of_stock_collection\":false,\"show_button_on_index\":false,\"insert_button_after_selector_collection\":\"\",\"insert_button_after_selector_index\":\"\",\"page_link_selector\":\"\",\"search_link_selector\":\"\",\"collection_check_link_visibility\":true,\"collection_buttons_container\":\"\",\"index_buttons_container\":\"\",\"page_buttons_container\":\"\",\"search_buttons_container\":\"\",\"extension_enable_url_variant_detection\":true,\"extension_enable_value_variant_detection\":true,\"extension_value_variant_selector\":\"[name='id']\",\"resubscribe_text\":\"This product is out of stock. Get notified when it's restocked again by entering your details below!\",\"preorder_enabled\":true,\"preorder_buy_button_selector\":\"\",\"preorder_add_to_cart_button_selector\":\"\",\"preorder_badge_selector\":\"\",\"preorder_button_out_of_stock_text\":\"Out of stock\",\"preorder_button_add_to_cart_text\":\"Add to cart\",\"preorder_form_selector\":\"form[action*=\\\"/cart/add\\\"]\",\"preorder_collection_enabled\":false,\"preorder_collection_form_selector\":\"form[action*=\\\"/cart/add\\\"]\",\"preorder_collection_add_to_cart_button_selector\":\"form[action*=\\\"/cart/add\\\"] button\",\"preorder_index_enabled\":false,\"preorder_index_form_selector\":\"form[action*=\\\"/cart/add\\\"]\",\"preorder_index_add_to_cart_button_selector\":\"form[action*=\\\"/cart/add\\\"] button\",\"preorder_page_enabled\":false,\"preorder_page_form_selector\":\"form[action*=\\\"/cart/add\\\"]\",\"preorder_page_add_to_cart_button_selector\":\"form[action*=\\\"/cart/add\\\"] button\",\"preorder_search_enabled\":false,\"preorder_search_form_selector\":\"form[action*=\\\"/cart/add\\\"]\",\"preorder_search_add_to_cart_button_selector\":\"form[action*=\\\"/cart/add\\\"] button\",\"preorder_collection_badge_selector\":\"\",\"preorder_index_badge_selector\":\"\",\"preorder_page_badge_selector\":\"\",\"preorder_search_badge_selector\":\"\",\"preorder_badge_selector_type\":\"afterend\",\"preorder_collection_badge_selector_type\":\"afterend\",\"preorder_button_child_selector\":\"span\",\"preorder_button_disclaimer_insert_selector\":\"\",\"preorder_button_disclaimer_insert_selector_type\":\"afterend\",\"preorder_payment_insert_selector\":\"\",\"preorder_payment_insert_selector_type\":\"afterend\",\"preorder_price_container_selector\":\"\",\"preorder_price_container_selector_insert_type\":\"afterend\",\"preorder_terms_insert_selector\":null,\"preorder_terms_insert_selector_type\":\"afterend\",\"preorder_original_price_selector\":\"\",\"preorder_price_format\":\"{{amount}} {{currency}}\",\"show_badge_if_any_variant_is_preorder\":false,\"enable_console_debug\":false,\"inline_form_enabled\":true,\"inline_form_selector\":\".product-form\",\"inline_form_selector_type\":\"afterend\",\"storefront_form_prefill_customer\":true,\"storefront_form_show_image\":false,\"storefront_form_text_color\":\"#202223\",\"storefront_form_background_color\":\"#FFFFFF\",\"storefront_form_border_radius\":0,\"market_setup_type\":\"multiple_markets\",\"shopify_app_id\":5940125,\"preorder_progress_bar_insert_selector\":null,\"preorder_progress_bar_insert_selector_type\":\"beforebegin\",\"countdown_timer_insert_selector\":null,\"countdown_timer_insert_selector_type\":\"afterend\",\"cache\":true,\"cached_at\":\"2026-01-08T15:33:09.082Z\",\"multi_language_enabled\":false,\"translation_locale\":\"en\"};window._RestockRocketConfig.cachedPreorderVariantIds = {\"preorder_variant_ids\":[44250685112578,44250693828866,44250704052482,44347432567042,44453511889154,44453557338370,44458355687682,44458471424258,45304967201026,45304976179458,45304982438146,45304986730754,45304998527234,45384986427650,45530555842818,53263397814659,53738391372163,53738408313219,54928617832835,55093853225347,55095859085699,55095862624643,55249816387971,55249853317507,55249857413507,55249922392451],\"updated_at\":\"2025-05-25T17:03:00Z\",\"market_locations_enabled\":false,\"market_id\":2389901570,\"preorder_location_filter_enabled\":false,\"preorder_location_filter_ids\":[],\"collection_id\":null};window._RestockRocketConfig.cachedInStockVariantIds = { in_stock_variant_ids: [] };window._RestockRocketConfig.cachedOutOfStockVariantIds = { out_of_stock_variant_ids: [] };window._RestockRocketConfig.cachedVariantPreorderLimits = {\"variant_preorder_limits\":{},\"updated_at\":\"2025-05-25T17:03:01Z\"};window._RestockRocketConfig.cachedVariantShippingTexts = { variant_shipping_texts: {} };window._RestockRocketConfig.sellingPlans = [];(function() {\n      const cachedData = {\"plans\":[],\"disabled_plan_ids\":[710332875139],\"cached_at\":\"2026-02-18T08:08:18Z\"};\n\n      if (cachedData && typeof cachedData === 'object' && cachedData.cached_at) {\n        // Find the maximum updated_at from all items in old array\n        const oldPlans = window._RestockRocketConfig.sellingPlans;\n        const maxUpdatedAt = Array.isArray(oldPlans) && oldPlans.length > 0\n          ? oldPlans.reduce(function(max, plan) {\n              // Parse dates for proper comparison (handles mixed ISO formats)\n              if (plan.updated_at) {\n                const planDate = new Date(plan.updated_at);\n                const maxDate = max ? new Date(max) : null;\n                return (!maxDate || (planDate && !isNaN(planDate) && planDate > maxDate)) ? plan.updated_at : max;\n              }\n              return max;\n            }, '')\n          : null;\n\n        // Use cached if old array is empty/has no timestamps, or cached is newer\n        // Parse dates for comparison to handle format differences (+00:00 vs .000Z)\n        const cachedDate = new Date(cachedData.cached_at);\n        const maxDate = maxUpdatedAt ? new Date(maxUpdatedAt) : null;\n        const useCached = !maxUpdatedAt || (cachedDate && !isNaN(cachedDate) && (!maxDate || cachedDate > maxDate));\n\n        if (useCached) {\n          if (Array.isArray(cachedData.plans)) {\n            window._RestockRocketConfig.sellingPlans = cachedData.plans;\n            // Only use disabled_plan_ids when using cached plans\n            window._RestockRocketConfig.disabledSellingPlanIds = cachedData.disabled_plan_ids || [];\n            console.debug('[RR] Using selling plans from cachedSellingPlans (cached_at: ' + cachedData.cached_at + ')');\n          }\n        } else {\n          // When using old format (stale cache), don't trust disabled_plan_ids\n          window._RestockRocketConfig.disabledSellingPlanIds = [];\n          console.debug('[RR] Using selling plans from old format (max updated_at: ' + maxUpdatedAt + ')');\n        }\n      }\n    })();window._RestockRocketConfig.integrations = [{\"id\":\"b0772d0f-a50b-4bf7-82f2-d5b99ebc327e\",\"shop_id\":28223,\"enabled\":true,\"page_types\":[\"product\",\"collection\",\"index\",\"search\",\"page\",\"cart\",\"list-collections\",\"article\",\"blog\"],\"configuration\":{\"toastDuration\":10000,\"toastPosition\":\"bottom-right\",\"enableXHRHijack\":true,\"enableFetchHijack\":true,\"quantityLimitDisabled\":false},\"type\":\"hijack\",\"css_config\":null,\"js_config\":null,\"created_at\":\"2025-04-03T05:28:56.291Z\",\"updated_at\":\"2025-06-07T10:39:15.104Z\"}];window._RestockRocketConfig.obfuscateInventoryQuantity = false;window._RestockRocketConfig.scriptUrlProduct = 'https://cdn.shopify.com/extensions/019c970d-551c-7515-a2e2-10cab9da1201/restock-rocket-shopify-463/assets/restockrocket-product.js'\n  window._RestockRocketConfig.scriptUrlCollection = 'https://cdn.shopify.com/extensions/019c970d-551c-7515-a2e2-10cab9da1201/restock-rocket-shopify-463/assets/restockrocket-collection.js'\n  window._RestockRocketConfig.scriptHost = window._RestockRocketConfig.scriptUrlProduct.substring(0, window._RestockRocketConfig.scriptUrlProduct.lastIndexOf('/') + 1)\n  window._RestockRocketConfig.host = 'https://app.restockrocket.io'\n\n  const SETTINGS_CACHE_DURATION = 15 * 60 * 1000; // 15 minutes in milliseconds\n  const LIQUID_CACHE_MAX_AGE = 2 * 60 * 60; // 2 hours in seconds\n\n  // Calculate Liquid cache freshness once at initialization\n  const liquidRenderedAt = window._RestockRocketConfig.liquidRenderedAt;\n\n  // Validate timestamp and calculate cache age\n  if (!liquidRenderedAt || typeof liquidRenderedAt !== 'number' || isNaN(liquidRenderedAt)) {\n    console.debug('STOQ - Invalid or missing liquidRenderedAt timestamp, assuming fresh');\n    window._RestockRocketConfig.isLiquidCacheFresh = true;\n  } else {\n    const now = Math.floor(Date.now() / 1000); // Current time in seconds\n    const liquidCacheAge = now - liquidRenderedAt; // Age in seconds\n\n    // Handle client clock ahead of server\n    if (liquidCacheAge < 0) {\n      console.debug(`STOQ - Client clock appears ahead of server by ${Math.abs(Math.round(liquidCacheAge / 60))} minutes, assuming cache fresh`);\n      window._RestockRocketConfig.isLiquidCacheFresh = true;\n    } else if (liquidCacheAge <= LIQUID_CACHE_MAX_AGE) {\n      console.debug(`STOQ - Liquid cache is fresh (${Math.round(liquidCacheAge / 60)} minutes old)`);\n      window._RestockRocketConfig.isLiquidCacheFresh = true;\n    } else {\n      console.debug(`STOQ - Liquid cache is stale (${Math.round(liquidCacheAge / 60)} minutes old, max ${Math.round(LIQUID_CACHE_MAX_AGE / 60)} minutes)`);\n      window._RestockRocketConfig.isLiquidCacheFresh = false;\n    }\n  }\n\n  function checkSettingsExpiry(settings) {\n    try {\n      if (!settings || !settings.updated_at) {\n        console.debug('STOQ - Invalid settings data structure');\n        return null;\n      }\n\n      if (!settings.cache) {\n        console.debug('STOQ - settings caching disabled');\n        return null;\n      }\n\n      // Check if translations are enabled but missing from cache\n      // This handles the backfill period where DB has translations but metafield doesn't\n      if (settings.multi_language_enabled) {\n        if (!settings.translations) {\n          // Translations enabled but no translation data in metafield\n          // Metafield hasn't been backfilled yet - force refresh\n          console.debug('STOQ - multi-language enabled but no translation data in cache, fetching fresh');\n          return null;\n        }\n\n        // Translations object exists in metafield - cache is valid\n        // If current locale isn't translated, applyTranslations will gracefully use default locale from base fields\n        if (window._RestockRocketConfig.normalizedLocale &&\n            !Object.prototype.hasOwnProperty.call(settings.translations, window._RestockRocketConfig.normalizedLocale)) {\n          console.debug('STOQ - locale not explicitly translated, will use default language from cache');\n        }\n        // Don't return null - continue using cache even for untranslated locales\n      }\n\n      const updatedAt = new Date(settings.updated_at);\n      if (isNaN(updatedAt.getTime())) {\n        console.debug('STOQ - Invalid updated_at date format in settings');\n        return null;\n      }\n\n      const age = Date.now() - updatedAt.getTime();\n      if (age < SETTINGS_CACHE_DURATION) {\n        console.debug('STOQ - settings changed recently, skipping cache');\n        return null;\n      }\n\n      return settings;\n    } catch (error) {\n      console.debug('STOQ - Error checking settings cache:', error);\n      return null;\n    }\n  }\n\n  function createRestockRocketContainer() {\n    const restockRocketContainer = document.createElement('div');\n    restockRocketContainer.id = 'restock-rocket';\n    document.body.appendChild(restockRocketContainer);\n  }\n\n  function createRestockRocketScript(scriptUrl) {\n    const restockRocketScriptElement = document.createElement('script');\n    restockRocketScriptElement.setAttribute('defer', 'defer');\n    restockRocketScriptElement.src = scriptUrl;\n    document.body.appendChild(restockRocketScriptElement);\n  }\n\n  createRestockRocketContainer()\n\n  console.debug('STOQ - extension activated')\n\n  function applyTranslations(settings) {\n    try {\n      // Skip translation logic entirely if multi-language is not enabled\n      if (!settings || !settings.multi_language_enabled) {\n        return settings;\n      }\n\n      if (!settings.translations) {\n        console.debug('STOQ - No translations found, skipping translation');\n        return settings;\n      }\n\n      const normalizedLocale = window._RestockRocketConfig.normalizedLocale;\n      const translations = settings.translations;\n\n      if (!normalizedLocale) {\n        // No matching locale has translations; drop payload to save memory\n        console.debug('STOQ - No matching locale for translations. Available:', Object.keys(translations || {}));\n        delete settings.translations;\n        return settings;\n      }\n\n      console.debug(`STOQ - Applying translations for normalized locale: ${normalizedLocale} (original: ${window._RestockRocketConfig.locale})`);\n\n      const translatedFields = translations[normalizedLocale];\n      if (translatedFields && typeof translatedFields === 'object') {\n        Object.keys(translatedFields).forEach(function(key) {\n          const value = translatedFields[key];\n          if (value !== null && value !== undefined && value !== '') {\n            settings[key] = value;\n          }\n        });\n      } else {\n        console.debug('STOQ - No translated fields found for locale:', normalizedLocale);\n      }\n\n      delete settings.translations;\n      return settings;\n    } catch (e) {\n      console.debug('STOQ - error applying translations:', e);\n      return settings;\n    }\n  }\n\n  // Setup event listener for cart selling plan updates\n  // This must be called before any scripts are loaded to avoid race conditions\n  function setupCartSellingPlanUpdater(settings) {\n    // Setup listener regardless - updateCartSellingPlans has its own guards\n    // This ensures cleanup happens even when preorders are disabled globally\n    // Listen for stoq:inventory-data-loaded event dispatched by api.js\n    window.addEventListener('stoq:inventory-data-loaded', function(event) {\n      console.debug('STOQ - Inventory data loaded, updating cart selling plans');\n      if (window._RestockRocket && window._RestockRocket.updateCartSellingPlans) {\n        window._RestockRocket.updateCartSellingPlans()\n          .then(hasUpdates => {\n            if (hasUpdates) {\n              console.debug('STOQ - cart selling plans updated successfully');\n            } else {\n              console.debug('STOQ - no cart selling plan updates needed');\n            }\n          })\n          .catch(error => {\n            console.error('STOQ - error updating cart selling plans:', error);\n          });\n      }\n    });\n  }\n\n  // First try to get settings from metafields with expiry check\n  const cachedSettings = window._RestockRocketConfig.cachedSettings;\n  const validCachedSettings = cachedSettings ? checkSettingsExpiry(cachedSettings) : null;\n\n  if (validCachedSettings) {\n    console.debug('STOQ - using cached settings');\n    initializeScripts(validCachedSettings);\n  } else {\n    console.debug('STOQ - fetching fresh settings');\n    const headers = {\n      'X-Shopify-Shop-Domain': window._RestockRocketConfig.shop || window.Shopify.shop,\n      'ngrok-skip-browser-warning': 'skip'\n    };\n\n    if (window.Shopify?.theme?.role === 'main') {\n      headers['X-Shopify-Theme-Schema-Name'] = window.Shopify.theme.schema_name;\n      headers['X-Shopify-Theme-Schema-Version'] = window.Shopify.theme.schema_version;\n      headers['X-Shopify-Theme-Store-Id'] = window.Shopify.theme.theme_store_id;\n    }\n\n    fetch(\n      `${window._RestockRocketConfig.host}/api/v1/setting.json?translation_locale=${window._RestockRocketConfig.normalizedLocale}`,\n      { headers }\n    )\n    .then(function(response) {\n      if (!response.ok) {\n        throw new Error('Network response was not ok');\n      }\n      return response.json();\n    })\n    .then(function(settings) {\n      initializeScripts(settings);\n    })\n    .catch(function(error) {\n      // If request failed and we have cached settings (even if expired), use them as fallback\n      if (cachedSettings) {\n        console.debug('STOQ - using expired cached settings as fallback');\n        initializeScripts(cachedSettings);\n      } else {\n        console.error('STOQ - failed to load settings:', error);\n      }\n    })\n    .catch(function(e) {\n      console.error(e)\n    })\n  }\n\n  function initializeScripts(settings) {\n    settings = applyTranslations(settings);\n    window._RestockRocketConfig.settings = settings;\n    console.debug(`STOQ - settings configured for ${window._RestockRocketConfig.pageType}`);\n\n    // Setup cart selling plan updater BEFORE loading any scripts to avoid race conditions\n    setupCartSellingPlanUpdater(settings);\n\n    if(settings.enable_app) {\n      const hijackIntegration = window._RestockRocketConfig.integrations.find(function(integration) {\n        return integration.type === 'hijack' && integration.enabled && integration.page_types.includes(window._RestockRocketConfig.pageType);\n      })\n\n      if(window._RestockRocketConfig.pageType === 'collection' && (settings.show_button_on_collection || settings.preorder_collection_enabled)) {\n        createRestockRocketScript(window._RestockRocketConfig.scriptUrlCollection);\n      } else if(window._RestockRocketConfig.pageType === 'index' && (settings.show_button_on_index || settings.preorder_index_enabled)) {\n        createRestockRocketScript(window._RestockRocketConfig.scriptUrlCollection);\n      } else if(window._RestockRocketConfig.pageType === 'search' && (settings.show_button_on_search || settings.preorder_search_enabled)) {\n        createRestockRocketScript(window._RestockRocketConfig.scriptUrlCollection);\n      } else if(window._RestockRocketConfig.pageType === 'page' && (settings.show_button_on_page || settings.preorder_page_enabled)) {\n        createRestockRocketScript(window._RestockRocketConfig.scriptUrlCollection);\n      } else if(window._RestockRocketConfig.pageType === 'product') {\n        createRestockRocketScript(window._RestockRocketConfig.scriptUrlProduct);\n      } else if(hijackIntegration) {\n        createRestockRocketScript(window._RestockRocketConfig.scriptUrlCollection);\n      } else {\n        console.debug(`STOQ - no scripts enabled for ${window._RestockRocketConfig.pageType}`);\n      }\n\n      // Dispatch custom event when app is loaded\n      // Cart selling plan updates will be triggered by stoq:inventory-data-loaded event\n      const appLoadedEvent = new CustomEvent('stoq:loaded', {\n        detail: {\n          pageType: window._RestockRocketConfig.pageType,\n          enabled: settings.enable_app,\n          settings: settings,\n          preorderEnabled: settings.preorder_enabled\n        }\n      });\n      console.debug('STOQ - dispatching app loaded event');\n      window.dispatchEvent(appLoadedEvent);\n    }\n  }\n\n\n\n\n  .restock-rocket-button,.restock-rocket-button-float{opacity:1!important;border:none!important;cursor:pointer!important;background-image:none!important;box-shadow:none!important;padding:15px 20px;font-size:16px;width:100%;font-family:inherit}@font-face{font-family:OpenSans;font-weight:200;src:url(https://d382hokyqag45a.cloudfront.net/assets/OpenSans-Light.woff)}@font-face{font-family:OpenSans;font-weight:300;src:url(https://d382hokyqag45a.cloudfront.net/assets/OpenSans-Regular.woff)}@font-face{font-family:OpenSans;font-weight:600;src:url(https://d382hokyqag45a.cloudfront.net/assets/OpenSans-SemiBold.woff)}.restock-rocket-button-container{position:relative;z-index:1;width:100%}.restock-rocket-button-container-float-right{position:fixed;z-index:123123;top:calc(50% - 200px);right:0;transform:rotate(270deg);transform-origin:bottom right}.restock-rocket-button-container-float-left{position:fixed;z-index:123123;top:calc(50% - 200px);left:40px;transform:rotate(90deg);transform-origin:top left}.restock-rocket-button-container-float-left:hover,.restock-rocket-button-container-float-right:hover,.restock-rocket-button-container:hover,.restock-rocket-button-float:hover,.restock-rocket-button:hover{opacity:.8}.restock-rocket-button{min-height:50px;margin-top:10px;margin-bottom:10px}.restock-rocket-button-collection{position:relative;font-size:13px;line-height:1;padding:7px;height:auto;z-index:3}.restock-rocket-wrapper{background-color:rgba(0,0,0,.5);z-index:123123123;width:100%;height:100%;overflow:auto;position:fixed;right:0;top:0;transition-property:all;transition-duration:.3s;display:flex;flex-direction:column;justify-content:center;}.restock-rocket-wrapper-inline{width:100%;height:100%;margin-top:20px}.restock-rocket-preorder-description{padding:10px 15px;margin-top:20px;display:flex;flex-direction:column;gap:10px;}.preorder-description-details{margin-bottom:0;display:flex;flex-direction:column;gap:10px;}.preorder-detail-item{display:flex;flex-direction:row;justify-content:start;gap:8px;align-items:center;}.restock-rocket-payment-widget{border:1px solid #ebebeb;margin-bottom:20px;}.restock-rocket-payment-option{display:flex;flex-wrap:wrap;align-items:center;gap:5px;padding:15px 20px;}.restock-rocket-payment-option:not(:last-child){border-bottom:1px solid #ebebeb;}.restock-rocket-payment-input-container{flex:1 1 auto;min-width:0}.restock-rocket-payment-input{margin-right:10px;margin-top:-3px;vertical-align:middle;margin-left:0;accent-color:#202223}.restock-rocket-payment-description{margin-top:4px;flex:1 1 100%}.restock-rocket-preorder-discount-badge{background:#ebebeb;height:25px;line-height:25px;padding:0 15px;border-radius:25px;font-size:0.8rem;flex:0 0 auto}.restock-rocket-payment-input{margin-right:10px;margin-top:-3px;vertical-align:middle;margin-left:0;accent-color:#202223}.restock-rocket-payment-description{margin-top:4px;flex:1 1 100%}.restock-rocket-preorder-discount-badge{background:#ebebeb;height:25px;line-height:25px;padding:0 15px;border-radius:25px;font-size:0.8rem;flex:0 0 auto}.restock-rocket-payment-input{margin-right:10px;margin-top:-3px;vertical-align:middle;margin-left:0;accent-color:#202223}.restock-rocket-payment-description{margin-top:4px;flex:1 1 100%}.restock-rocket-preorder-discount-badge{background:#ebebeb;height:25px;line-height:25px;padding:0 15px;border-radius:25px;font-size:0.8rem;flex:0 0 auto}.restock-rocket-preorder-badge{font-size:13px;line-height:1;padding:5px 13px 6px;border-radius:40px;height:auto;border:none;width:auto;z-index:2;margin:0;background:0 0}.preorder-badge-collection{position:absolute;top:10px;right:10px}.preorder-badge-product{margin-left:10px}.restock-rocket-price-strike{text-decoration:line-through;color: #666666;}.restock-rocket-discounted-price{margin-left:10px;}.restock-rocket-acknowledgement-checkbox{margin-bottom:12px;display:flex;align-items:flex-start;gap:8px;font-size:14px;line-height: 1.5;}.restock-rocket-acknowledge-checkbox-input{width:18px;height:18px;margin-top:2px;cursor:pointer;flex-shrink:0;accent-color: #0d0d0d;}.restock-rocket-acknowledge-checkbox-label{flex:1;cursor:pointer;}.restock-rocket-preorder-countdown-timer{display:flex;flex-direction:column;align-items:center;padding:16px;margin:8px 0;font-family:inherit;}.restock-rocket-preorder-countdown-timer .countdown-header{font-size:16px;margin-bottom:6px;text-align:center}.restock-rocket-preorder-countdown-timer .countdown-units{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.restock-rocket-preorder-countdown-timer .countdown-unit{display:flex;flex-direction:column;align-items:center;gap:6px}.restock-rocket-preorder-countdown-timer .countdown-box{min-width:40px;padding:10px 6px;text-align:center;font-size:20px;line-height:1}.restock-rocket-preorder-countdown-timer .countdown-label{font-size:14px;font-weight:500;text-align:center;text-transform:capitalize;opacity:.7}@media (max-width:768px){.restock-rocket-preorder-countdown-timer{padding:14px}.restock-rocket-preorder-countdown-timer .countdown-box{min-width:55px;padding:14px 10px;font-size:26px}.restock-rocket-preorder-countdown-timer .countdown-label{font-size:11px}}@media (max-width:480px){.restock-rocket-preorder-countdown-timer{padding:12px}.restock-rocket-preorder-countdown-timer .countdown-units{width:100%;gap:10px}.restock-rocket-preorder-countdown-timer .countdown-box{width:100%;min-width:50px;padding:12px 8px;font-size:24px}.restock-rocket-preorder-countdown-timer .countdown-label{font-size:10px}}.restock-rocket-toast{position:fixed;cursor:pointer;background:#fff;border:0;min-width:40px;min-height:40px;box-shadow:0 0 15px rgba(0,0,0,.1)!important;z-index:622004;padding:20px 30px;font-family:inherit;font-size:inherit;color:#000;display:flex;justify-content:center;align-items:center}.restock-rocket-toast a{text-decoration:none;font-weight:700;color:#000}.restock-rocket-toast .dismiss{margin-left:15px;z-index:1;font-size:20px;}.restock-rocket-toast-top{top:60px}.restock-rocket-toast-bottom{bottom:75px}.restock-rocket-toast-left,.restock-rocket-toast-right{-webkit-animation:.5s forwards slide;animation:.5s forwards slide}.restock-rocket-toast-left{left:0;transform:translateX(-100%);-webkit-transform:translateX(-100%);border-radius:0 10px 10px 0}.restock-rocket-toast-left.slide-out{-webkit-animation:.5s forwards slide-out-left;animation:.5s forwards slide-out-left}.restock-rocket-toast-right{right:0;transform:translateX(100%);-webkit-transform:translateX(100%);border-radius:10px 0 0 10px}.restock-rocket-toast-right.slide-out{-webkit-animation:.5s forwards slide-out-right;animation:.5s forwards slide-out-right}@keyframes slide{100%{transform:translateX(0)}}@-webkit-keyframes slide{100%{-webkit-transform:translateX(0)}}@keyframes slide-out-left{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}@-webkit-keyframes slide-out-left{0%{-webkit-transform:translateX(0)}100%{-webkit-transform:translateX(-100%)}}@keyframes slide-out-right{0%{transform:translateX(0)}100%{transform:translateX(100%)}}@-webkit-keyframes slide-out-right{0%{-webkit-transform:translateX(0)}100%{-webkit-transform:translateX(100%)}}.restock-rocket-preorder-progress-bar{padding:12px 15px;margin-bottom:20px;font-family:inherit;}.restock-rocket-preorder-progress-bar .preorder-progress-text{margin-bottom:8px;}.restock-rocket-preorder-progress-bar .preorder-progress-bar-row{display:flex;align-items:center;gap:10px;}.restock-rocket-preorder-progress-bar .preorder-progress-track{flex:1;height:12px;overflow:hidden;}.restock-rocket-preorder-progress-bar .preorder-progress-fill{display:block;height:100%;min-width:2px;transition:width 0.3s ease;}.restock-rocket-preorder-progress-bar .preorder-progress-percentage{font-weight:500;min-width:35px;text-align:right;}",
+    "text_259": "#quiz-container {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    background: rgba(0, 0, 0, 0.5);\n    z-index: var(--quiz-z-index, 100);\n    overflow: auto;\n  }\n  .quiz-content {\n    position: relative;\n    border-radius: 8px;\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n    z-index: var(--quiz-content-z-index, 100 + 1);\n    max-height: 100%;\n    overflow: auto;\n    background: white;\n  }\n  .close-btn {\n    position: absolute;\n    top: 10px;\n    right: 10px;\n    background: none;\n    border: none;\n    font-size: 32px;\n    cursor: pointer;\n    z-index: var(--close-btn-z-index, 100 + 2);\n    margin-left: auto;\n    color: #777777;\n    line-height: 32px;\n  }\n  .react-dropdown-select-dropdown {\n    z-index: var(--close-btn-z-index, 100 + 2) !important;\n  }\n\n  \n\n  \n  \n  /**\n   * Popup Functions\n   *\n   * Creates and manages quiz popup containers.\n   * - Sets z-index CSS variables for layering control\n   * - Creates modal overlay with quiz renderer\n   * - Handles close button and overlay click-to-close\n   * - Sets localStorage flag to prevent duplicate popups\n   *\n   * Used by: automatic popup, link popup, chat button\n   */\n  document.addEventListener('DOMContentLoaded', function() {\n    document.documentElement.style.setProperty('--quiz-z-index', 100);\n    document.documentElement.style.setProperty('--quiz-content-z-index', 100 + 1);\n    document.documentElement.style.setProperty('--close-btn-z-index', 100 + 2);\n\n    const quizWidth = 100;\n    const quizHeight = 100;\n\n    window.createQuizContainer = function(quizKey) {\n      // Only mark the popup as shown when the key already targets a quiz (not for response hashes)\n      if (typeof quizKey === 'string' && quizKey.startsWith('quiz_')) {\n        window.revenueHuntSetStorage('revenuehunt-popup-already-shown-' + quizKey, true, 1);\n      }\n      const quizContainer = document.createElement('div');\n      quizContainer.id = 'quiz-container';\n      quizContainer.className = 'quiz-container';\n      quizContainer.style.display = 'flex';\n      quizContainer.innerHTML = `\n        <div class=\"quiz-content\" style=\"width: ${quizWidth}%; height: ${quizHeight}%;\">\n          <button class=\"close-btn\" aria-label=\"Close quiz\"><span>&#215;</span></button>\n          <quiz-renderer target=\"${quizKey}\" type=\"modal\" aria-label=\"Quiz\" over-plan-at=\"\" execute-custom-features=\"true\"></quiz-renderer>\n        </div>\n      `;\n      document.body.appendChild(quizContainer);\n\n      const closeButton = quizContainer.querySelector('.close-btn');\n      closeButton.addEventListener('click', function () {\n        quizContainer.remove();\n      });\n\n      quizContainer.addEventListener('click', function (event) {\n        if (event.target === quizContainer) {\n          quizContainer.remove();\n        }\n      });\n\n      return quizContainer;\n    };\n  });\n\n\n  \n  /**\n   * Storage Helpers\n   *\n   * Provides localStorage utilities with automatic expiration.\n   * Used to track popup display state, greeting/notification dismissals, etc.\n   *\n   * Functions:\n   * - revenueHuntGetStorage(name): Get value, returns null if expired\n   * - revenueHuntSetStorage(name, value, days): Set value with expiration\n   */\n  window.revenueHuntGetStorage = function(name) {\n    try {\n      const itemStr = localStorage.getItem(name);\n      if (!itemStr) {\n        return null;\n      }\n      const item = JSON.parse(itemStr);\n      if (Date.now() > item.expiry) {\n        localStorage.removeItem(name);\n        return null;\n      }\n      return item.value;\n    } catch (e) {\n      console.warn('Failed to get localStorage:', e);\n      return null;\n    }\n  };\n\n  window.revenueHuntSetStorage = function(name, value, days) {\n    try {\n      const expiry = Date.now() + (days * 24 * 60 * 60 * 1000);\n      const data = {\n        value: value,\n        expiry: expiry\n      };\n      localStorage.setItem(name, JSON.stringify(data));\n    } catch (e) {\n      console.warn('Failed to set localStorage:', e);\n    }\n  };\n\n  \n  /**\n   * Block Priority System\n   *\n   * Ensures only ONE quiz extension of each type activates per page.\n   * Priority: First block > First global\n   *\n   * Use cases:\n   * - Multiple blocks of same type: Only first block runs\n   * - Multiple globals of same type: Only first global runs (if no blocks)\n   * - Mix of block + global: Only block runs, global is skipped\n   */\n\n  // Registry for synchronous block registration (works before document.body exists)\n  window.revenueHuntBlockRegistry = window.revenueHuntBlockRegistry || {};\n\n  /**\n   * Registers a block extension\n   * Uses JS variable instead of DOM to support synchronous registration before document.body exists\n   * @param {string} type - Extension type (e.g., 'link-popup', 'chat-button', 'automatic-popup')\n   * @returns {boolean} - True if registered successfully, false if already registered\n   */\n  window.revenueHuntRegisterBlock = function(type) {\n    if (window.revenueHuntBlockRegistry[type]) {\n      return false;\n    }\n    window.revenueHuntBlockRegistry[type] = true;\n    return true;\n  };\n\n  /**\n   * Checks if a block extension is active\n   * @param {string} type - Extension type\n   * @returns {boolean} - True if block extension is active\n   */\n  window.revenueHuntIsBlockActive = function(type) {\n    return !!window.revenueHuntBlockRegistry[type];\n  };\n\n  /**\n   * Registers a global extension\n   * @param {string} type - Extension type\n   * @returns {boolean} - True if registered successfully, false if already registered\n   */\n  window.revenueHuntRegisterGlobal = function(type) {\n    const globalMarkerId = 'revenuehunt-' + type + '-global-active';\n    if (document.getElementById(globalMarkerId)) {\n      return false;\n    }\n    const marker = document.createElement('div');\n    marker.id = globalMarkerId;\n    marker.style.display = 'none';\n    document.body.appendChild(marker);\n    return true;\n  };\n\n  \n  /**\n   * Link Popup Quiz Script\n   *\n   * Handles quiz popups triggered by clicking links with #quiz or #quiz-{id} hash.\n   * Also handles direct URL navigation with quiz hash (e.g., /page#quiz).\n   *\n   * Priority system:\n   * - Block extensions: Register and exit if already registered\n   * - Global extensions: Exit if block exists OR already registered\n   */\n  document.addEventListener('DOMContentLoaded', function() {\n    const isBlock = false;\n\n    if (isBlock) {\n      if (!window.revenueHuntRegisterBlock('link-popup')) {\n        return;\n      }\n    } else {\n      if (window.revenueHuntIsBlockActive('link-popup')) {\n        return;\n      }\n      if (!window.revenueHuntRegisterGlobal('link-popup')) {\n        return;\n      }\n    }\n\n    const quizLinks = document.querySelectorAll('a[href=\"#quiz\"], a[href^=\"#quiz-\"]');\n    const currentUrl = window.location.href;\n    const defaultQuizKey = 'quiz_1TYTd4';\n    const quizWidth = 100;\n    const quizHeight = 100;\n\n    function openQuizPopup(hashTarget) {\n      let quizKey = hashTarget;\n      if (hashTarget === 'quiz') {\n        quizKey = defaultQuizKey;\n      } else if (hashTarget.startsWith('quiz-')) {\n        quizKey = 'quiz_' + hashTarget.substring(5);\n      }\n      window.createQuizContainer(quizKey);\n    }\n\n    const currentHash = window.location.hash;\n    if (currentHash === '#quiz' || currentHash.startsWith('#quiz-') || currentHash.startsWith('#response')) {\n      const hashTarget = currentHash.slice(1);\n      openQuizPopup(hashTarget);\n    }\n\n    if (quizLinks) {\n      quizLinks.forEach(quizLink => {\n        quizLink.addEventListener('click', function(event) {\n          event.preventDefault();\n          const hashTarget = event.currentTarget.hash.split('#')[1];\n          openQuizPopup(hashTarget);\n        });\n      });\n\n      if(window.addEventListener) {\n        window.addEventListener('message', function(event) {\n          const isResultPage = event.data === 'isResult';\n          const quizContent = document.querySelector('.quiz-content');\n          if(!quizContent) return;\n\n          quizContent.style.width = `${quizWidth}%`;\n          quizContent.style.height = `${quizHeight}%`;\n        });\n      }\n    }\n  });",
+    "text_260": ".recharge-theme {\n    /* App */\n    --recharge-app-background: #FAFAFA;\n    --recharge-app-container: 1200px;\n    --recharge-app-vertical-padding: 32px;\n\n    /* Brand colors */\n    \n--recharge-color-brand: #000000;\n\n    /* Tints */\n    --recharge-color-brand-120: #000000;\n    --recharge-color-brand-20: #333333;\n    --recharge-color-brand-40: #666666;\n    --recharge-color-brand-60: #999999;\n    --recharge-color-brand-75: #bfbfbf;\n    --recharge-color-brand-85: #d9d9d9;\n\n    /* Neutral */\n    --recharge-color-neutral: hsl(0, 35%, 7%);\n    --recharge-color-neutral-80: hsl(0, 7%, 25%);\n    --recharge-color-neutral-70: hsl(0, 5%, 35%);\n    --recharge-color-neutral-40: hsl(0, 3%, 63%);\n    --recharge-color-neutral-10: hsl(0, 2%, 91%);\n    \n\n    /* Links */\n    --recharge-button-secondary: #000000;\n    --recharge-button-secondary-120: #000000;\n    --recharge-button-secondary-60: #666666;\n\n    /* Images */\n    --recharge-images-ratio: 1;\n\n    /* Cards */\n    \n    --recharge-cards-background: #FFFFFF;\n    \n\n    \n    --recharge-cards-border-color: RGBA(0,0,0,0);\n    \n\n    /* Fonts */\n    --recharge-typography-scale: 16px;\n    --recharge-typography-size-1: calc(3 * var(--recharge-typography-scale));\n    --recharge-typography-size-2: calc(2.25 * var(--recharge-typography-scale));\n    --recharge-typography-size-3: calc(1.625 * var(--recharge-typography-scale));\n    --recharge-typography-size-4: calc(1.25 * var(--recharge-typography-scale));\n    --recharge-typography-size-5: calc(1 * var(--recharge-typography-scale));\n    --recharge-typography-size-6: calc(.875 * var(--recharge-typography-scale));\n\n    /** Text **/\n    --recharge-typography-light: #FFFFFF;\n    --recharge-typography-primary: var(--recharge-color-neutral);\n    --recharge-typography-secondary: var(--recharge-color-neutral-70);\n\n    /* Corners */\n    --recharge-corners-radius: 8px;\n\n    --recharge-button-border-radius: 8px;\n    \n\n    /* Views */\n    \n    --recharge-views-background: #FAFAFA;\n    \n\n    /* Buttons */\n    --recharge-button-font-family: inherit;\n    --recharge-button-brand: var(--recharge-color-brand);\n    --recharge-button-color: #FFFFFF;\n  }",
+    "text_261": "LEARN MORE",
+    "text_262": "ACCEPT & CLOSE"
+  },
+  "images": {
+    "img_0": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_1": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_2": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_3": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_4": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_5": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_6": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_7": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_8": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_9": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_10": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_11": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_12": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_13": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_14": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_15": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_16": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_17": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_18": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_19": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_20": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_21": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_22": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_23": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_24": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_25": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_26": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_27": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_28": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_29": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_30": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_31": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_32": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_33": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_34": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_35": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_36": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_37": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_38": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_39": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_40": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_41": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_42": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_43": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_44": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_45": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_46": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_47": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_48": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_49": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_50": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_51": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_52": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_53": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_54": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_55": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_56": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_57": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_58": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_59": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_60": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_61": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_62": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_63": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_64": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_65": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_66": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_67": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_68": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_69": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_70": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_71": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_72": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_73": {
+      "original": "assets/images/gym_app_mockup_1772467989071.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_74": {
+      "original": "assets/images/gym_equipment_1772468085508.png",
+      "alt": "The Barn Gym Community Training"
+    },
+    "img_75": {
+      "original": "assets/images/gym_hero_dark_1772467974246.png",
+      "alt": "The Barn Gym Community Training"
+    }
+  }
+}

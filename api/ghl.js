@@ -37,6 +37,7 @@ export async function pushLeadToGHL({ name, email, phone, source }) {
 
     if (!res.ok) {
         const text = await res.text();
+        console.error(`[GHL DEBUG] Status: ${res.status}, Body: ${text}`);
         throw new Error(`GHL error ${res.status}: ${text}`);
     }
 
