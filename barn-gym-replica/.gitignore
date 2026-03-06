@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.git/
+*.mp4
+public/*.mp4
+*.mkv
+*.avi
+*.mov
+live_*_full.png
+local_*_full.png
+gallery_*_full.png
+temp_framer_home.html

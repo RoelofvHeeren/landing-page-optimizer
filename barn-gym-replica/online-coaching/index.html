@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Coaching | Barn Gym</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/js/components.js" defer></script>
+    <style>
+        .hero {
+            position: relative;
+            background-image: url('/images/personal_training/76Nl9wxIU1asRhuLukJUaWJWzc.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px 80px;
+            text-align: center;
+            color: white;
+            border-radius: 40px;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .persona-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .persona-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .persona-card .body {
+            padding: 20px;
+        }
+
+        /* Sticky Scrolling Section Styles */
+        .sticky-section {
+            padding: 80px 20px;
+            background: #fafafa;
+            border-radius: 40px;
+            margin: 40px 20px;
+        }
+
+        .sticky-container {
+            display: flex;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .sticky-text-side {
+            flex: 1;
+            padding-bottom: 50vh;
+            /* space to scroll past */
+            position: relative;
+            z-index: 2;
+        }
+
+        .sticky-text-block {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0.2;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateX(-20px);
+        }
+
+        .sticky-text-block.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .sticky-text-block .step-num {
+            font-size: 14px;
+            color: #888;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .sticky-text-block h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .sticky-text-block p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .sticky-image-side {
+            flex: 1;
+            position: sticky;
+            top: 15vh;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-mockup {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            background: #fff;
+            border: 8px solid #333;
+        }
+
+        .app-mockup img {
+            width: 100%;
+            display: block;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-only-img {
+            display: none;
+        }
+
+        @media (max-width: 900px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sticky-container {
+                flex-direction: column;
+            }
+
+            .sticky-image-side {
+                display: none;
+            }
+
+            .sticky-text-block {
+                height: auto;
+                opacity: 1;
+                transform: translateX(0);
+                margin-bottom: 60px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .sticky-text-side {
+                padding-bottom: 0;
+            }
+
+            .mobile-only-img {
+                display: block;
+                max-width: 250px;
+                margin: 30px auto 0;
+                border-radius: 30px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border: 6px solid #333;
+            }
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .results-grid img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* How It Works List */
+        .how-list {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .how-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        .how-num {
+            font-size: 40px;
+            font-family: 'Playfair Display', serif;
+            color: #2b7a58;
+            font-style: italic;
+            line-height: 1;
+            min-width: 60px;
+        }
+
+        .how-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .how-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                padding: 60px 15px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="font-playfair" style="font-size: 50px; margin-bottom: 20px;">Elite Coaching, Anywhere You Are
+            </h1>
+            <p style="font-size: 16px; color: #ddd; max-width: 600px; margin: 0 auto; line-height: 1.6;">Customized
+                training programs. Expert nutrition plans. A community that guarantees you stay consistent, all
+                delivered straight to your phone.</p>
+
+            <a href="#join" class="btn btn-white" style="margin-top: 40px; margin-bottom: 15px;">Apply For Online
+                Coaching</a>
+            <p style="font-size: 12px; color: #ccc;">Start your journey with a free comprehensive roadmap session.</p>
+        </div>
+    </header>
+
+    <!-- Built For -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">Who Is <span class="text-green">Online Coaching</span> Built
+            For</h2>
+
+        <div class="cards-grid">
+            <div class="persona-card">
+                <img src="/images/personal_training/BdeQwtmYvJGvH4DssR78etpBW4A.png" alt="The Busy Professional">
+                <div class="body">
+                    <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">The Busy Professional</h3>
+                    <p style="color: #666; font-size: 13px; line-height: 1.5;">Flexible scheduling. Train when it fits
+                        your life, with the accountability you need to execute without the commute.</p>
+                </div>
+            </div>
+            <div class="persona-card">
+                <img src="/images/personal_training/znRh1BJ1V9ByMXk56ZpDAvmurE.png" alt="The Frequent Traveler">
+                <div class="body">
+                    <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">The Frequent Traveler</h3>
+                    <p style="color: #666; font-size: 13px; line-height: 1.5;">Stay on track in any hotel gym or with
+                        zero equipment. Your plan seamlessly travels with you anywhere in the world.</p>
+                </div>
+            </div>
+            <div class="persona-card">
+                <img src="/images/personal_training/cLeYkNvfvPcPtNAWAEUCdnDJKiE.jpg" alt="The Home Gym Hero">
+                <div class="body">
+                    <h3 class="font-playfair" style="font-size: 20px; margin-bottom: 10px;">The Home Gym Hero</h3>
+                    <p style="color: #666; font-size: 13px; line-height: 1.5;">Maximize the equipment you have. We build
+                        custom programs tailored to your exact setup and goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase (Sticky Scroll) -->
+    <section class="sticky-section">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 class="font-playfair" style="font-size: 40px;">The <span class="text-green">Barn Gym System</span>,
+                Anywhere</h2>
+            <p style="color: #666; font-size: 15px; max-width: 600px; margin: 10px auto 0;">Experience our proven
+                methodologies, fully customized for you, delivered through our elite coaching app Trainerize.</p>
+        </div>
+
+        <div class="sticky-container">
+            <!-- Text side -->
+            <div class="sticky-text-side">
+                <div class="sticky-text-block active"
+                    data-img="/images/community_vsl/Trainerize%20images/IFbJBSDNk7oWROw39s7e6hrIL9E.png">
+                    <div class="step-num">01</div>
+                    <h3 class="font-playfair">Your Custom Training Program</h3>
+                    <p>Every exercise, set, and rep is laid out for you. Complete with video demonstrations, form cues,
+                        and built-in rest timers so you never wonder what to do next.</p>
+                    <img src="/images/community_vsl/Trainerize%20images/IFbJBSDNk7oWROw39s7e6hrIL9E.png"
+                        alt="Training Program" class="mobile-only-img">
+                </div>
+
+                <div class="sticky-text-block"
+                    data-img="/images/community_vsl/Trainerize%20images/R1ewslccACEWRKxzRmANGxjo.png">
+                    <div class="step-num">02</div>
+                    <h3 class="font-playfair">Expert Nutrition Plans</h3>
+                    <p>We don't just give you macros. You'll receive comprehensive meal plans, sustainable habits, and
+                        daily tracking tools to ensure you fuel correctly while still enjoying food.</p>
+                    <img src="/images/community_vsl/Trainerize%20images/R1ewslccACEWRKxzRmANGxjo.png"
+                        alt="Nutrition Plans" class="mobile-only-img">
+                </div>
+
+                <div class="sticky-text-block"
+                    data-img="/images/community_vsl/Trainerize%20images/pPzat7WEwEi3TrmoHxwHGsyxstw.png">
+                    <div class="step-num">03</div>
+                    <h3 class="font-playfair">Real-Time Analytics</h3>
+                    <p>Watch your progress compound. Log your weights, track your body metrics, and visually see your
+                        strength increase week over week. Data-driven adjustments guarantee results.</p>
+                    <img src="/images/community_vsl/Trainerize%20images/pPzat7WEwEi3TrmoHxwHGsyxstw.png" alt="Analytics"
+                        class="mobile-only-img">
+                </div>
+
+                <div class="sticky-text-block"
+                    data-img="/images/community_vsl/Trainerize%20images/f585OatPncDfaQbqauLE7Z0k3U.png">
+                    <div class="step-num">04</div>
+                    <h3 class="font-playfair">Direct Support & Community</h3>
+                    <p>You're never training alone. Message your coach directly, get video form checks, and plug into
+                        the online Barn Gym community for unmatched accountability.</p>
+                    <img src="/images/community_vsl/Trainerize%20images/f585OatPncDfaQbqauLE7Z0k3U.png"
+                        alt="Community Support" class="mobile-only-img">
+                </div>
+            </div>
+
+            <!-- Image side (Sticky) -->
+            <div class="sticky-image-side">
+                <div class="app-mockup">
+                    <img id="sticky-app-img"
+                        src="/images/community_vsl/Trainerize%20images/IFbJBSDNk7oWROw39s7e6hrIL9E.png"
+                        alt="Trainerize App Interface">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section style="padding: 40px 20px; text-align: center;">
+        <h3
+            style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #888; letter-spacing: 2px; margin-bottom: 10px;">
+            Results</h3>
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 10px;">Real <span
+                class="text-green">People</span>, Remote <span class="text-green">Results</span></h2>
+        <p style="color: #666; font-size: 14px; margin-bottom: 40px;">No influencers. No fake transformations. Just
+            everyday people achieving extraordinary things from afar.</p>
+
+        <div class="results-grid">
+            <img src="/images/personal_training/QaOyn6jNUtjOrdUHFFnKT9MVs.png" alt="Result 1">
+            <img src="/images/personal_training/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" alt="Result 2">
+            <img src="/images/personal_training/eHwZqRT0Kq5XS2TEyCNbCKBjBs8.png" alt="Result 3">
+            <img src="/images/personal_training/xbvsybidTcZQoWRLz7kMjc9EJc0.png" alt="Result 4">
+            <img src="/images/personal_training/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" alt="Result 5">
+            <img src="/images/personal_training/h9e4GUMhIll94pIyxFYGkSYas.png" alt="Result 6">
+            <img src="/images/personal_training/s0tcPUvvWB4mMscO4glRB7qGk.png" alt="Result 7">
+            <img src="/images/personal_training/suHiUZG5vNHpMqsU3KF83Ck344.png" alt="Result 8">
+            <img src="/images/personal_training/y6ojNMUEiXdMWVmNNhKaEmxQsKM.png" alt="Result 9">
+            <img src="/images/personal_training/dMOe2dNs8rHeGOso89ngrOg.png" alt="Result 10">
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 class="font-playfair" style="font-size: 40px;">How It <span class="text-green">Works</span></h2>
+        <p style="color: #666; font-size: 14px; margin-top: 10px;">A seamless onboarding process designed to get you
+            results from day one.</p>
+
+        <div class="how-list">
+            <div class="how-item">
+                <div class="how-num">01</div>
+                <div class="how-content">
+                    <h3 class="font-playfair">The Strategy Call</h3>
+                    <p>We start with a deep dive into your goals, past struggles, equipment access, and lifestyle to
+                        build a realistic, tailored roadmap for your success.</p>
+                </div>
+            </div>
+            <div class="how-item">
+                <div class="how-num">02</div>
+                <div class="how-content">
+                    <h3 class="font-playfair">App Onboarding</h3>
+                    <p>Download Trainerize onto your device. Your fully customized workouts, nutrition targets, and
+                        schedule will be waiting for you, complete with all tutorials.</p>
+                </div>
+            </div>
+            <div class="how-item">
+                <div class="how-num">03</div>
+                <div class="how-content">
+                    <h3 class="font-playfair">Weekly Check-Ins</h3>
+                    <p>We review your logged data, adjust your plan as needed, provide form feedback, and deliver the
+                        high-level accountability required to keep you pushing forward.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#join" class="btn btn-dark" style="margin-top: 20px;">Apply For Online Coaching</a>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="padding: 80px 20px 120px; text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2 class="font-playfair" style="font-size: 40px; margin-bottom: 20px;">Start Your <span
+                class="text-green">Transformation</span></h2>
+        <p style="color: #888; font-size: 14px; line-height: 1.6; margin-bottom: 40px;">
+            Distance is no longer an excuse. Get the elite coaching, structured plans, and community support of Barn Gym
+            from anywhere in the world.
+        </p>
+
+        <a href="#join" class="btn btn-dark">Apply Now</a>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textBlocks = document.querySelectorAll('.sticky-text-block');
+            const stickyImg = document.getElementById('sticky-app-img');
+
+            if (!stickyImg || textBlocks.length === 0) return;
+
+            // Preload images
+            const imageUrls = Array.from(textBlocks).map(b => b.getAttribute('data-img')).filter(url => url);
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-40% 0px -40% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        textBlocks.forEach(b => b.classList.remove('active'));
+                        entry.target.classList.add('active');
+
+                        const newImgSrc = entry.target.getAttribute('data-img');
+                        // Get current absolute URL of the sticky image
+                        const currentSrcURL = new URL(stickyImg.src, window.location.origin).pathname;
+                        // Avoid unnecessary updates
+                        if (newImgSrc && decodeURI(currentSrcURL) !== decodeURI(newImgSrc)) {
+                            // Fade out
+                            stickyImg.style.opacity = '0';
+
+                            // Wait for fade out, then change source and fade in
+                            setTimeout(() => {
+                                stickyImg.src = newImgSrc;
+                                stickyImg.style.opacity = '1';
+                            }, 200);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            textBlocks.forEach(block => observer.observe(block));
+        });
+    </script>
+</body>
+
+</html>
