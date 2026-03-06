@@ -6,9 +6,15 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Replace with a secure way to load your key, e.g. process.env.GEMINI_API_KEY
-// Using the provided key for the demonstration
-const API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyD-WXgd0Z-JD31JAfWJtLjDVy0ER2nR314';
+// Load API key from environment variable
+const API_KEY = process.env.GEMINI_API_KEY;
+
+if (!API_KEY) {
+    console.error('CRITICAL ERROR: GEMINI_API_KEY environment variable is not set.');
+    console.error('Please set it using: export GEMINI_API_KEY=your_api_key_here');
+    process.exit(1);
+}
+
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 async function generateAIContent(projectName, userPrompt) {
