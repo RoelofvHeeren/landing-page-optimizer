@@ -12,10 +12,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ─── Resolve landing page directories ────────────────────────────────────────
 const sixWeekDir = path.join(__dirname, '..', 'barn-gym-6-week-replica');
 const ptDir = path.join(__dirname, '..', 'barn-gym-pt-replica');
 const classesDir = path.join(__dirname, '..', 'barn-gym-classes-landing');
+const replicaDir = path.join(__dirname, '..', 'barn-gym-replica');
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
@@ -96,6 +96,7 @@ app.use('/pt', ptRouter);
 app.use(express.static(path.join(ptDir, 'public')));
 app.use(express.static(path.join(sixWeekDir, 'public')));
 app.use(express.static(path.join(classesDir, 'public')));
+app.use(express.static(path.join(replicaDir, 'public'))); // Adding replica public dir for online-coaching images
 app.use(express.static(sixWeekDir)); // /style.css
 
 // ─── 6-week landing page at /6week ───────────────────────────────────────────
@@ -110,6 +111,15 @@ classesRouter.use(express.static(classesDir)); // Serve style.css, thank-you.htm
 classesRouter.get('/', (req, res) => res.sendFile(path.join(classesDir, 'index.html')));
 classesRouter.get('/thank-you', (req, res) => res.sendFile(path.join(classesDir, 'thank-you.html')));
 app.use('/classes', classesRouter);
+
+// ─── Online Coaching landing page at /online ────────────────────────────────
+const onlineRouter = express.Router();
+onlineRouter.get('/', (req, res) => res.sendFile(path.join(replicaDir, 'online', 'index.html')));
+app.use('/online', onlineRouter);
+
+// Serve standard root scripts and CSS for the replica folder
+app.get('/style.css', (req, res) => res.sendFile(path.join(replicaDir, 'style.css')));
+app.get('/js/components.js', (req, res) => res.sendFile(path.join(replicaDir, 'public', 'js', 'components.js')));
 
 // ─── Root redirect to /6week ─────────────────────────────────────────────────
 app.get('/', (req, res) => res.redirect(301, '/6week'));
