@@ -1,0 +1,17 @@
+node_modules/
+.git/
+**/*.mp4
+**/*.mkv
+**/*.avi
+**/*.mov
+**/*.png
+**/*.jpg
+**/*.jpeg
+!public/images/**
+!public/logos/**
+!public/js/**
+!public/legal/**
+!public/*.ico
+!public/*.svg
+dist/
+temp_framer_home.html
