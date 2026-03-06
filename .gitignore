@@ -1,5 +1,9 @@
 # Node dependencies
-node_modules/
+**/node_modules/
+
+# AI Copier outputs
+ai-website-copier/output/
+ai-website-copier/generated/
 
 # Environment variables (never commit real secrets)
 .env

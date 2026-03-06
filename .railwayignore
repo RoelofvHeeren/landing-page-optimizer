@@ -1,0 +1,5 @@
+ai-website-copier/
+barn-gym-replica/dist/
+**/node_modules/
+.git/
+**/.DS_Store
