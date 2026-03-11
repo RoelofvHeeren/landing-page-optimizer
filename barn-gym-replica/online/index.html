@@ -19,6 +19,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/logos/white.png">
     <script src="/js/components.js" defer></script>
     <style>
         html {
@@ -242,23 +243,44 @@
         }
 
         @media (max-width: 900px) {
+            .navbar {
+                justify-content: center !important;
+            }
+
             .cards-grid {
                 grid-template-columns: 1fr;
             }
 
             .sticky-container {
                 flex-direction: column;
+                gap: 20px;
+                overflow: hidden;
             }
 
             .sticky-text-side {
                 padding: 0;
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 20px;
+                padding-bottom: 20px;
+                cursor: grab;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .sticky-text-side::-webkit-scrollbar {
+                display: none;
             }
 
             .sticky-text-block {
-                margin-bottom: 40px;
+                flex-shrink: 0;
+                width: 100%;
+                margin-bottom: 0;
                 opacity: 1;
                 transform: none;
                 padding: 30px 20px;
+                scroll-snap-align: center;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             }
 
             .sticky-image-side {
@@ -268,7 +290,6 @@
             .mobile-only-img {
                 display: block;
                 max-width: 500px;
-                /* Allow wider side-by-side or stacked on mobile if needed. Actually we'll just stack the two. */
             }
 
             .mobile-dual-images {
@@ -284,6 +305,51 @@
                 flex-shrink: 0;
                 border-radius: 20px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Marquee adjustments */
+            .marquee-item {
+                width: 200px;
+            }
+
+            /* How it works adjustments */
+            .how-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .how-num {
+                min-width: auto;
+                margin-bottom: 10px;
+            }
+
+            /* Spacing and headlines */
+            .hero {
+                padding: 60px 20px;
+                margin: 10px;
+                gap: 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px !important;
+            }
+
+            section {
+                padding: 40px 20px !important;
+            }
+
+            h2.font-playfair {
+                font-size: 32px !important;
+            }
+
+            .sticky-section {
+                margin: 20px 10px;
+                padding: 40px 15px !important;
+            }
+
+            .sticky-section h2 {
+                font-size: 32px !important;
             }
         }
 
@@ -805,6 +871,56 @@
             }, observerOptions);
 
             textBlocks.forEach(block => observer.observe(block));
+
+            // Draggable slider for mobile process section
+            const slider = document.querySelector('.sticky-text-side');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            slider.addEventListener('mousedown', (e) => {
+                if (window.innerWidth > 900) return;
+                isDown = true;
+                slider.classList.add('active');
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+                slider.style.scrollSnapType = 'none'; // Disable snap while dragging
+                slider.style.cursor = 'grabbing';
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 900) return;
+                isDown = false;
+                slider.style.scrollSnapType = 'x mandatory';
+                slider.style.cursor = 'grab';
+            });
+
+            slider.addEventListener('mouseup', () => {
+                if (window.innerWidth > 900) return;
+                isDown = false;
+                slider.style.scrollSnapType = 'x mandatory';
+                slider.style.cursor = 'grab';
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+                if (window.innerWidth > 900) return;
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 2; // scroll-fast
+                slider.scrollLeft = scrollLeft - walk;
+            });
+
+            // Touch events for mobile
+            slider.addEventListener('touchstart', () => {
+                if (window.innerWidth > 900) return;
+                slider.style.scrollSnapType = 'none';
+            }, { passive: true });
+
+            slider.addEventListener('touchend', () => {
+                if (window.innerWidth > 900) return;
+                slider.style.scrollSnapType = 'x mandatory';
+            }, { passive: true });
         });
     </script>
 </body>
