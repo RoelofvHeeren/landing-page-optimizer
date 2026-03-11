@@ -276,18 +276,37 @@
 
             .sticky-text-block {
                 flex-shrink: 0;
-                width: 100%;
+                width: 88%;
+                /* Narrower for 'peek' effect */
                 margin-bottom: 0;
                 opacity: 1;
                 transform: none;
-                padding: 25px 20px;
-                /* Reduced padding */
+                padding: 30px 25px;
                 scroll-snap-align: center;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
                 border: 1px solid #f0f0f0;
                 position: relative;
                 overflow: visible;
-                /* Allow mockups to pop if needed */
+                text-align: center;
+                /* Centered content */
+            }
+
+            .sticky-text-block h3 {
+                font-size: 28px !important;
+                margin-bottom: 12px !important;
+                color: #007559;
+            }
+
+            .sticky-text-block p {
+                font-size: 15px !important;
+                line-height: 1.5 !important;
+                margin: 0 auto !important;
+                max-width: 100% !important;
+            }
+
+            .indicators {
+                justify-content: center !important;
+                margin-bottom: 20px !important;
             }
 
             .mobile-dual-images {
@@ -299,12 +318,12 @@
             }
 
             .mobile-dual-images img {
-                width: 44%;
-                /* Better fit */
-                max-width: 180px;
+                width: 35%;
+                /* Downsized by ~20% */
+                max-width: 140px;
                 flex-shrink: 0;
-                border-radius: 15px;
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
                 transform: rotate(-2deg);
                 /* Organic look */
             }
@@ -944,18 +963,21 @@
             if (slider && prevBtn && nextBtn) {
                 // Arrow Navigation
                 prevBtn.addEventListener('click', () => {
-                    slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+                    const card = slider.querySelector('.sticky-text-block');
+                    slider.scrollBy({ left: -card.offsetWidth - 15, behavior: 'smooth' });
                 });
 
                 nextBtn.addEventListener('click', () => {
-                    slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+                    const card = slider.querySelector('.sticky-text-block');
+                    slider.scrollBy({ left: card.offsetWidth + 15, behavior: 'smooth' });
                 });
 
                 // Sync indicators with scroll
                 slider.addEventListener('scroll', () => {
                     if (window.innerWidth > 900) return;
 
-                    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+                    const card = slider.querySelector('.sticky-text-block');
+                    const index = Math.round(slider.scrollLeft / (card.offsetWidth + 15));
 
                     // Update dots for ALL text blocks (since we show them inside cards now)
                     indicatorGroups.forEach(group => {
