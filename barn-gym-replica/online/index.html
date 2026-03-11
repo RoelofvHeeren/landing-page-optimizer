@@ -253,8 +253,10 @@
 
             .sticky-container {
                 flex-direction: column;
-                gap: 20px;
-                overflow: hidden;
+                gap: 15px;
+                overflow: visible;
+                /* Prevent cropping */
+                position: relative;
             }
 
             .sticky-text-side {
@@ -262,10 +264,10 @@
                 display: flex;
                 overflow-x: auto;
                 scroll-snap-type: x mandatory;
-                gap: 20px;
+                gap: 15px;
                 padding-bottom: 20px;
-                cursor: grab;
                 -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
             }
 
             .sticky-text-side::-webkit-scrollbar {
@@ -278,33 +280,62 @@
                 margin-bottom: 0;
                 opacity: 1;
                 transform: none;
-                padding: 30px 20px;
+                padding: 25px 20px;
+                /* Reduced padding */
                 scroll-snap-align: center;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            }
-
-            .sticky-image-side {
-                display: none;
-            }
-
-            .mobile-only-img {
-                display: block;
-                max-width: 500px;
+                border: 1px solid #f0f0f0;
+                position: relative;
+                overflow: visible;
+                /* Allow mockups to pop if needed */
             }
 
             .mobile-dual-images {
                 display: flex;
-                gap: 10px;
-                margin-top: 20px;
-                overflow-x: auto;
-                padding-bottom: 20px;
+                gap: 12px;
+                margin-top: 25px;
+                overflow: visible;
+                justify-content: center;
             }
 
             .mobile-dual-images img {
-                width: 200px;
+                width: 44%;
+                /* Better fit */
+                max-width: 180px;
                 flex-shrink: 0;
-                border-radius: 20px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                transform: rotate(-2deg);
+                /* Organic look */
+            }
+
+            .mobile-dual-images img:last-child {
+                transform: rotate(2deg);
+                margin-left: -10px;
+            }
+
+            .slider-nav {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 10px;
+            }
+
+            .slider-arrow {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #eee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                cursor: pointer;
+            }
+
+            .sticky-image-side {
+                display: none;
             }
 
             /* Marquee adjustments */
@@ -352,12 +383,17 @@
             }
 
             .sticky-section {
-                margin: 20px 10px;
-                padding: 40px 15px !important;
+                margin: 10px;
+                padding: 30px 10px !important;
             }
 
             .sticky-section h2 {
-                font-size: 32px !important;
+                font-size: 28px !important;
+                margin-bottom: 5px !important;
+            }
+
+            .sticky-section p.text-center {
+                margin-bottom: 30px !important;
             }
         }
 
@@ -672,6 +708,20 @@
                 </div>
             </div>
 
+            <!-- Slider Navigation (Arrows) - Mobile Only -->
+            <div class="slider-nav">
+                <div class="slider-arrow" id="prevSlide">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </div>
+                <div class="slider-arrow" id="nextSlide">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </div>
+            </div>
+
             <!-- Image side (Sticky) -->
             <div class="sticky-image-side">
                 <div class="app-mockup-wrapper">
@@ -880,55 +930,37 @@
 
             textBlocks.forEach(block => observer.observe(block));
 
-            // Draggable slider for mobile process section
+            // Overhauled Slider Logic for Mobile
             const slider = document.querySelector('.sticky-text-side');
-            let isDown = false;
-            let startX;
-            let scrollLeft;
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            const indicatorGroups = document.querySelectorAll('.indicators');
 
-            slider.addEventListener('mousedown', (e) => {
-                if (window.innerWidth > 900) return;
-                isDown = true;
-                slider.classList.add('active');
-                startX = e.pageX - slider.offsetLeft;
-                scrollLeft = slider.scrollLeft;
-                slider.style.scrollSnapType = 'none'; // Disable snap while dragging
-                slider.style.cursor = 'grabbing';
-            });
+            if (slider && prevBtn && nextBtn) {
+                // Arrow Navigation
+                prevBtn.addEventListener('click', () => {
+                    slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+                });
 
-            slider.addEventListener('mouseleave', () => {
-                if (window.innerWidth > 900) return;
-                isDown = false;
-                slider.style.scrollSnapType = 'x mandatory';
-                slider.style.cursor = 'grab';
-            });
+                nextBtn.addEventListener('click', () => {
+                    slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+                });
 
-            slider.addEventListener('mouseup', () => {
-                if (window.innerWidth > 900) return;
-                isDown = false;
-                slider.style.scrollSnapType = 'x mandatory';
-                slider.style.cursor = 'grab';
-            });
+                // Sync indicators with scroll
+                slider.addEventListener('scroll', () => {
+                    if (window.innerWidth > 900) return;
 
-            slider.addEventListener('mousemove', (e) => {
-                if (window.innerWidth > 900) return;
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - slider.offsetLeft;
-                const walk = (x - startX) * 2; // scroll-fast
-                slider.scrollLeft = scrollLeft - walk;
-            });
+                    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
 
-            // Touch events for mobile
-            slider.addEventListener('touchstart', () => {
-                if (window.innerWidth > 900) return;
-                slider.style.scrollSnapType = 'none';
-            }, { passive: true });
-
-            slider.addEventListener('touchend', () => {
-                if (window.innerWidth > 900) return;
-                slider.style.scrollSnapType = 'x mandatory';
-            }, { passive: true });
+                    // Update dots for ALL text blocks (since we show them inside cards now)
+                    indicatorGroups.forEach(group => {
+                        const dots = group.querySelectorAll('.indicator');
+                        dots.forEach((dot, i) => {
+                            dot.classList.toggle('active', i === index);
+                        });
+                    });
+                });
+            }
         });
     </script>
 </body>
