@@ -6,10 +6,10 @@ import { chromium } from 'playwright';
         viewport: { width: 1440, height: 1080 }
     });
 
-    await page.goto('http://localhost:5173/how-to-join/online-coaching/index.html', { waitUntil: 'load' });
-    await page.waitForTimeout(3000); // Give Vite/components time to mount
+    await page.goto('http://localhost:3000/online', { waitUntil: 'load' });
+    await page.waitForTimeout(5000); // Give GHL widget time to load
 
-    await page.screenshot({ path: 'local_online_coaching_full.png', fullPage: true });
+    await page.screenshot({ path: 'local_online_coaching_hero_full.png', fullPage: true });
     await browser.close();
     console.log('Local online coaching screenshot generated.');
 })();

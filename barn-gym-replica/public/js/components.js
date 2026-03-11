@@ -6,10 +6,6 @@ class Navbar extends HTMLElement {
           <!-- White logo for dark hero sections -->
           <img src="/logos/white.png" alt="Barn Gym" style="height: 60px;">
         </a>
-        <div class="menu-toggle" style="background: rgba(255,255,255,0.1); border-radius: 50%; width: 44px; height: 44px; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer; border: 1px solid rgba(255,255,255,0.2);">
-          <span style="display: block; width: 16px; height: 1px; background: white; margin-bottom: 4px;"></span>
-          <span style="display: block; width: 16px; height: 1px; background: white;"></span>
-        </div>
       </nav>
     `;
   }

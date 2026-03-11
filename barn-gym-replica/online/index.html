@@ -21,27 +21,27 @@
     <link rel="stylesheet" href="/style.css">
     <script src="/js/components.js" defer></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         .hero {
             position: relative;
             background-image: url('/images/personal_training/76Nl9wxIU1asRhuLukJUaWJWzc.png');
             background-size: cover;
             background-position: center;
-            padding: 100px 20px 80px;
-            text-align: center;
+            padding: 100px 5%;
             color: white;
             border-radius: 40px;
             overflow: hidden;
             margin: 20px;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 40px;
+            min-height: 85vh;
         }
 
         .hero-content {
@@ -49,6 +49,34 @@
             z-index: 2;
             max-width: 800px;
             margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-booking-container {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            max-width: 850px;
+            width: 100%;
+            margin: 0 auto;
+            scroll-margin-top: 40px;
+        }
+
+        @media (max-width: 991px) {
+            .hero {
+                padding: 80px 20px;
+            }
+
+            .hero-content {
+                flex: none;
+            }
+
+            .hero-booking-container {
+                max-width: 100%;
+            }
         }
 
         .cards-grid {
@@ -88,84 +116,129 @@
 
         .sticky-container {
             display: flex;
-            max-width: 1100px;
+            align-items: flex-start;
+            max-width: 1200px;
             margin: 0 auto;
             gap: 60px;
-            align-items: flex-start;
+            position: relative;
+            z-index: 1;
         }
 
         .sticky-text-side {
             flex: 1;
-            padding-bottom: 50vh;
-            /* space to scroll past */
-            position: relative;
-            z-index: 2;
+            padding: 100px 0 200px;
+            /* Space for scrolling */
         }
 
         .sticky-text-block {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            opacity: 0.2;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            transform: translateX(-20px);
+            padding: 50px 40px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            margin-bottom: 250px;
+            opacity: 0.3;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
         }
 
         .sticky-text-block.active {
             opacity: 1;
-            transform: translateX(0);
-        }
-
-        .sticky-text-block .step-num {
-            font-size: 14px;
-            color: #888;
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            margin-bottom: 10px;
+            transform: translateY(0) scale(1);
         }
 
         .sticky-text-block h3 {
             font-size: 36px;
             margin-bottom: 20px;
-            color: #333;
+            color: #007559;
+            /* Brand green */
         }
 
         .sticky-text-block p {
             font-size: 16px;
-            color: #666;
+            color: #555;
             line-height: 1.6;
             max-width: 400px;
+        }
+
+        .indicators {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            width: 40px;
+            border-radius: 10px;
+            background: #007559;
         }
 
         .sticky-image-side {
             flex: 1;
             position: sticky;
-            top: 15vh;
-            height: 70vh;
+            top: 20vh;
+            height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .app-mockup {
+        .app-mockup-wrapper {
+            position: relative;
             width: 100%;
-            max-width: 320px;
-            border-radius: 40px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            max-width: 450px;
+            height: 500px;
+        }
+
+        .app-mockup {
+            position: absolute;
+            width: 260px;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             background: #fff;
-            border: 8px solid #333;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .app-mockup.img-back {
+            top: 0;
+            left: 0;
+            transform: scale(0.9) translateX(-40px);
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        .app-mockup.img-front {
+            bottom: 0;
+            right: 0;
+            z-index: 2;
         }
 
         .app-mockup img {
             width: 100%;
             display: block;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.3s ease;
         }
 
         .mobile-only-img {
             display: none;
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-dual-images {
+            display: none;
+            /* Hidden on desktop */
         }
 
         @media (max-width: 900px) {
@@ -177,45 +250,99 @@
                 flex-direction: column;
             }
 
+            .sticky-text-side {
+                padding: 0;
+            }
+
+            .sticky-text-block {
+                margin-bottom: 40px;
+                opacity: 1;
+                transform: none;
+                padding: 30px 20px;
+            }
+
             .sticky-image-side {
                 display: none;
             }
 
-            .sticky-text-block {
-                height: auto;
-                opacity: 1;
-                transform: translateX(0);
-                margin-bottom: 60px;
-                align-items: center;
-                text-align: center;
-            }
-
-            .sticky-text-side {
-                padding-bottom: 0;
-            }
-
             .mobile-only-img {
                 display: block;
-                max-width: 250px;
-                margin: 30px auto 0;
-                border-radius: 30px;
+                max-width: 500px;
+                /* Allow wider side-by-side or stacked on mobile if needed. Actually we'll just stack the two. */
+            }
+
+            .mobile-dual-images {
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+                overflow-x: auto;
+                padding-bottom: 20px;
+            }
+
+            .mobile-dual-images img {
+                width: 200px;
+                flex-shrink: 0;
+                border-radius: 20px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                border: 6px solid #333;
             }
         }
 
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-            max-width: 1200px;
-            margin: 40px auto;
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .results-grid img {
+        .marquee-row {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+        }
+
+        .marquee-row.left {
+            animation: marquee-left 40s linear infinite;
+        }
+
+        .marquee-row.right {
+            animation: marquee-right 40s linear infinite;
+        }
+
+        @keyframes marquee-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee-right {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .marquee-item {
+            display: inline-block;
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        .marquee-item img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 20px;
             object-fit: cover;
+            display: block;
         }
 
         /* How It Works List */
@@ -261,6 +388,35 @@
                 padding: 60px 15px 40px;
             }
         }
+
+        .google-review-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .google-review-badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .google-review-badge .stars {
+            display: flex;
+            gap: 2px;
+        }
     </style>
 </head>
 
@@ -273,18 +429,56 @@
     <div id="navbar-placeholder"></div>
 
     <!-- Hero -->
-    <header class="hero">
-        <div class="hero-overlay"></div>
+    <header class="hero" id="hero-booking">
+        <div class="hero-overlay"
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); z-index: 1;">
+        </div>
         <div class="hero-content">
-            <h1 class="font-playfair" style="font-size: 50px; margin-bottom: 20px;">Elite Coaching, Anywhere You Are
-            </h1>
-            <p style="font-size: 16px; color: #ddd; max-width: 600px; margin: 0 auto; line-height: 1.6;">Customized
-                training programs. Expert nutrition plans. A community that guarantees you stay consistent, all
-                delivered straight to your phone.</p>
+            <a href="https://share.google/sizRXxU0g9rqjUKr9" target="_blank" class="google-review-badge">
+                <div class="stars">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="#fbbc04"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="#fbbc04"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="#fbbc04"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="#fbbc04"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="#fbbc04"
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                </div>
+                <span>5.0 rating on <strong>Google</strong></span>
+            </a>
+            <h1 class="font-playfair" style="font-size: 56px; margin-bottom: 24px; line-height: 1.1;">A Dedicated
+                Coach, Always In Your Pocket</h1>
+            <p style="font-size: 18px; color: #ddd; max-width: 600px; margin: 0 auto 32px; line-height: 1.6;">Stop
+                guessing and start seeing real changes. Get custom workouts, daily accountability, and a guaranteed path
+                to your goals, no matter where you train.</p>
 
-            <a href="#join" class="btn btn-white" style="margin-top: 40px; margin-bottom: 15px;">Apply For Online
-                Coaching</a>
-            <p style="font-size: 12px; color: #ccc;">Start your journey with a free comprehensive roadmap session.</p>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <a href="#booking-calendar" class="btn btn-white">Game Plan Call</a>
+                <a href="#how-it-works" class="btn btn-outline-white"
+                    style="border: 1px solid white; border-radius: 50px; padding: 12px 30px; text-decoration: none; color: white;">How
+                    It Works</a>
+            </div>
+        </div>
+
+        <div class="hero-booking-container" id="booking-calendar">
+            <iframe src="https://api.leadconnectorhq.com/widget/booking/acDRb6fSuZTzzLjUKHQq"
+                style="width: 100%; border:none; overflow: hidden; min-height: 600px;" scrolling="no"
+                id="acDRb6fSuZTzzLjUKHQq_1773244181202">
+            </iframe>
+            <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
         </div>
     </header>
 
@@ -323,63 +517,96 @@
 
     <!-- App Showcase (Sticky Scroll) -->
     <section class="sticky-section">
-        <div style="text-align: center; margin-bottom: 60px;">
-            <h2 class="font-playfair" style="font-size: 40px;">The <span class="text-green">Barn Gym System</span>,
-                Anywhere</h2>
-            <p style="color: #666; font-size: 15px; max-width: 600px; margin: 10px auto 0;">Experience our proven
-                methodologies, fully customized for you, delivered through our elite coaching app Trainerize.</p>
-        </div>
+        <h2 class="text-center font-playfair"
+            style="font-size: 50px; margin-bottom: 10px; position:relative; z-index:2;">
+            Our Simple <span class="text-green">&amp;</span> Smart Process
+        </h2>
+        <p class="text-center"
+            style="color:#575757; font-size: 16px; max-width: 600px; margin: 0 auto 80px; position:relative; z-index:2;">
+            A system that turns consistency into progress you can measure, not just hope for.
+        </p>
 
         <div class="sticky-container">
             <!-- Text side -->
             <div class="sticky-text-side">
-                <div class="sticky-text-block active"
-                    data-img="/images/community_vsl/Trainerize%20images/IFbJBSDNk7oWROw39s7e6hrIL9E.png">
-                    <div class="step-num">01</div>
-                    <h3 class="font-playfair">Your Custom Training Program</h3>
-                    <p>Every exercise, set, and rep is laid out for you. Complete with video demonstrations, form cues,
-                        and built-in rest timers so you never wonder what to do next.</p>
-                    <img src="/images/community_vsl/Trainerize%20images/IFbJBSDNk7oWROw39s7e6hrIL9E.png"
-                        alt="Training Program" class="mobile-only-img">
+                <div class="sticky-text-block active" data-img-back="/images/online_coaching/process_1a.png"
+                    data-img-front="/images/online_coaching/process_1b.png">
+                    <h3 class="font-playfair">Easy To Follow Videos</h3>
+                    <p>Know exactly what to do every day — it's never been easier to train with high-definition video
+                        guidance, detailed target areas, modifications, and more.</p>
+                    <div class="indicators">
+                        <div class="indicator active"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                    </div>
+                    <div class="mobile-dual-images">
+                        <img src="/images/online_coaching/process_1a.png" alt="Training Program">
+                        <img src="/images/online_coaching/process_1b.png" alt="Training Program 2">
+                    </div>
                 </div>
 
-                <div class="sticky-text-block"
-                    data-img="/images/community_vsl/Trainerize%20images/R1ewslccACEWRKxzRmANGxjo.png">
-                    <div class="step-num">02</div>
-                    <h3 class="font-playfair">Expert Nutrition Plans</h3>
-                    <p>We don't just give you macros. You'll receive comprehensive meal plans, sustainable habits, and
-                        daily tracking tools to ensure you fuel correctly while still enjoying food.</p>
-                    <img src="/images/community_vsl/Trainerize%20images/R1ewslccACEWRKxzRmANGxjo.png"
-                        alt="Nutrition Plans" class="mobile-only-img">
+                <div class="sticky-text-block" data-img-back="/images/online_coaching/process_2a.png"
+                    data-img-front="/images/online_coaching/process_2b.png">
+                    <h3 class="font-playfair">Meal Planning Made Easy</h3>
+                    <p>Keep track of your weights and reps with our robust notes and logging experience to see your
+                        progression. All from the comfort of your phone.</p>
+                    <div class="indicators">
+                        <div class="indicator"></div>
+                        <div class="indicator active"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                    </div>
+                    <div class="mobile-dual-images">
+                        <img src="/images/online_coaching/process_2a.png" alt="Nutrition Plans">
+                        <img src="/images/online_coaching/process_2b.png" alt="Nutrition Plans 2">
+                    </div>
                 </div>
 
-                <div class="sticky-text-block"
-                    data-img="/images/community_vsl/Trainerize%20images/pPzat7WEwEi3TrmoHxwHGsyxstw.png">
-                    <div class="step-num">03</div>
-                    <h3 class="font-playfair">Real-Time Analytics</h3>
-                    <p>Watch your progress compound. Log your weights, track your body metrics, and visually see your
-                        strength increase week over week. Data-driven adjustments guarantee results.</p>
-                    <img src="/images/community_vsl/Trainerize%20images/pPzat7WEwEi3TrmoHxwHGsyxstw.png" alt="Analytics"
-                        class="mobile-only-img">
+                <div class="sticky-text-block" data-img-back="/images/online_coaching/process_3a.png"
+                    data-img-front="/images/online_coaching/process_3b.png">
+                    <h3 class="font-playfair">Plan For Success</h3>
+                    <p>See your month at a glance with our intuitive calendar to help you plan out your workouts and
+                        keep you on track and on target.</p>
+                    <div class="indicators">
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator active"></div>
+                        <div class="indicator"></div>
+                    </div>
+                    <div class="mobile-dual-images">
+                        <img src="/images/online_coaching/process_3a.png" alt="Analytics">
+                        <img src="/images/online_coaching/process_3b.png" alt="Analytics 2">
+                    </div>
                 </div>
 
-                <div class="sticky-text-block"
-                    data-img="/images/community_vsl/Trainerize%20images/f585OatPncDfaQbqauLE7Z0k3U.png">
-                    <div class="step-num">04</div>
-                    <h3 class="font-playfair">Direct Support & Community</h3>
-                    <p>You're never training alone. Message your coach directly, get video form checks, and plug into
-                        the online Barn Gym community for unmatched accountability.</p>
-                    <img src="/images/community_vsl/Trainerize%20images/f585OatPncDfaQbqauLE7Z0k3U.png"
-                        alt="Community Support" class="mobile-only-img">
+                <div class="sticky-text-block" data-img-back="/images/online_coaching/process_4a.png"
+                    data-img-front="/images/online_coaching/process_4b.png">
+                    <h3 class="font-playfair">Track Everything</h3>
+                    <p>Set the standard for your overall health by tracking sleep, heart rate, steps, workouts, and
+                        more.</p>
+                    <div class="indicators">
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator active"></div>
+                    </div>
+                    <div class="mobile-dual-images">
+                        <img src="/images/online_coaching/process_4a.png" alt="Community Support">
+                        <img src="/images/online_coaching/process_4b.png" alt="Community Support 2">
+                    </div>
                 </div>
             </div>
 
             <!-- Image side (Sticky) -->
             <div class="sticky-image-side">
-                <div class="app-mockup">
-                    <img id="sticky-app-img"
-                        src="/images/community_vsl/Trainerize%20images/IFbJBSDNk7oWROw39s7e6hrIL9E.png"
-                        alt="Trainerize App Interface">
+                <div class="app-mockup-wrapper">
+                    <div class="app-mockup img-back">
+                        <img id="sticky-app-img-back" src="/images/online_coaching/process_1a.png" alt="App Back">
+                    </div>
+                    <div class="app-mockup img-front">
+                        <img id="sticky-app-img-front" src="/images/online_coaching/process_1b.png" alt="App Front">
+                    </div>
                 </div>
             </div>
         </div>
@@ -395,22 +622,61 @@
         <p style="color: #666; font-size: 14px; margin-bottom: 40px;">No influencers. No fake transformations. Just
             everyday people achieving extraordinary things from afar.</p>
 
-        <div class="results-grid">
-            <img src="/images/personal_training/QaOyn6jNUtjOrdUHFFnKT9MVs.png" alt="Result 1">
-            <img src="/images/personal_training/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png" alt="Result 2">
-            <img src="/images/personal_training/eHwZqRT0Kq5XS2TEyCNbCKBjBs8.png" alt="Result 3">
-            <img src="/images/personal_training/xbvsybidTcZQoWRLz7kMjc9EJc0.png" alt="Result 4">
-            <img src="/images/personal_training/MT1DYfiDm5axfyRRNaIMaqXOqJs.png" alt="Result 5">
-            <img src="/images/personal_training/h9e4GUMhIll94pIyxFYGkSYas.png" alt="Result 6">
-            <img src="/images/personal_training/s0tcPUvvWB4mMscO4glRB7qGk.png" alt="Result 7">
-            <img src="/images/personal_training/suHiUZG5vNHpMqsU3KF83Ck344.png" alt="Result 8">
-            <img src="/images/personal_training/y6ojNMUEiXdMWVmNNhKaEmxQsKM.png" alt="Result 9">
-            <img src="/images/personal_training/dMOe2dNs8rHeGOso89ngrOg.png" alt="Result 10">
+        <div class="marquee-wrapper">
+            <!-- Top Row (Left) -->
+            <div class="marquee-row left">
+                <div class="marquee-item"><img src="/images/personal_training/QaOyn6jNUtjOrdUHFFnKT9MVs.png"
+                        alt="Result 1"></div>
+                <div class="marquee-item"><img src="/images/personal_training/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png"
+                        alt="Result 2"></div>
+                <div class="marquee-item"><img src="/images/personal_training/eHwZqRT0Kq5XS2TEyCNbCKBjBs8.png"
+                        alt="Result 3"></div>
+                <div class="marquee-item"><img src="/images/personal_training/xbvsybidTcZQoWRLz7kMjc9EJc0.png"
+                        alt="Result 4"></div>
+                <div class="marquee-item"><img src="/images/personal_training/MT1DYfiDm5axfyRRNaIMaqXOqJs.png"
+                        alt="Result 5"></div>
+                <!-- Duplicate for infinite scroll -->
+                <div class="marquee-item"><img src="/images/personal_training/QaOyn6jNUtjOrdUHFFnKT9MVs.png"
+                        alt="Result 1"></div>
+                <div class="marquee-item"><img src="/images/personal_training/CgIjCoIH3Vv4AsCuVfh4uOHnIk.png"
+                        alt="Result 2"></div>
+                <div class="marquee-item"><img src="/images/personal_training/eHwZqRT0Kq5XS2TEyCNbCKBjBs8.png"
+                        alt="Result 3"></div>
+                <div class="marquee-item"><img src="/images/personal_training/xbvsybidTcZQoWRLz7kMjc9EJc0.png"
+                        alt="Result 4"></div>
+                <div class="marquee-item"><img src="/images/personal_training/MT1DYfiDm5axfyRRNaIMaqXOqJs.png"
+                        alt="Result 5"></div>
+            </div>
+
+            <!-- Bottom Row (Right) -->
+            <div class="marquee-row right">
+                <div class="marquee-item"><img src="/images/personal_training/h9e4GUMhIll94pIyxFYGkSYas.png"
+                        alt="Result 6"></div>
+                <div class="marquee-item"><img src="/images/personal_training/s0tcPUvvWB4mMscO4glRB7qGk.png"
+                        alt="Result 7"></div>
+                <div class="marquee-item"><img src="/images/personal_training/suHiUZG5vNHpMqsU3KF83Ck344.png"
+                        alt="Result 8"></div>
+                <div class="marquee-item"><img src="/images/personal_training/y6ojNMUEiXdMWVmNNhKaEmxQsKM.png"
+                        alt="Result 9"></div>
+                <div class="marquee-item"><img src="/images/personal_training/dMOe2dNs8rHeGOso89ngrOg.png"
+                        alt="Result 10"></div>
+                <!-- Duplicate for infinite scroll -->
+                <div class="marquee-item"><img src="/images/personal_training/h9e4GUMhIll94pIyxFYGkSYas.png"
+                        alt="Result 6"></div>
+                <div class="marquee-item"><img src="/images/personal_training/s0tcPUvvWB4mMscO4glRB7qGk.png"
+                        alt="Result 7"></div>
+                <div class="marquee-item"><img src="/images/personal_training/suHiUZG5vNHpMqsU3KF83Ck344.png"
+                        alt="Result 8"></div>
+                <div class="marquee-item"><img src="/images/personal_training/y6ojNMUEiXdMWVmNNhKaEmxQsKM.png"
+                        alt="Result 9"></div>
+                <div class="marquee-item"><img src="/images/personal_training/dMOe2dNs8rHeGOso89ngrOg.png"
+                        alt="Result 10"></div>
+            </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section style="padding: 80px 20px; text-align: center;">
+    <section id="how-it-works" style="padding: 80px 20px; text-align: center;">
         <h2 class="font-playfair" style="font-size: 40px;">How It <span class="text-green">Works</span></h2>
         <p style="color: #666; font-size: 14px; margin-top: 10px;">A seamless onboarding process designed to get you
             results from day one.</p>
@@ -442,7 +708,7 @@
             </div>
         </div>
 
-        <a href="#join" class="btn btn-dark" style="margin-top: 20px;">Apply For Online Coaching</a>
+        <a href="#booking-calendar" class="btn btn-dark" style="margin-top: 20px;">Game Plan Call</a>
     </section>
 
     <!-- Final CTA -->
@@ -454,20 +720,49 @@
             from anywhere in the world.
         </p>
 
-        <a href="#join" class="btn btn-dark">Apply Now</a>
+        <a href="#booking-calendar" class="btn btn-dark">Game Plan Call</a>
     </section>
 
-    <div id="footer-placeholder"></div>
+    <footer class="footer-section bg-light-gray" style="padding: 60px 20px; font-family: 'Inter', sans-serif;">
+        <div class="container"
+            style="display: flex; flex-direction: column; align-items: center; max-width: 800px; margin: 0 auto; text-align: center;">
+
+            <img src="/logos/color.png" alt="Barn Gym Header"
+                style="max-width: 100px; margin-bottom: 30px; opacity: 0.8;">
+
+            <div style="display: flex; flex-direction: column; gap: 15px; align-items: center; margin-bottom: 40px;">
+                <a href="mailto:Guy@barn-gym.com"
+                    style="font-size: 20px; color: #111; text-decoration: none; font-family: 'Playfair Display', serif;">Guy@barn-gym.com</a>
+                <a href="tel:+447739790874"
+                    style="font-size: 20px; color: #111; text-decoration: none; font-family: 'Playfair Display', serif;">+44
+                    7739 790874</a>
+            </div>
+
+            <p style="font-size: 11px; color: #888; line-height: 1.6; max-width: 600px;">
+                This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed
+                by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+            </p>
+            <p style="font-size: 11px; color: #aaa; margin-top: 10px;">
+                &copy; 2026 Barn Gym. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const textBlocks = document.querySelectorAll('.sticky-text-block');
-            const stickyImg = document.getElementById('sticky-app-img');
+            const stickyImgBack = document.getElementById('sticky-app-img-back');
+            const stickyImgFront = document.getElementById('sticky-app-img-front');
 
-            if (!stickyImg || textBlocks.length === 0) return;
+            if (!stickyImgBack || !stickyImgFront || textBlocks.length === 0) return;
 
             // Preload images
-            const imageUrls = Array.from(textBlocks).map(b => b.getAttribute('data-img')).filter(url => url);
+            const imageUrls = [];
+            textBlocks.forEach(b => {
+                if (b.getAttribute('data-img-back')) imageUrls.push(b.getAttribute('data-img-back'));
+                if (b.getAttribute('data-img-front')) imageUrls.push(b.getAttribute('data-img-front'));
+            });
+
             imageUrls.forEach(url => {
                 const img = new Image();
                 img.src = url;
@@ -475,8 +770,8 @@
 
             const observerOptions = {
                 root: null,
-                rootMargin: '-40% 0px -40% 0px',
-                threshold: 0
+                rootMargin: '-10% 0px -50% 0px',
+                threshold: 0.1
             };
 
             const observer = new IntersectionObserver((entries) => {
@@ -485,19 +780,25 @@
                         textBlocks.forEach(b => b.classList.remove('active'));
                         entry.target.classList.add('active');
 
-                        const newImgSrc = entry.target.getAttribute('data-img');
-                        // Get current absolute URL of the sticky image
-                        const currentSrcURL = new URL(stickyImg.src, window.location.origin).pathname;
+                        const newImgBackSrc = entry.target.getAttribute('data-img-back');
+                        const newImgFrontSrc = entry.target.getAttribute('data-img-front');
+
+                        const currentBackSrcURL = new URL(stickyImgBack.src, window.location.origin).pathname;
+
                         // Avoid unnecessary updates
-                        if (newImgSrc && decodeURI(currentSrcURL) !== decodeURI(newImgSrc)) {
-                            // Fade out
-                            stickyImg.style.opacity = '0';
+                        if (newImgBackSrc && decodeURI(currentBackSrcURL) !== decodeURI(newImgBackSrc)) {
+                            // Quick fade out of the images themselves without moving the containers
+                            stickyImgBack.style.opacity = '0';
+                            stickyImgFront.style.opacity = '0';
 
                             // Wait for fade out, then change source and fade in
                             setTimeout(() => {
-                                stickyImg.src = newImgSrc;
-                                stickyImg.style.opacity = '1';
-                            }, 200);
+                                stickyImgBack.src = newImgBackSrc;
+                                stickyImgFront.src = newImgFrontSrc;
+
+                                stickyImgBack.style.opacity = '1';
+                                stickyImgFront.style.opacity = '1';
+                            }, 300);
                         }
                     }
                 });
