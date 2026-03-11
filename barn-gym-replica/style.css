@@ -262,6 +262,47 @@ a {
   }
 }
 
+/* Global Mobile Refinements */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 32px !important;
+  }
+
+  .hero-title {
+    font-size: 36px !important;
+  }
+
+  section {
+    padding: 60px 20px !important;
+  }
+
+  .container {
+    padding: 0 20px !important;
+  }
+
+  .navbar {
+    padding: 20px !important;
+    justify-content: center !important;
+  }
+
+  .brand-logo img {
+    height: 50px !important;
+  }
+
+  /* Reduce space between sections */
+  section,
+  .join-section,
+  .results-section,
+  .community-section,
+  .corporate-section,
+  .video-section,
+  .floating-img-section,
+  .faq-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 48px;
