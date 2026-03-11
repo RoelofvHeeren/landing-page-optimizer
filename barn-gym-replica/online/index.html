@@ -277,18 +277,31 @@
             .sticky-text-block {
                 flex-shrink: 0;
                 width: 100%;
-                /* Show only one at a time */
+                /* Show only one at a time by filling viewport */
                 margin-bottom: 0;
                 opacity: 1;
                 transform: none;
-                padding: 30px 25px;
+                padding: 10px 0;
                 scroll-snap-align: center;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-                border: 1px solid #f0f0f0;
+                background: none !important;
+                border: none !important;
+                box-shadow: none !important;
                 position: relative;
                 overflow: visible;
+                display: flex;
+                justify-content: center;
+            }
+
+            .card-inner {
+                background: #fff;
+                border: 1px solid #f0f0f0;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                max-width: 360px;
+                width: 90%;
+                padding: 30px 25px;
                 text-align: center;
-                /* Centered content */
+                position: relative;
             }
 
             .sticky-text-block h3 {
@@ -667,69 +680,78 @@
             <div class="sticky-text-side">
                 <div class="sticky-text-block active" data-img-back="/images/online_coaching/process_1a.png"
                     data-img-front="/images/online_coaching/process_1b.png">
-                    <h3 class="font-playfair">Easy To Follow Videos</h3>
-                    <p>Know exactly what to do every day — it's never been easier to train with high-definition video
-                        guidance, detailed target areas, modifications, and more.</p>
-                    <div class="indicators">
-                        <div class="indicator active"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                    </div>
-                    <div class="mobile-dual-images">
-                        <img src="/images/online_coaching/process_1a.png" alt="Training Program">
-                        <img src="/images/online_coaching/process_1b.png" alt="Training Program 2">
+                    <div class="card-inner">
+                        <h3 class="font-playfair">Easy To Follow Videos</h3>
+                        <p>Know exactly what to do every day — it's never been easier to train with high-definition
+                            video
+                            guidance, detailed target areas, modifications, and more.</p>
+                        <div class="indicators">
+                            <div class="indicator active"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                        </div>
+                        <div class="mobile-dual-images">
+                            <img src="/images/online_coaching/process_1a.png" alt="Training Program">
+                            <img src="/images/online_coaching/process_1b.png" alt="Training Program 2">
+                        </div>
                     </div>
                 </div>
 
                 <div class="sticky-text-block" data-img-back="/images/online_coaching/process_2a.png"
                     data-img-front="/images/online_coaching/process_2b.png">
-                    <h3 class="font-playfair">Meal Planning Made Easy</h3>
-                    <p>Keep track of your weights and reps with our robust notes and logging experience to see your
-                        progression. All from the comfort of your phone.</p>
-                    <div class="indicators">
-                        <div class="indicator"></div>
-                        <div class="indicator active"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                    </div>
-                    <div class="mobile-dual-images">
-                        <img src="/images/online_coaching/process_2a.png" alt="Nutrition Plans">
-                        <img src="/images/online_coaching/process_2b.png" alt="Nutrition Plans 2">
+                    <div class="card-inner">
+                        <h3 class="font-playfair">Meal Planning Made Easy</h3>
+                        <p>Keep track of your weights and reps with our robust notes and logging experience to see your
+                            progression. All from the comfort of your phone.</p>
+                        <div class="indicators">
+                            <div class="indicator"></div>
+                            <div class="indicator active"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                        </div>
+                        <div class="mobile-dual-images">
+                            <img src="/images/online_coaching/process_2a.png" alt="Nutrition Plans">
+                            <img src="/images/online_coaching/process_2b.png" alt="Nutrition Plans 2">
+                        </div>
                     </div>
                 </div>
 
                 <div class="sticky-text-block" data-img-back="/images/online_coaching/process_3a.png"
                     data-img-front="/images/online_coaching/process_3b.png">
-                    <h3 class="font-playfair">Plan For Success</h3>
-                    <p>See your month at a glance with our intuitive calendar to help you plan out your workouts and
-                        keep you on track and on target.</p>
-                    <div class="indicators">
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator active"></div>
-                        <div class="indicator"></div>
-                    </div>
-                    <div class="mobile-dual-images">
-                        <img src="/images/online_coaching/process_3a.png" alt="Analytics">
-                        <img src="/images/online_coaching/process_3b.png" alt="Analytics 2">
+                    <div class="card-inner">
+                        <h3 class="font-playfair">Plan For Success</h3>
+                        <p>See your month at a glance with our intuitive calendar to help you plan out your workouts and
+                            keep you on track and on target.</p>
+                        <div class="indicators">
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator active"></div>
+                            <div class="indicator"></div>
+                        </div>
+                        <div class="mobile-dual-images">
+                            <img src="/images/online_coaching/process_3a.png" alt="Analytics">
+                            <img src="/images/online_coaching/process_3b.png" alt="Analytics 2">
+                        </div>
                     </div>
                 </div>
 
                 <div class="sticky-text-block" data-img-back="/images/online_coaching/process_4a.png"
                     data-img-front="/images/online_coaching/process_4b.png">
-                    <h3 class="font-playfair">Track Everything</h3>
-                    <p>Set the standard for your overall health by tracking sleep, heart rate, steps, workouts, and
-                        more.</p>
-                    <div class="indicators">
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator"></div>
-                        <div class="indicator active"></div>
-                    </div>
-                    <div class="mobile-dual-images">
-                        <img src="/images/online_coaching/process_4a.png" alt="Community Support">
-                        <img src="/images/online_coaching/process_4b.png" alt="Community Support 2">
+                    <div class="card-inner">
+                        <h3 class="font-playfair">Track Everything</h3>
+                        <p>Set the standard for your overall health by tracking sleep, heart rate, steps, workouts, and
+                            more.</p>
+                        <div class="indicators">
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator active"></div>
+                        </div>
+                        <div class="mobile-dual-images">
+                            <img src="/images/online_coaching/process_4a.png" alt="Community Support">
+                            <img src="/images/online_coaching/process_4b.png" alt="Community Support 2">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -965,22 +987,18 @@
             if (slider && prevBtn && nextBtn) {
                 // Arrow Navigation
                 prevBtn.addEventListener('click', () => {
-                    const card = slider.querySelector('.sticky-text-block');
-                    slider.scrollBy({ left: -card.offsetWidth - 15, behavior: 'smooth' });
+                    slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
                 });
 
                 nextBtn.addEventListener('click', () => {
-                    const card = slider.querySelector('.sticky-text-block');
-                    slider.scrollBy({ left: card.offsetWidth + 15, behavior: 'smooth' });
+                    slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
                 });
 
                 // Sync indicators with scroll
                 slider.addEventListener('scroll', () => {
                     if (window.innerWidth > 900) return;
 
-                    const card = slider.querySelector('.sticky-text-block');
-                    const cardWidth = card.getBoundingClientRect().width;
-                    const index = Math.round(slider.scrollLeft / (cardWidth + 15));
+                    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
 
                     // Update dots for ALL text blocks (since we show them inside cards now)
                     indicatorGroups.forEach(group => {
