@@ -276,8 +276,9 @@
 
             .sticky-text-block {
                 flex-shrink: 0;
-                width: 88%;
-                /* Narrower for 'peek' effect */
+                width: 90%;
+                max-width: 360px;
+                /* Fixed width as requested */
                 margin-bottom: 0;
                 opacity: 1;
                 transform: none;
@@ -338,6 +339,8 @@
                 justify-content: center;
                 gap: 20px;
                 margin-top: 10px;
+                width: 100%;
+                /* Ensure it centers within the parent */
             }
 
             .slider-arrow {
@@ -977,7 +980,8 @@
                     if (window.innerWidth > 900) return;
 
                     const card = slider.querySelector('.sticky-text-block');
-                    const index = Math.round(slider.scrollLeft / (card.offsetWidth + 15));
+                    const cardWidth = card.getBoundingClientRect().width;
+                    const index = Math.round(slider.scrollLeft / (cardWidth + 15));
 
                     // Update dots for ALL text blocks (since we show them inside cards now)
                     indicatorGroups.forEach(group => {
